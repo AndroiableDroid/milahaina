@@ -301,6 +301,7 @@ PRODUCT_PACKAGES += \
     CarrierConfigResCommon \
     FrameworksResCommon \
     aptxalsOverlay \
+    MilahainaFrameworksOverlay \
     FrameworksResTarget \
     SystemUIResCommon \
     TelephonyResCommon \
