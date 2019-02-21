@@ -348,3 +348,7 @@ $(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.
 
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.vibrator.service.milahaina
+
+# WFD
+PRODUCT_PACKAGES += \
+    libwfdaac_vendor
