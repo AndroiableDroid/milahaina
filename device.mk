@@ -262,6 +262,7 @@ PRODUCT_PACKAGES += \
     FrameworksResTarget \
     SystemUIResCommon \
     TelephonyResCommon \
+    TetheringResCommon \
     WifiResCommon \
     WifiResTarget \
     PanelConfig \
