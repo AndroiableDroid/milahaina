@@ -195,6 +195,7 @@ PRODUCT_PACKAGES += \
     fstab.default \
     init.xiaomi.rc \
     init.xiaomi.recovery.rc \
+    init.xiaomi.camera.rc \
     init.class_main.sh \
     init.qcom.early_boot.sh \
     init.qcom.rc \
