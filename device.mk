@@ -167,6 +167,10 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.hardware.camera=xiaomi \
     camera.disable_zsl_mode=true
 
+# Connectivity
+PRODUCT_PACKAGES += \
+    ConnectivityOverlay
+
 # Consumer IR
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml
