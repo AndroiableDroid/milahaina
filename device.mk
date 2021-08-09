@@ -210,6 +210,7 @@ PRODUCT_PACKAGES += \
     libOmxEvrcEnc \
     libOmxG711Enc \
     libOmxQcelp13Enc \
+    libavservices_minijail \
     libavservices_minijail.vendor \
     libcodec2_hidl@1.0.vendor \
     libcodec2_vndk.vendor \
@@ -239,6 +240,10 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     kernel/xiaomi/sm8350
+
+# Networking
+PRODUCT_PACKAGES += \
+    libnl
 
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
