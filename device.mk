@@ -372,7 +372,11 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.vibrator.service.milahaina
 
 # WFD
+PRODUCT_BOOT_JARS += \
+    WfdCommon
+
 PRODUCT_PACKAGES += \
+    libnl \
     libwfdaac_vendor
 
 # WiFi
