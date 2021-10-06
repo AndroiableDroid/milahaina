@@ -74,7 +74,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/xiaomi
 
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_lahaina \
+    android.hardware.biometrics.fingerprint@2.3-service.xiaomi_milahaina \
     vendor.xiaomi.hardware.fingerprintextension@1.0.vendor
 
 # Bluetooth
