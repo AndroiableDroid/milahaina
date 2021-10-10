@@ -6,7 +6,7 @@
 
 BUILD_BROKEN_DUP_RULES := true
 
-DEVICE_PATH := device/asus/sake
+DEVICE_PATH := device/xiaomi/milahaina
 
 include build/make/target/board/BoardConfigMainlineCommon.mk
 
@@ -79,12 +79,12 @@ TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
-    $(DEVICE_PATH)/hidl/asus_framework_matrix.xml \
+    $(DEVICE_PATH)/hidl/xiaomi_framework_matrix.xml \
     $(DEVICE_PATH)/hidl/device_framework_matrix.xml \
     vendor/lineage/config/device_framework_matrix.xml
 
 DEVICE_MANIFEST_FILE := \
-    $(DEVICE_PATH)/hidl/asus_manifest.xml \
+    $(DEVICE_PATH)/hidl/xiaomi_manifest.xml \
     $(DEVICE_PATH)/hidl/manifest.xml
 
 DEVICE_MATRIX_FILE := \
@@ -103,101 +103,20 @@ BOARD_KERNEL_CMDLINE := \
     console=ttyMSM0,115200n8 \
     ip6table_raw.raw_before_defrag=1 \
     iptable_raw.raw_before_defrag=1 \
-    loop.max_part=7 \
     lpm_levels.sleep_disabled=1 \
     msm_rtb.filter=0x237 \
     pcie_ports=compat \
     service_locator.enable=1 \
     swiotlb=0 \
-    loop.max_part=7
+    loop.max_part=7 \
+    androidboot.selinux=permissive
 
-BOARD_VENDOR_KERNEL_MODULES_LOAD := \
-    adsp_loader_dlkm.ko \
-    apr_dlkm.ko \
-    aw8697.ko \
-    bolero_cdc_dlkm.ko \
-    bt_fm_slim.ko \
-    btpower.ko \
-    camera.ko \
-    cs35l45_i2c_dlkm.ko \
-    e4000.ko \
-    fc0011.ko \
-    fc0012.ko \
-    fc0013.ko \
-    fc2580.ko \
-    focaltech_fts_zf.ko \
-    gf_spi.ko \
-    hdmi_dlkm.ko \
-    it913x.ko \
-    lid.ko \
-    lid_2.ko \
-    llcc_perfmon.ko \
-    m88rs6000t.ko \
-    machine_dlkm.ko \
-    max2165.ko \
-    mbhc_dlkm.ko \
-    mc44s803.ko \
-    msi001.ko \
-    mt2060.ko \
-    mt2063.ko \
-    mt20xx.ko \
-    mt2131.ko \
-    mt2266.ko \
-    mxl301rf.ko \
-    mxl5005s.ko \
-    mxl5007t.ko \
-    native_dlkm.ko \
-    pinctrl_lpi_dlkm.ko \
-    pinctrl_wcd_dlkm.ko \
-    platform_dlkm.ko \
-    q6_dlkm.ko \
-    q6_notifier_dlkm.ko \
-    q6_pdr_dlkm.ko \
-    qm1d1b0004.ko \
-    qm1d1c0042.ko \
-    qt1010.ko \
-    r820t.ko \
-    rdbg.ko \
-    rmnet_core.ko \
-    rmnet_ctl.ko \
-    rmnet_offload.ko \
-    rmnet_shs.ko \
-    rx_macro_dlkm.ko \
-    si2157.ko \
-    sla.ko \
-    slimbus-ngd.ko \
-    slimbus.ko \
-    snd-soc-es928x.ko \
-    snd_event_dlkm.ko \
-    stub_dlkm.ko \
-    swr_ctrl_dlkm.ko \
-    swr_dlkm.ko \
-    swr_dmic_dlkm.ko \
-    swr_haptics_dlkm.ko \
-    sx932x_sake.ko \
-    tda18212.ko \
-    tda18218.ko \
-    tda18250.ko \
-    tda9887.ko \
-    tea5761.ko \
-    tea5767.ko \
-    tua9001.ko \
-    tuner-simple.ko \
-    tuner-types.ko \
-    tuner-xc2028.ko \
-    tx_macro_dlkm.ko \
-    va_macro_dlkm.ko \
-    wcd938x_dlkm.ko \
-    wcd938x_slave_dlkm.ko \
-    wcd9xxx_dlkm.ko \
-    wcd_core_dlkm.ko \
-    wlan.ko \
-    wsa883x_dlkm.ko \
-    wsa_macro_dlkm.ko \
-    xc4000.ko \
-    xc5000.ko
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load))
+BOOT_KERNEL_MODULES := $(strip $(shell cat $(DEVICE_PATH)/modules.load.recovery))
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(BOOT_KERNEL_MODULES)
+BOARD_USES_METADATA_PARTITION := true
 
-TARGET_MODULE_ALIASES += wlan.ko:qca_cld3_wlan.ko
+#TARGET_MODULE_ALIASES += wlan.ko:qca_cld3_wlan.ko
 
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
@@ -210,19 +129,23 @@ TARGET_KERNEL_ADDITIONAL_FLAGS := \
     LLVM=1
 
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CONFIG := vendor/$(PRODUCT_DEVICE)_defconfig
-TARGET_KERNEL_SOURCE := kernel/asus/sm8350
+TARGET_KERNEL_CONFIG := haydn_defconfig
+TARGET_KERNEL_SOURCE := kernel/xiaomi/haydn
+
+# Media
+TARGET_USES_ION := true
+TARGET_DISABLED_UBWC := true
 
 # Partitions
-BOARD_ASUS_DYNAMIC_PARTITIONS_PARTITION_LIST := odm product system system_ext vendor
-BOARD_ASUS_DYNAMIC_PARTITIONS_SIZE := 7512192768 # BOARD_SUPER_PARTITION_SIZE - 4MB
-BOARD_SUPER_PARTITION_GROUPS := asus_dynamic_partitions
-BOARD_SUPER_PARTITION_SIZE := 7516192768
+BOARD_BOOTIMAGE_PARTITION_SIZE := 201326592
+BOARD_DTBOIMG_PARTITION_SIZE := 8388608
+BOARD_SUPER_PARTITION_SIZE := 9126805504
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 112421842944
+BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 100663296
 
-BOARD_BOOTIMAGE_PARTITION_SIZE := 0x6000000
-BOARD_DTBOIMG_PARTITION_SIZE := 0x1800000
-BOARD_FLASH_BLOCK_SIZE := 131072
-BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := $(BOARD_BOOTIMAGE_PARTITION_SIZE)
+BOARD_SUPER_PARTITION_GROUPS := qti_dynamic_partitions
+BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := odm system system_ext vendor product
+BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 9122611200 # BOARD_SUPER_PARTITION_SIZE - 4MB
 
 ifneq ($(WITH_GMS),true)
 BOARD_PRODUCTIMAGE_EXTFS_INODE_COUNT := -1
@@ -245,7 +168,7 @@ BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := lahaina
 
 # Power
-TARGET_TAP_TO_WAKE_NODE := /proc/driver/dclick
+TARGET_TAP_TO_WAKE_NODE := "/sys/touchpanel/double_tap"
 
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
@@ -253,8 +176,6 @@ ENABLE_VENDOR_RIL_SERVICE := true
 # Recovery
 BOARD_INCLUDE_RECOVERY_DTBO := true
 BOARD_USES_RECOVERY_AS_BOOT := true
-BOOT_KERNEL_MODULES := focaltech_fts_zf.ko
-BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(BOOT_KERNEL_MODULES)
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.default
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 100
@@ -267,18 +188,17 @@ BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 PRODUCT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 
 # WLAN
-BOARD_HAS_QCOM_WLAN := true
 BOARD_WLAN_DEVICE := qcwcn
 BOARD_HOSTAPD_DRIVER := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
-BOARD_WPA_SUPPLICANT_DRIVER := $(BOARD_HOSTAPD_DRIVER)
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB := $(BOARD_HOSTAPD_PRIVATE_LIB)
-HOSTAPD_VERSION := VER_0_8_X
-WPA_SUPPLICANT_VERSION := $(HOSTAPD_VERSION)
-
-CONFIG_ACS := true
-CONFIG_IEEE80211AC := true
-CONFIG_IEEE80211AX := true
+BOARD_WPA_SUPPLICANT_DRIVER := NL80211
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
+QC_WIFI_HIDL_FEATURE_DUAL_AP := true
+WIFI_DRIVER_DEFAULT := wlan
+WIFI_DRIVER_STATE_CTRL_PARAM := "/dev/wlan"
+WIFI_DRIVER_STATE_OFF := "OFF"
+WIFI_DRIVER_STATE_ON := "ON"
 WIFI_HIDL_FEATURE_AWARE := true
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
+WPA_SUPPLICANT_VERSION := VER_0_8_X

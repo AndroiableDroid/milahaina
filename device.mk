@@ -4,9 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit from our proprietary files directory.
-$(call inherit-product, vendor/asus/sake/sake-vendor.mk)
-
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
@@ -112,9 +109,17 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
 
+#PRODUCT_PACKAGES += \
+#    android.hardware.camera.provider@2.4-service_64 \
+#    vendor.qti.hardware.camera.postproc@1.0.vendor
+
+# Consumer IR
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml
+
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.5-service_64 \
-    vendor.qti.hardware.camera.postproc@1.0.vendor
+    android.hardware.ir@1.0-impl \
+    android.hardware.ir@1.0-service
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -157,18 +162,20 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
 # HIDL
 PRODUCT_PACKAGES += \
+    android.hidl.base@1.0 \
+    android.hidl.base@1.0.vendor \
     libhidltransport.vendor \
     libhwbinder.vendor
 
 # Health
-PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-service
+#PRODUCT_PACKAGES += \
+#    android.hardware.health@2.1-impl \
+#    android.hardware.health@2.1-service
 
 # Hotword Enrollment
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/hiddenapi-package-allowlist.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/asus-hiddenapi-package-allowlist.xml \
-    $(LOCAL_PATH)/privapp-permissions-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-asus-product.xml
+    $(LOCAL_PATH)/hiddenapi-package-allowlist.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/xiaomi-hiddenapi-package-allowlist.xml \
+    $(LOCAL_PATH)/privapp-permissions-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-xiaomi-product.xml
 
 # Initialization
 PRODUCT_COPY_FILES += \
@@ -176,8 +183,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     fstab.default \
-    init.asus.rc \
-    init.asus.recovery.rc \
+    init.xiaomi.rc \
+    init.xiaomi.recovery.rc \
     init.class_main.sh \
     init.qcom.early_boot.sh \
     init.qcom.rc \
@@ -208,11 +215,13 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libavservices_minijail \
     libavservices_minijail.vendor \
+    libavservices_minijail_vendor \
     libcodec2_hidl@1.0.vendor \
     libcodec2_vndk.vendor \
     libmm-omxcore \
     libstagefright_softomx.vendor \
-    libstagefrighthw
+    libstagefrighthw \
+    libgui_vendor
 
 # NFC
 $(call inherit-product, vendor/nxp/opensource/commonsys/packages/apps/Nfc/nfc_system_product.mk)
@@ -225,7 +234,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.uicc.xml
 
 PRODUCT_PACKAGES += \
-    android.hardware.secure_element@1.0:64 \
+    SecureElement \
+    android.hardware.secure_element@1.0 \
     ls_nq_client:64 \
     jcos_nq_client:64 \
     vendor.nxp.nxpnfc@1.0.vendor
@@ -236,7 +246,7 @@ PRODUCT_SOONG_NAMESPACES += \
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    kernel/asus/sm8350
+    kernel/xiaomi/sm8350
 
 # Networking
 PRODUCT_PACKAGES += \
@@ -255,8 +265,8 @@ PRODUCT_PACKAGES += \
     TetheringResCommon \
     WifiResCommon \
     WifiResTarget \
-    ZenFone8Frameworks \
-    ZenFone8SystemUI
+    MiLahainaFrameworks \
+    MiLahainaSystemUI
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -341,17 +351,16 @@ PRODUCT_PACKAGES += \
 
 # Touch
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.sake
+    vendor.lineage.touch@1.0-service.milahaina
 
 # USB
+TARGET_HAS_DIAG_ROUTER := true
+TARGET_KERNEL_VERSION := 5.4
 $(call inherit-product, vendor/qcom/opensource/usb/vendor_product.mk)
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.accessory.xml \
     frameworks/native/data/etc/android.hardware.usb.host.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.host.xml
-
-TARGET_HAS_DIAG_ROUTER := true
-TARGET_KERNEL_VERSION := 5.4
 
 # Update Engine
 PRODUCT_PACKAGES += \
@@ -371,11 +380,7 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.mk)
 
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service.sake
-
-# WFD
-PRODUCT_BOOT_JARS += \
-    WfdCommon
+    vendor.qti.hardware.vibrator.service.milahaina
 
 PRODUCT_PACKAGES += \
     libnl \
@@ -400,3 +405,6 @@ PRODUCT_PACKAGES += \
     libwifi-hal-qcom \
     wpa_supplicant \
     wpa_supplicant.conf
+
+# Inherit from our proprietary files directory.
+$(call inherit-product, vendor/xiaomi/milahaina/milahaina-vendor.mk)

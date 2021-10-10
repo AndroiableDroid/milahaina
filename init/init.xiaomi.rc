@@ -4,6 +4,10 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+on init
+    mount overlay overlay /vendor/etc/audio lowerdir=/odm/${ro.boot.hardware.sku}/etc/audio:/vendor/etc/audio,context=u:object_r:vendor_file:s0
+    setprop ro.boot.product.vendor.sku xiaomi
+
 on fs
     # Haptics
     chown system system /sys/class/leds/vibrator/duration
@@ -21,9 +25,6 @@ on post-fs-data
     # Sensors
     write /sys/class/sensors/psensor/load_cal 1
     write /sys/class/sensors/psensor_2nd/load_cal 1
-
-    # ZRAM
-    swapon_all fstab.default
 
 on boot
     # Accelerometer
@@ -69,55 +70,8 @@ on property:persist.vendor.zram.enable=${persist.vendor.zram.enable}
     setprop vendor.zram.enable ${persist.vendor.zram.enable}
     setprop vendor.zram.disksize ${persist.vendor.zram.disksize}
 
-on property:ro.boot.country_code=JP
-    # NFC
-    setprop ro.boot.product.hardware.sku eSE
-
-on property:sys.boot_completed=1
-    # Camera
-    copy /proc/driver/dualcam_cali /data/vendor/camera/dualcam_cali
-    copy /vendor/factory/dualcam_cali.bin /data/vendor/camera/dualcam_cali.bin
-    chmod 0755 /data/vendor/camera/dualcam_cali.bin
-    chmod 0755 /data/vendor/camera/dualcam_cali
-    chmod 0644 /vendor/factory/dualcam_cali.bin
-
-    # Power
-    write /sys/class/asuslib/boot_completed 1
-
-on property:vendor.asus.virtualtherm=*
-    # Thermal
-    write /sys/class/asuslib/virtual_thermal ${vendor.asus.virtualtherm}
-
 on property:vendor.audio.in_call=*
     # Audio
     write /sys/class/asuslib/in_call ${vendor.audio.in_call}
     write /sys/class/sensors/psensor/oil_flag ${vendor.audio.in_call}
     write /sys/devices/platform/soc/990000.i2c/i2c-1/1-0038/fts_phone_state ${vendor.audio.in_call}
-
-on property:vendor.goodix.sensor.status=*
-   # Fingerprint
-   write /sys/devices/platform/soc/990000.i2c/i2c-1/1-0038/fp_auth_status ${vendor.goodix.sensor.status}
-
-on property:vendor.zram.enable=*
-   # ZRAM
-   start asus_zram
-
-service asus_zram /vendor/bin/init.asus.zram.sh
-    user root
-    group root
-    disabled
-    seclabel u:r:vendor_qti_init_shell:s0
-    oneshot
-
-service vendor.camera-provider-2-5 /vendor/bin/hw/android.hardware.camera.provider@2.5-service_64
-    override
-    interface android.hardware.camera.provider@2.4::ICameraProvider legacy/0
-    interface android.hardware.camera.provider@2.5::ICameraProvider legacy/0
-    interface vendor.asus.bspcam@1.0::IAsusBspCameraInterface default
-    interface vendor.qti.hardware.camera.postproc@1.0::IPostProcService camerapostprocservice
-    class hal
-    user cameraserver
-    group audio camera input drmrpc oem_2907
-    ioprio rt 4
-    capabilities SYS_NICE
-    writepid /dev/cpuset/camera-daemon/tasks /dev/stune/foreground/tasks
