@@ -194,6 +194,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fstab.default \
     init.xiaomi.rc \
+    init.xiaomi.audio.rc \
     init.xiaomi.recovery.rc \
     init.xiaomi.camera.rc \
     init.class_main.sh \
