@@ -133,8 +133,6 @@ vendor/etc/acdbdata/nn_vad_models/fai_3.0.0_0.0_eai_1.00.pmd
 vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_1.10.pmd
 vendor/etc/audio/audio_policy_configuration.xml
 vendor/etc/audio_diag.cfg
-vendor/etc/audio_effects.conf
-vendor/etc/audio_effects.xml
 vendor/etc/audio_io_policy.conf
 vendor/etc/audio_platform_info_hdk.xml
 vendor/etc/audio_platform_info_intcodec.xml
@@ -151,8 +149,6 @@ vendor/etc/audio_policy_engine_product_strategies.xml
 vendor/etc/audio_policy_engine_stream_volumes_mi.xml
 vendor/etc/audio_policy_engine_stream_volumes.xml
 vendor/etc/audio_policy_volumes.xml
-vendor/etc/audio/sku_lahaina/audio_effects.conf
-vendor/etc/audio/sku_lahaina/audio_effects.xml
 vendor/etc/audio/sku_lahaina/audio_io_policy.conf
 vendor/etc/audio/sku_lahaina/audio_platform_info_hdk.xml
 vendor/etc/audio/sku_lahaina/audio_platform_info_intcodec.xml
@@ -192,7 +188,6 @@ vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
 vendor/lib/soundfx/libshoebox.so
-vendor/lib/soundfx/libvolumelistener.so
 vendor/lib/libAlacSwDec.so
 vendor/lib/libApeSwDec.so
 vendor/lib/libFlacSwDec.so
@@ -227,7 +222,6 @@ vendor/lib/libcapiv2svarnn.so
 vendor/lib/libcapiv2vop.so
 vendor/lib/libdrc.so
 vendor/lib/libdsd2pcm.so
-vendor/lib/libeffectsconfig.so
 vendor/lib/libgcs-calwrapper.so
 vendor/lib/libgcs-ipc.so
 vendor/lib/libgcs-osal.so
@@ -251,7 +245,6 @@ vendor/lib64/soundfx/libqcbassboost.so
 vendor/lib64/soundfx/libqcreverb.so
 vendor/lib64/soundfx/libqcvirt.so
 vendor/lib64/soundfx/libshoebox.so
-vendor/lib64/soundfx/libvolumelistener.so
 vendor/lib64/libAlacSwDec.so
 vendor/lib64/libApeSwDec.so
 vendor/lib64/libFlacSwDec.so
@@ -280,7 +273,6 @@ vendor/lib64/libaudioparsers.so
 vendor/lib64/libcapiv2svacnn.so
 vendor/lib64/libcapiv2svarnn.so
 vendor/lib64/libcapiv2vop.so
-vendor/lib64/libeffectsconfig.so
 vendor/lib64/libgcs-calwrapper.so
 vendor/lib64/libgcs-ipc.so
 vendor/lib64/libgcs-osal.so
