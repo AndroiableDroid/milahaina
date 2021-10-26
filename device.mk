@@ -86,6 +86,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     fstab.default \
+    init.xiaomi.camera.rc \
     init.xiaomi.recovery.rc \
     init.class_main.sh \
     init.qcom.class_core.sh \
