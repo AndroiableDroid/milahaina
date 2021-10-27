@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+on init
+    mount overlay overlay /vendor/etc/audio lowerdir=/odm/${ro.boot.hardware.sku}/etc/audio:/vendor/etc/audio,context=u:object_r:vendor_file:s0
+
 on early-boot
     exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.xiaomi.early_boot.sh
 
