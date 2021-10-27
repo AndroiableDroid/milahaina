@@ -169,6 +169,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
 # HIDL
 PRODUCT_PACKAGES += \
+    android.hidl.base@1.0 \
+    android.hidl.base@1.0.vendor \
     libhidltransport.vendor \
     libhwbinder.vendor
 
@@ -216,11 +218,13 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libavservices_minijail \
     libavservices_minijail.vendor \
+    libavservices_minijail_vendor \
     libcodec2_hidl@1.0.vendor \
     libcodec2_vndk.vendor \
     libmm-omxcore \
     libstagefright_softomx.vendor \
-    libstagefrighthw
+    libstagefrighthw \
+    libgui_vendor
 
 # NFC
 $(call inherit-product, vendor/nxp/opensource/commonsys/packages/apps/Nfc/nfc_system_product.mk)
