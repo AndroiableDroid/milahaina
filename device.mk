@@ -307,6 +307,9 @@ PRODUCT_PACKAGES += \
     MiLahainaFrameworks \
     MilahainaSystemUI
 
+# Platform
+TARGET_BOARD_PLATFORM := lahaina
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
