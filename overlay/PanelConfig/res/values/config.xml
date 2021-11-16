@@ -27,15 +27,6 @@
     <!-- Default refresh rate while the device has high brightness mode enabled for HDR. -->
     <integer name="config_defaultRefreshRateInHbmHdr">60</integer>
 
-    <!-- Not allow to switch to higher refresh rate when (display, ambient) brightness falls into
-         the region defined by the two arrays -->
-    <integer-array name="config_brightnessThresholdsOfPeakRefreshRate">
-        <item>-1</item>
-    </integer-array>
-    <integer-array name="config_ambientThresholdsOfPeakRefreshRate">
-        <item>-1</item>
-    </integer-array>
-
     <!-- Whether the always on display mode is available. -->
     <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
 
@@ -483,6 +474,22 @@
         <item>500</item>
     </integer-array>
 
+    <!-- The display uses different gamma curves for different refresh rates. It's hard for panel
+         vendor to tune the curves to have exact same brightness for different refresh rate. So
+         flicker could be observed at switch time. The issue is worse at the gamma lower end.
+         In addition, human eyes are more sensitive to the flicker at darker environment.
+         To prevent flicker, we only support higher refresh rates if the display brightness is above
+         a threshold. And the darker environment could have higher threshold.
+         For example, no higher refresh rate if
+             display brightness <= disp0 && ambient brightness <= amb0
+             || display brightness <= disp1 && ambient brightness <= amb1 -->
+    <integer-array name="config_brightnessThresholdsOfPeakRefreshRate">
+        <item>74</item> <!-- 77% UI brightness -->
+    </integer-array>
+    <integer-array name="config_ambientThresholdsOfPeakRefreshRate">
+        <item>63</item>
+    </integer-array>
+
     <!-- The bounding path of the cutout region of the main built-in display.
          Must either be empty if there is no cutout region, or a string that is parsable by
          {@link android.util.PathParser}.
@@ -509,25 +516,28 @@
         H 0 Z
     </string>
 
+    <!-- The default intensity level for haptic feedback. See Settings.System.HAPTIC_FEEDBACK_INTENSITY
+         for more details on the constant values and meanings. -->
+    <integer name="config_defaultHapticFeedbackIntensity">3</integer>
+
     <!-- Vibrator pattern for feedback about a long screen/key press -->
     <integer-array name="config_longPressVibePattern">
         <item>0</item>
-        <item>1</item>
-        <item>20</item>
-        <item>21</item>
+        <item>12</item>
+        <item>7</item>
     </integer-array>
 
     <!-- Vibrator pattern for feedback about touching a virtual key -->
     <integer-array name="config_virtualKeyVibePattern">
         <item>0</item>
-        <item>10</item>
-        <item>20</item>
-        <item>30</item>
+        <item>12</item>
+        <item>7</item>
+    </integer-array>
     </integer-array>
 
     <!-- Vibrator pattern for a very short but reliable vibration for soft keyboard tap -->
     <integer-array name="config_keyboardTapVibePattern">
-        <item>40</item>
+        <item>10</item>
     </integer-array>
 
     <!-- Vibrator pattern for feedback when selecting an hour/minute tick of a Clock -->
@@ -560,26 +570,10 @@
         <item>10</item>
     </integer-array>
 
-    <!-- Vibrator pattern to be used as the default for notifications
-         that specify DEFAULT_VIBRATE.
-     -->
-    <integer-array name="config_defaultNotificationVibePattern">
-        <item>0</item>
-        <item>350</item>
-        <item>250</item>
-        <item>350</item>
-    </integer-array>
-
-    <!-- Vibrator pattern to be used as the default for notifications
-         that do not specify vibration but vibrate anyway because the device
-         is in vibrate mode.
-     -->
-    <integer-array name="config_notificationFallbackVibePattern">
-        <item>0</item>
-        <item>100</item>
-        <item>150</item>
-        <item>100</item>
-    </integer-array>
+    <!-- The default intensity level for notification vibrations. See
+         Settings.System.NOTIFICATION_VIBRATION_INTENSITY more details on the constant values and
+         meanings. -->
+    <integer name="config_defaultNotificationVibrationIntensity">3</integer>
 
     <!-- Indicate whether to allow the device to suspend when the screen is off
          due to the proximity sensor.  This resource should only be set to true
