@@ -512,7 +512,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepdetector.xml
 
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@2.0-service.multihal \
+    android.hardware.sensors@2.0-service.milahaina-multihal \
     libsensorndkbridge
 
 # Service Tracker
