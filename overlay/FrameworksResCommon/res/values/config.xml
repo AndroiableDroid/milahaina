@@ -271,4 +271,13 @@
     <!-- Flag indicating which package name can access the persistent data partition -->
     <string name="config_persistentDataPackageName">com.google.android.gms</string>
 
+    <!-- Telephony qualified networks service package name to bind to by default. -->
+    <string name="config_qualified_networks_service_package">vendor.qti.iwlan</string>
+
+    <!-- IWLAN data service package name to bind to by default. -->
+    <string name="config_wlan_data_service_package">vendor.qti.iwlan</string>
+
+    <!-- IWLAN network service package name to bind to by default. -->
+    <string name="config_wlan_network_service_package">vendor.qti.iwlan</string>
+
 </resources>
