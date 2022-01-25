@@ -1,1 +1,9 @@
+# Audio
+persist.vendor.audio.bcl.enabled=false
+persist.vendor.audio.speaker.prot.enable=false
+persist.vendor.audio.vbat.enabled=false
+vendor.audio.spkr_prot.tx.sampling_rate=0
+ro.vendor.audio.sdk.fluencetype=fluence
+
+# Device Props
 import /odm/etc/${ro.boot.product.hardware.sku}.build.prop
