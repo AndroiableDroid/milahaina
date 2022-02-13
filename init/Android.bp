@@ -42,6 +42,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.xiaomi.perf.rc",
+    src: "init.xiaomi.perf.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.xiaomi.recovery.rc",
     src: "init.xiaomi.recovery.rc",
     sub_dir: "init",
@@ -106,6 +113,12 @@ sh_binary {
 sh_binary {
     name: "init.qcom.early_boot.sh",
     src: "init.qcom.early_boot.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.xiaomi.post_boot.sh",
+    src: "init.xiaomi.post_boot.sh",
     vendor: true,
 }
 
