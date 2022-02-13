@@ -216,6 +216,7 @@ PRODUCT_PACKAGES += \
     init.xiaomi.rc \
     init.xiaomi.audio.rc \
     init.xiaomi.recovery.rc \
+    init.xiaomi.perf.rc
     init.xiaomi.camera.rc \
     init.class_main.sh \
     init.qcom.early_boot.sh \
@@ -223,9 +224,13 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.target.rc \
     init.xiaomi.early_boot.sh \
+    init.xiaomi.post_boot.sh
     ueventd.lahaina.rc \
     ueventd.milahaina.rc \
     ueventd.qcom.rc
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.post_boot.custom=true
 
 # Keymaster
 PRODUCT_PACKAGES += \
