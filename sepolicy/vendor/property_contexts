@@ -38,3 +38,6 @@ persist.vendor.asus.gyrosensor2caliby       u:object_r:vendor_sensors_prop:s0
 persist.vendor.asus.gyrosensor2calibz       u:object_r:vendor_sensors_prop:s0
 persist.vendor.asus.gyrosensor2calibtime    u:object_r:vendor_sensors_prop:s0
 vendor.proximity.                           u:object_r:vendor_sensors_prop:s0
+
+# Thermal
+vendor.sys.thermal.data.path                u:object_r:vendor_thermal_prop:s0

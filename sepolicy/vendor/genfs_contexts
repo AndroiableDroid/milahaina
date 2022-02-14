@@ -1,3 +1,6 @@
+# Battery
+genfscon sysfs /class/qcom-battery                u:object_r:vendor_sysfs_battery_supply:s0
+
 # Camera
 genfscon proc /driver/dualcam_cali    u:object_r:vendor_proc_camera:s0
 genfscon proc /driver/ois_af_state    u:object_r:vendor_proc_camera:s0
@@ -34,8 +37,7 @@ genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/finger_irq             
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pmk8350@0:rtc@6100/rtc/rtc0/alarmtimer.0.auto/modalias         u:object_r:vendor_sysfs_fingerprint:s0
 
 # Sensors
-genfscon sysfs /class/icm206xx             u:object_r:vendor_sysfs_sensors:s0
-genfscon sysfs /devices/virtual/sensors    u:object_r:vendor_sysfs_sensors:s0
+genfscon sysfs /class/touch/touch_dev/palm_sensor             u:object_r:vendor_sysfs_sensors:s0
 
 # Thermal
 genfscon sysfs /class/asuslib/set_virtualthermal    u:object_r:sysfs_thermal:s0
