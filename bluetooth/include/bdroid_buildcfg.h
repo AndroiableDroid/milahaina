@@ -19,7 +19,36 @@
 
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
-#define BTM_DEF_LOCAL_NAME   "QCOM-BTD"
+#include <cutils/properties.h>
+#include <string.h>
+
+inline const char* BtmGetDefaultName()
+{
+	char sku[PROPERTY_VALUE_MAX];
+	property_get("ro.boot.product.hardware.sku", sku, "");
+
+        if (!strcmp("haydn", sku)) {
+		return "Mi 11i Global";
+        } else if (!strcmp("haydn_in", sku)) {
+                return "Mi 11X Pro";
+        } else if (!strcmp("haydnpro", sku)) {
+                return "Redmi K40 Pro+";
+        } else if (!strcmp("mars", sku)) {
+		return "Mi 11 Pro";
+        } else if (!strcmp("star", sku)) {
+                return "Mi 11 Ultra";
+        } else if (!strcmp("viliin", sku)) {
+                return "Xiaomi 11T Pro";
+        } else if (!strcmp("viligl", sku)) {
+                return "Xiaomi 11T Pro";
+        } else if (!strcmp("vilijp", sku)) {
+                return "Xiaomi 11T Pro";
+        } else {
+		return "MiLahaina";
+	}
+}
+
+#define BTM_DEF_LOCAL_NAME BtmGetDefaultName()
 // Disables read remote device feature
 #define MAX_ACL_CONNECTIONS   16
 #define MAX_L2CAP_CHANNELS    32
