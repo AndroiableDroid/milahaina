@@ -10,38 +10,7 @@ ifneq ($(filter milahaina,$(TARGET_DEVICE)),)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
-# A/B builds require us to create the mount points at compile time.
-# Just creating it for all cases since it does not hurt.
-FIRMWARE_MOUNT_POINT := $(TARGET_OUT_VENDOR)/firmware_mnt
-$(FIRMWARE_MOUNT_POINT): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating $(FIRMWARE_MOUNT_POINT)"
-	@mkdir -p $(TARGET_OUT_VENDOR)/firmware_mnt
-
-BT_FIRMWARE_MOUNT_POINT := $(TARGET_OUT_VENDOR)/bt_firmware
-$(BT_FIRMWARE_MOUNT_POINT): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating $(BT_FIRMWARE_MOUNT_POINT)"
-	@mkdir -p $(TARGET_OUT_VENDOR)/bt_firmware
-
-DSP_MOUNT_POINT := $(TARGET_OUT_VENDOR)/dsp
-$(DSP_MOUNT_POINT): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating $(DSP_MOUNT_POINT)"
-	@mkdir -p $(TARGET_OUT_VENDOR)/dsp
-
-VM_MOUNT_POINT := $(TARGET_OUT_VENDOR)/vm-system
-$(VM_MOUNT_POINT): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating $(VM_MOUNT_POINT)"
-	@mkdir -p $(VM_MOUNT_POINT)
-
-ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_MOUNT_POINT) $(BT_FIRMWARE_MOUNT_POINT) $(DSP_MOUNT_POINT) $(VM_MOUNT_POINT)
-
-FACTORY_MOUNT_POINT_SYMLINK := $(TARGET_OUT_VENDOR)/factory
-$(FACTORY_MOUNT_POINT_SYMLINK): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating $@ link"
-	@rm -rf $@
-	$(hide) ln -sf /mnt/vendor/persist $@
-
-ALL_DEFAULT_INSTALLED_MODULES += $(FACTORY_MOUNT_POINT_SYMLINK)
-
+# Symlinks
 RFS_MSM_ADSP_SYMLINKS := $(TARGET_OUT_VENDOR)/rfs/msm/adsp/
 $(RFS_MSM_ADSP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@rm -rf $@/*
@@ -86,6 +55,17 @@ $(RFS_MSM_SLPI_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /vendor/firmware_mnt $@/readonly/firmware
 	$(hide) ln -sf /vendor/firmware $@/readonly/vendor/firmware
 
+RFS_MSM_WPSS_SYMLINKS := $(TARGET_OUT_VENDOR)/rfs/msm/wpss/
+$(RFS_MSM_WPSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@rm -rf $@/*
+	@mkdir -p $(dir $@)/readonly/vendor
+	$(hide) ln -sf /data/vendor/tombstones/rfs/wpss $@/ramdumps
+	$(hide) ln -sf /mnt/vendor/persist/rfs/msm/wpss $@/readwrite
+	$(hide) ln -sf /mnt/vendor/persist/rfs/shared $@/shared
+	$(hide) ln -sf /mnt/vendor/persist/hlos_rfs/shared $@/hlos
+	$(hide) ln -sf /vendor/firmware_mnt $@/readonly/firmware
+	$(hide) ln -sf /vendor/firmware $@/readonly/vendor/firmware
+
 WIFI_FIRMWARE_SYMLINKS := $(TARGET_OUT_VENDOR)/firmware/wlan/qca_cld
 $(WIFI_FIRMWARE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "Creating WiFi firmware symlinks: $@"
@@ -98,6 +78,7 @@ ALL_DEFAULT_INSTALLED_MODULES += \
     $(RFS_MSM_CDSP_SYMLINKS) \
     $(RFS_MSM_MPSS_SYMLINKS) \
     $(RFS_MSM_SLPI_SYMLINKS) \
-    $(WIFI_FIRMWARE_SYMLINKS)
+    $(RFS_MSM_WPSS_SYMLINKS) \
+    $(WLAN_FIRMWARE_SYMLINKS)
 
 endif
