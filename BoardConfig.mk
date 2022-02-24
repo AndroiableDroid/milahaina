@@ -114,7 +114,8 @@ BOARD_KERNEL_CMDLINE := \
     pcie_ports=compat \
     service_locator.enable=1 \
     swiotlb=0 \
-    loop.max_part=7
+    loop.max_part=7 \
+    firmware_class.path=/vendor/firmware
 
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load))
 
