@@ -438,6 +438,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
 
+# vm-bootsys
+TARGET_ENABLE_VM_SUPPORT := true
+
 # VNDK
 PRODUCT_EXTRA_VNDK_VERSIONS := 30
 
