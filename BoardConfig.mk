@@ -5,6 +5,8 @@
 #
 
 BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
+
 DEVICE_PATH := device/xiaomi/milahaina
 
 include build/make/target/board/BoardConfigMainlineCommon.mk
@@ -81,6 +83,9 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(DEVICE_PATH)/hidl/xiaomi_framework_matrix.xml \
     $(DEVICE_PATH)/hidl/device_framework_matrix.xml \
     vendor/lineage/config/device_framework_matrix.xml
+
+DEVICE_FRAMEWORK_MANIFEST_FILE := \
+    $(DEVICE_PATH)/hidl/framework_manifest.xml
 
 DEVICE_MANIFEST_FILE := \
     $(DEVICE_PATH)/hidl/xiaomi_manifest.xml \

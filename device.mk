@@ -200,8 +200,10 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qcom.sh \
     init.target.rc \
-    ueventd.qcom.rc \
-    ueventd.milahaina.rc
+    init.xiaomi.early_boot.sh \
+    ueventd.lahaina.rc \
+    ueventd.milahaina.rc \
+    ueventd.qcom.rc
 
 # Keymaster
 PRODUCT_COPY_FILES += \
@@ -277,6 +279,7 @@ PRODUCT_PACKAGES += \
     WifiResCommon \
     WifiResTarget \
     PanelConfig \
+    MiLahainaFrameworks \
     MilahainaSystemUI
 
 # Partitions
@@ -304,7 +307,7 @@ PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti.vendor
 
 # Security
-BOOT_SECURITY_PATCH := 2021-05-05
+BOOT_SECURITY_PATCH := 2021-11-01
 VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
 PRODUCT_PACKAGES += \
