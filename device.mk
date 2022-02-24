@@ -345,6 +345,10 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.3.vendor \
     android.hardware.radio.deprecated@1.0.vendor
 
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # Security
 BOOT_SECURITY_PATCH := 2021-11-01
 VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
