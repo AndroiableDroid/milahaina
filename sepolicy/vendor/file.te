@@ -24,3 +24,9 @@ type ultrasound_device, dev_type;
 
 # iio sysfs
 type vendor_sysfs_iio, fs_type, sysfs_type;
+
+# thermal
+type vendor_thermal_data_file, file_type, data_file_type;
+
+# msm_subsys
+type vendor_sysfs_msm_subsys, fs_type, sysfs_type;
