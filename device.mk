@@ -92,6 +92,7 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio@2.0-impl \
     audio.bluetooth.default \
     com.dsi.ant@1.0.vendor \
+    android.hardware.bluetooth@1.1.vendor \
     com.qualcomm.qti.bluetooth_audio@1.0.vendor \
     liba2dpoffload \
     libbluetooth_audio_session \
@@ -130,7 +131,8 @@ PRODUCT_PACKAGES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.3-service.clearkey
+    android.hardware.drm@1.3-service.clearkey \
+    android.hardware.drm@1.4.vendor
 
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
@@ -180,10 +182,20 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/hiddenapi-package-allowlist.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/xiaomi-hiddenapi-package-allowlist.xml \
     $(LOCAL_PATH)/privapp-permissions-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-xiaomi-product.xml
 
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0.vendor
+
 # GSI
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
 # GPS
+BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
+
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.1.vendor \
+    android.hardware.gnss@2.1.vendor
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
 
@@ -208,6 +220,9 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc
 
 # Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.1.vendor
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml
 
@@ -251,12 +266,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     SecureElement \
     android.hardware.secure_element@1.0:64 \
+    android.hardware.secure_element@1.2.vendor \
     ls_nq_client:64 \
     jcos_nq_client:64 \
     vendor.nxp.nxpnfc@1.0.vendor
 
 PRODUCT_SOONG_NAMESPACES += \
-    vendor/nxp/opensource/sn100x
+    vendor/nxp/opensource/halimpl
 
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
@@ -266,6 +282,13 @@ PRODUCT_SOONG_NAMESPACES += \
 # Networking
 PRODUCT_PACKAGES += \
     libnl
+
+PRODUCT_PACKAGES += \
+    android.system.net.netd@1.1.vendor
+
+# NeuralNetworks
+PRODUCT_PACKAGES += \
+    android.hardware.neuralnetworks@1.3.vendor
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
@@ -307,6 +330,12 @@ PRODUCT_PACKAGES += \
     libqti_vndfwk_detect.vendor \
     libvndfwk_detect_jni.qti \
     libvndfwk_detect_jni.qti.vendor
+
+# Radio
+PRODUCT_PACKAGES += \
+    android.hardware.radio@1.6.vendor \
+    android.hardware.radio.config@1.3.vendor \
+    android.hardware.radio.deprecated@1.0.vendor
 
 # Security
 BOOT_SECURITY_PATCH := 2021-11-01
