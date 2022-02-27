@@ -12,6 +12,9 @@ DEVICE_PATH := device/xiaomi/milahaina
 
 include build/make/target/board/BoardConfigMainlineCommon.mk
 
+# Treble
+BOARD_VNDK_VERSION := current
+
 # A/B
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS := \
@@ -115,7 +118,8 @@ BOARD_KERNEL_CMDLINE := \
     service_locator.enable=1 \
     swiotlb=0 \
     loop.max_part=7 \
-    firmware_class.path=/vendor/firmware
+    firmware_class.path=/vendor/firmware \
+    androidboot.selinux=permissive
 
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load))
 
@@ -144,7 +148,7 @@ BOARD_DTBOIMG_PARTITION_SIZE := 0x1800000
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 0x06000000
 
-ifneq ($(WITH_GMS),true)
+ifeq ($(WITH_GMS),true)
 BOARD_PRODUCTIMAGE_EXTFS_INODE_COUNT := -1
 BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 2000000000
 BOARD_SYSTEMIMAGE_EXTFS_INODE_COUNT := -1
@@ -186,6 +190,11 @@ include device/qcom/sepolicy_vndr/SEPolicy.mk
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
+
+# Soong
+SOONG_CONFIG_NAMESPACES += ufsbsg
+SOONG_CONFIG_ufsbsg += ufsframework
+SOONG_CONFIG_ufsbsg_ufsframework := bsg
 
 # WLAN
 BOARD_HAS_QCOM_WLAN := true
