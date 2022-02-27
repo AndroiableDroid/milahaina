@@ -1,2 +1,4 @@
 xiaomi_touch.ko
-focaltech_touch.ko
+fts_touch_spi.ko
+xiaomi_touch.ko
+msm_drm.ko
