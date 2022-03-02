@@ -148,18 +148,6 @@
             <instance>camerapostprocservice</instance>
         </interface>
     </hal>
-    <!-- Codec2 Ozoaudio -->
-    <hal format="hidl">
-        <name>android.hardware.media.c2</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IComponentStore</name>
-            <instance>default</instance>
-            <instance>ozoaudio</instance>
-            <instance>software</instance>
-        </interface>
-     </hal>
     <!-- Config Store -->
     <hal format="hidl">
         <name>vendor.qti.hardware.capabilityconfigstore</name>

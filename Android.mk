@@ -73,12 +73,21 @@ $(WIFI_FIRMWARE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /vendor/etc/wifi/WCNSS_qcom_cfg.ini $@/WCNSS_qcom_cfg.ini
 	$(hide) ln -sf /mnt/vendor/persist/wlan_mac.bin $@/wlan_mac.bin
 
+# WiFi firmware symlinks
+WLAN_CHIPSETS := wlan qca6750 qca6390
+$(foreach chip, $(WLAN_CHIPSETS), \
+	$(shell mkdir -p $(TARGET_OUT_VENDOR)/firmware/wlan/qca_cld/$(chip); \
+	ln -sf /vendor/etc/wifi/$(chip)/WCNSS_qcom_cfg.ini \
+	$(TARGET_OUT_VENDOR)/firmware/wlan/qca_cld/$(chip)/WCNSS_qcom_cfg.ini; \
+	ln -sf /mnt/vendor/persist/wlan/wlan_mac.bin \
+	$(TARGET_OUT_VENDOR)/firmware/wlan/qca_cld/$(chip)/wlan_mac.bin))
+
 ALL_DEFAULT_INSTALLED_MODULES += \
     $(RFS_MSM_ADSP_SYMLINKS) \
     $(RFS_MSM_CDSP_SYMLINKS) \
     $(RFS_MSM_MPSS_SYMLINKS) \
     $(RFS_MSM_SLPI_SYMLINKS) \
-    $(RFS_MSM_WPSS_SYMLINKS) \
-    $(WLAN_FIRMWARE_SYMLINKS)
+    $(RFS_MSM_WPSS_SYMLINKS)
 
 endif
+include vendor/qcom/opensource/wlan/qcacld-3.0/Android.mk

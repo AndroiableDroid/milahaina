@@ -18,7 +18,6 @@
         <interface>
             <name>IComponentStore</name>
             <instance>default</instance>
-            <instance>ozoaudio</instance>
             <instance>software</instance>
         </interface>
     </hal>
@@ -553,6 +552,22 @@
         <version>1.0</version>
         <interface>
             <name>IQspmhal</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.xiaomi.hardware.citsensorservice</name>
+        <version>1.1</version>
+        <interface>
+            <name>ICitSensorService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.xiaomi.hardware.displayfeature</name>
+        <version>1.0</version>
+        <interface>
+            <name>IDisplayFeature</name>
             <instance>default</instance>
         </interface>
     </hal>
