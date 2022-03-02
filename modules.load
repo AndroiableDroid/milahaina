@@ -4,7 +4,9 @@ bolero_cdc_dlkm.ko
 bt_fm_slim.ko
 btpower.ko
 camera.ko
+cameralog.ko
 cnss2.ko
+icnss2.ko
 cnss_utils.ko
 cs35l41_dlkm.ko
 device_management_service_v01.ko
@@ -82,6 +84,8 @@ va_macro_dlkm.ko
 wcd938x_dlkm.ko
 wcd938x_slave_dlkm.ko
 wcd9xxx_dlkm.ko
+wcd937x_dlkm.ko
+wcd937x_slave_dlkm.ko
 wcd_core_dlkm.ko
 wlan_firmware_service_v01.ko
 wlan.ko
@@ -89,4 +93,5 @@ wsa883x_dlkm.ko
 wsa_macro_dlkm.ko
 xc4000.ko
 xc5000.ko
+fts_touch_spi.ko
 xiaomi_touch.ko

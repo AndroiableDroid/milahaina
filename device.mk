@@ -299,6 +299,7 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
     CarrierConfigResCommon \
     FrameworksResCommon \
+    aptxalsOverlay \
     FrameworksResTarget \
     SystemUIResCommon \
     TelephonyResCommon \
@@ -342,10 +343,6 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.6.vendor \
     android.hardware.radio.config@1.3.vendor \
     android.hardware.radio.deprecated@1.0.vendor
-
-# Remove unwanted packages
-PRODUCT_PACKAGES += \
-    RemovePackages
 
 # Security
 BOOT_SECURITY_PATCH := 2021-11-01
