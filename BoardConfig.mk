@@ -101,6 +101,10 @@ DEVICE_MATRIX_FILE := \
 ODM_MANIFEST_SKUS := haydnpro
 ODM_MANIFEST_HAYDNPRO_FILES := $(DEVICE_PATH)/hidl/haydnpro_manifest.xml
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_milahaina
+TARGET_RECOVERY_DEVICE_MODULES := libinit_milahaina
+
 # Kernel
 BOARD_KERNEL_CMDLINE := \
     androidboot.console=ttyMSM0 \
