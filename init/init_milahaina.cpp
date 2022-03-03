@@ -77,16 +77,18 @@ void set_device_props(const string model, const string name, const string market
 
 void vendor_load_properties()
 {
-    // Detect device and configure properties
-    string region = GetProperty("ro.boot.hwc", "");
+   if (!android::init::IsRecoveryMode()) {    // DO-NOT Update props in recovery
+      // Detect device and configure properties
+      string region = GetProperty("ro.boot.hwc", "");
 
-    if (region == "IN") { // India
-        set_device_props("2107113SI", "vili_in", "Xiaomi 11T Pro");
-    } else if (region == "JP") { // Japan
-        set_device_props("2107113SR", "vili", "Xiaomi 11T Pro");
-    } else { // Global
-        set_device_props("2107113SG", "vili_global", "Xiaomi 11T Pro");
-    }
+      if (region == "IN") { // India
+          set_device_props("2107113SI", "vili_in", "Xiaomi 11T Pro");
+      } else if (region == "JP") { // Japan
+          set_device_props("2107113SR", "vili", "Xiaomi 11T Pro");
+      } else { // Global
+          set_device_props("2107113SG", "vili_global", "Xiaomi 11T Pro");
+      }
+   }
 
     // Set hardware revision
     property_override("ro.boot.hardware.revision", GetProperty("ro.boot.hwversion", "").c_str());
