@@ -46,7 +46,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.audio.bcl.enabled=false \
     persist.vendor.audio.speaker.prot.enable=false \
     persist.vendor.audio.vbat.enabled=false \
-    vendor.audio.spkr_prot.tx.sampling_rate=0
+    vendor.audio.spkr_prot.tx.sampling_rate=0 \
+    ro.vendor.audio.sdk.fluencetype=fluence
 
 $(call inherit-product, hardware/qcom-caf/sm8350/audio/configs/lahaina/lahaina.mk)
 $(call inherit-product, vendor/qcom/opensource/audio/configs/qssi/qssi.mk)
