@@ -90,4 +90,3 @@ ALL_DEFAULT_INSTALLED_MODULES += \
     $(RFS_MSM_WPSS_SYMLINKS)
 
 endif
-include vendor/qcom/opensource/wlan/qcacld-3.0/Android.mk

@@ -161,6 +161,11 @@ PRODUCT_PACKAGES += \
     lights.qcom \
     vendor.lineage.livedisplay@2.0-service-sdm
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.display.use_layer_ext=1 \
+    ro.surface_flinger.refresh_rate_switching=true \
+    ro.surface_flinger.use_content_detection_for_refresh_rate=true
+
 # Fastboot
 PRODUCT_PACKAGES += \
     fastbootd
