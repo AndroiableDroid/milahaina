@@ -211,11 +211,14 @@ vendor/lib/libaudioroute_ext.so
 vendor/lib/libhdmipassthru.so
 vendor/lib/libqtigef.so
 vendor/lib/libvideoNS.so
+vendor/lib/libresampler.so
+vendor/lib64/libresampler.so
 vendor/lib64/liba2dpoffload.so
 vendor/lib64/libacdbloader.so
 vendor/lib64/libhdmipassthru.so
 
 # Audio (acdbdata)
+vendor/etc/acdbdata/adsp_avs_config.acdb
 vendor/etc/acdbdata/CDP/CDP_Bluetooth_cal.acdb
 vendor/etc/acdbdata/CDP/CDP_General_cal.acdb
 vendor/etc/acdbdata/CDP/CDP_Global_cal.acdb
@@ -224,6 +227,22 @@ vendor/etc/acdbdata/CDP/CDP_Hdmi_cal.acdb
 vendor/etc/acdbdata/CDP/CDP_Headset_cal.acdb
 vendor/etc/acdbdata/CDP/CDP_Speaker_cal.acdb
 vendor/etc/acdbdata/CDP/CDP_workspaceFile.qwsp
+vendor/etc/acdbdata/HDK/HDK_Bluetooth_cal.acdb
+vendor/etc/acdbdata/HDK/HDK_General_cal.acdb
+vendor/etc/acdbdata/HDK/HDK_Global_cal.acdb
+vendor/etc/acdbdata/HDK/HDK_Handset_cal.acdb
+vendor/etc/acdbdata/HDK/HDK_Hdmi_cal.acdb
+vendor/etc/acdbdata/HDK/HDK_Headset_cal.acdb
+vendor/etc/acdbdata/HDK/HDK_Speaker_cal.acdb
+vendor/etc/acdbdata/HDK/HDK_workspaceFile.qwsp
+vendor/etc/acdbdata/HDK/lahaina-hhg-snd-card/HHG_Bluetooth_cal.acdb
+vendor/etc/acdbdata/HDK/lahaina-hhg-snd-card/HHG_General_cal.acdb
+vendor/etc/acdbdata/HDK/lahaina-hhg-snd-card/HHG_Global_cal.acdb
+vendor/etc/acdbdata/HDK/lahaina-hhg-snd-card/HHG_Handset_cal.acdb
+vendor/etc/acdbdata/HDK/lahaina-hhg-snd-card/HHG_Hdmi_cal.acdb
+vendor/etc/acdbdata/HDK/lahaina-hhg-snd-card/HHG_Headset_cal.acdb
+vendor/etc/acdbdata/HDK/lahaina-hhg-snd-card/HHG_Speaker_cal.acdb
+vendor/etc/acdbdata/HDK/lahaina-hhg-snd-card/HHG_workspaceFile.qwsp
 vendor/etc/acdbdata/IDP/IDP_Shima_Bluetooth_cal.acdb
 vendor/etc/acdbdata/IDP/IDP_Shima_General_cal.acdb
 vendor/etc/acdbdata/IDP/IDP_Shima_Global_cal.acdb
@@ -254,7 +273,6 @@ vendor/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.00.pmd
 vendor/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.10.pmd
 vendor/etc/acdbdata/nn_vad_models/fai_3.0.0_0.0_eai_1.00.pmd
 vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_1.10.pmd
-vendor/etc/acdbdata/adsp_avs_config.acdb
 vendor/etc/acdbdata/QRD/lahaina-shimaqrd-snd-card/QRD_Shima_Bluetooth_cal.acdb
 vendor/etc/acdbdata/QRD/lahaina-shimaqrd-snd-card/QRD_Shima_General_cal.acdb
 vendor/etc/acdbdata/QRD/lahaina-shimaqrd-snd-card/QRD_Shima_Global_cal.acdb
@@ -271,14 +289,6 @@ vendor/etc/acdbdata/QRD/lahaina-yupikqrd-snd-card/QRD_Yupik_Hdmi_cal.acdb
 vendor/etc/acdbdata/QRD/lahaina-yupikqrd-snd-card/QRD_Yupik_Headset_cal.acdb
 vendor/etc/acdbdata/QRD/lahaina-yupikqrd-snd-card/QRD_Yupik_Speaker_cal.acdb
 vendor/etc/acdbdata/QRD/lahaina-yupikqrd-snd-card/QRD_Yupik_workspaceFile.qwsp
-vendor/etc/acdbdata/Tutu/mars/Tutu_Bluetooth_cal_mars.acdb
-vendor/etc/acdbdata/Tutu/mars/Tutu_General_cal_mars.acdb
-vendor/etc/acdbdata/Tutu/mars/Tutu_Global_cal_mars.acdb
-vendor/etc/acdbdata/Tutu/mars/Tutu_Handset_cal_mars.acdb
-vendor/etc/acdbdata/Tutu/mars/Tutu_Hdmi_cal_mars.acdb
-vendor/etc/acdbdata/Tutu/mars/Tutu_Headset_cal_mars.acdb
-vendor/etc/acdbdata/Tutu/mars/Tutu_Speaker_cal_mars.acdb
-vendor/etc/acdbdata/Tutu/mars/Tutu_workspaceFile_mars.qwsp
 vendor/etc/acdbdata/Tutu/Tutu_Bluetooth_cal.acdb
 vendor/etc/acdbdata/Tutu/Tutu_General_cal.acdb
 vendor/etc/acdbdata/Tutu/Tutu_Global_cal.acdb
@@ -302,6 +312,7 @@ vendor/etc/audio/sku_lahaina_qssi/audio_policy_configuration.xml
 vendor/etc/audio_tuning_mixer.txt
 
 # Audio (firmware)
+vendor/firmware/rcv_voice_delta.txt
 vendor/firmware/spk1_playback_delta.txt
 vendor/firmware/spk1_voice_delta.txt
 vendor/firmware/spk2_playback_delta.txt
@@ -341,6 +352,14 @@ vendor/lib/libgcs.so
 vendor/lib/liblistensoundmodel2.so
 vendor/lib/libmulawdec.so
 vendor/lib/libsmwrapper.so
+
+# Batterysecret
+vendor/bin/batterysecret 
+vendor/bin/charge_logger
+vendor/bin/mishow.sh
+vendor/etc/init/hw/init.batterysecret.rc 
+vendor/etc/init/init.charge_logger.rc
+vendor/etc/init/init.mishow.ctl.rc
 
 # Bluetooth
 -system_ext/priv-app/aptxals/aptxals.apk
@@ -632,6 +651,7 @@ vendor/lib64/libqllengine.so
 vendor/lib64/libremosaic_wrapper.so
 vendor/lib64/libremosaiclib.so
 vendor/lib64/libsnpe_dsp_domains_v2.so
+vendor/lib64/libsnpe_dsp_domains_v3.so
 vendor/lib64/libsns_api.so
 vendor/lib64/libsns_device_mode_stub.so
 vendor/lib64/libsns_fastRPC_util.so
@@ -758,9 +778,6 @@ vendor/lib64/camera/components/com.qtistatic.stats.aec.so
 vendor/lib64/camera/components/com.qtistatic.stats.af.so
 vendor/lib64/camera/components/com.qtistatic.stats.awb.so
 vendor/lib64/camera/components/com.qtistatic.stats.pdlib.so
-vendor/lib64/camera/components/com.vidhance.node.eis.so
-vendor/lib64/camera/components/com.vidhance.node.ica.so
-vendor/lib64/camera/components/com.vidhance.stats.aec_dmbr.so
 vendor/lib64/camera/components/com.xiaomi.node.mibokeh.so
 vendor/lib64/camera/components/com.xiaomi.node.mifilter.so
 vendor/lib64/camera/components/com.xiaomi.node.misegment.so
@@ -1818,9 +1835,36 @@ vendor/bin/tftp_server
 vendor/etc/init/vendor.qti.tftp.rc
 
 # Thermal
+vendor/bin/mi_thermald
+vendor/etc/init/hw/init.mi_thermald.rc
 vendor/bin/thermal-engine
 vendor/etc/init/init_thermal-engine.rc
 vendor/etc/thermal-engine.conf
+vendor/etc/thermal-camera.conf
+vendor/etc/thermal-class0.conf
+vendor/etc/thermald-devices.conf
+vendor/etc/thermal-engine.conf
+vendor/etc/thermal-huanji.conf
+vendor/etc/thermal-india-camera.conf
+vendor/etc/thermal-india-class0.conf
+vendor/etc/thermal-india-huanji.conf
+vendor/etc/thermal-india-mgame.conf
+vendor/etc/thermal-india-navigation.conf
+vendor/etc/thermal-india-nolimits.conf
+vendor/etc/thermal-india-normal.conf
+vendor/etc/thermal-india-phone.conf
+vendor/etc/thermal-india-tgame.conf
+vendor/etc/thermal-india-video.conf
+vendor/etc/thermal-map.conf
+vendor/etc/thermal-map-india.conf
+vendor/etc/thermal-mgame.conf
+vendor/etc/thermal-navigation.conf
+vendor/etc/thermal-nolimits.conf
+vendor/etc/thermal-normal.conf
+vendor/etc/thermal-phone.conf
+vendor/etc/thermal-region-map.conf
+vendor/etc/thermal-tgame.conf
+vendor/etc/thermal-video.conf
 -vendor/lib/libthermalclient.so
 -vendor/lib64/libthermalclient.so
 
@@ -2071,7 +2115,14 @@ vendor/etc/wifi/aoa_cldb_falcon.bin
 vendor/etc/wifi/aoa_cldb_swl14.bin
 vendor/etc/wifi/fstman.ini
 vendor/etc/wifi/icm.conf
+vendor/etc/wifi/p2p_supplicant_overlay.conf
 vendor/etc/wifi/passpointProfile.conf
+vendor/etc/wifi/vendor_cmd.xml
+vendor/etc/wifi/wpa_supplicant.conf
+vendor/etc/wifi/wpa_supplicant_overlay.conf
+vendor/etc/wifi/qca6390/WCNSS_qcom_cfg.ini
+vendor/etc/wifi/qca6750/WCNSS_qcom_cfg.ini
+vendor/etc/wifi/wlan/WCNSS_qcom_cfg.ini
 
 # Widevine
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine
