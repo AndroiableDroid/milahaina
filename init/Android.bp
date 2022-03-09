@@ -23,7 +23,7 @@ prebuilt_etc {
 prebuilt_etc {
     name: "init.xiaomi.camera.rc",
     src: "init.xiaomi.camera.rc",
-    sub_dir: "init",
+    sub_dir: "init/hw",
     vendor: true,
 }
 
