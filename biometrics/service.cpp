@@ -14,33 +14,35 @@
  * limitations under the License.
  */
 
-#include "BiometricsFingerprint.h"
+#define LOG_TAG "android.hardware.biometrics.fingerprint@2.3-service.xiaomi_milahaina"
+
+#include <android/log.h>
+#include <hidl/HidlSupport.h>
+#include <hidl/HidlTransportSupport.h>
+#include <android/hardware/biometrics/fingerprint/2.3/IBiometricsFingerprint.h>
+#include <android/hardware/biometrics/fingerprint/2.2/types.h>
 #include <vendor/xiaomi/hardware/fingerprintextension/1.0/IXiaomiFingerprint.h>
+#include "BiometricsFingerprint.h"
 
-// libhwbinder:
-using android::hardware::configureRpcThreadpool;
-using android::hardware::joinRpcThreadpool;
-
-// Generated HIDL files
 using android::hardware::biometrics::fingerprint::V2_3::IBiometricsFingerprint;
 using android::hardware::biometrics::fingerprint::V2_3::implementation::BiometricsFingerprint;
+using android::hardware::configureRpcThreadpool;
+using android::hardware::joinRpcThreadpool;
+using android::sp;
 using vendor::xiaomi::hardware::fingerprintextension::V1_0::IXiaomiFingerprint;
 
 int main() {
-    android::sp<IBiometricsFingerprint> service = BiometricsFingerprint::getInstance();
+    android::sp<IBiometricsFingerprint> bio = BiometricsFingerprint::getInstance();
     android::sp<IXiaomiFingerprint> xfe = BiometricsFingerprint::getXiaomiInstance();
-
-    if (service == nullptr) {
-        ALOGE("Instance of BiometricsFingerprint is null");
-        return 1;
-    }
 
     configureRpcThreadpool(1, true /*callerWillJoin*/);
 
-    android::status_t status = service->registerAsService();
-    if (status != android::OK) {
-        ALOGE("Cannot register BiometricsFingerprint service");
-        return 1;
+    if (bio != nullptr) {
+        if (::android::OK != bio->registerAsService()) {
+            return 1;
+        }
+    } else {
+        ALOGE("Can't create instance of BiometricsFingerprint, nullptr");
     }
 
     if (xfe != nullptr) {
@@ -53,5 +55,5 @@ int main() {
 
     joinRpcThreadpool();
 
-    return 0;  // should never get here
+    return 0; // should never get here
 }
