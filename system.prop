@@ -52,6 +52,9 @@ dev.pm.dyn_samplingrate=1
 #persist.speaker.prot.enable=false
 qcom.hw.aac.encoder=true
 
+# whitelist aac
+persist.vendor.bt.a2dp.aac_whitelist=false
+
 #system props for the MM modules
 media.stagefright.enable-player=true
 media.stagefright.enable-http=true
