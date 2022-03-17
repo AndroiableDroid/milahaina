@@ -17,6 +17,7 @@ fc0013.ko
 fc2580.ko
 focaltech_touch.ko
 fpc1020_tee.ko
+goodix_ta.ko
 hdmi_dlkm.ko
 hwid.ko
 ir-spi.ko
