@@ -64,12 +64,15 @@ void set_ro_build_prop(const string &source, const string &prop,
     property_override(prop_name.c_str(), value.c_str());
 }
 
-void set_device_props(const string model, const string name, const string marketname) {
+void set_device_props(const string brand, const string device, const string model, const string name, const string marketname) {
     // list of partitions to override props
     string source_partitions[] = { "", "bootimage.", "odm.", "product.",
-                                   "system.", "system_ext.", "vendor." };
+                                   "system.", "system_ext.", "vendor.",
+                                    "vendor_dlkm." };
 
     for (const string &source : source_partitions) {
+        set_ro_build_prop(source, "brand", brand);
+        set_ro_build_prop(source, "device", device);
         set_ro_build_prop(source, "model", model);
         set_ro_build_prop(source, "name", name);
         set_ro_build_prop(source, "marketname", marketname);
@@ -83,11 +86,11 @@ void vendor_load_properties()
       string region = GetProperty("ro.boot.hwc", "");
 
       if (region == "IN") { // India
-          set_device_props("2107113SI", "vili_in", "Xiaomi 11T Pro");
+          set_device_props("Xiaomi", "viliin", "2107113SI", "vili_in", "Xiaomi 11T Pro");
       } else if (region == "JP") { // Japan
-          set_device_props("2107113SR", "vili", "Xiaomi 11T Pro");
+          set_device_props("Xiaomi", "vili", "2107113SR", "vili", "Xiaomi 11T Pro");
       } else { // Global
-          set_device_props("2107113SG", "vili_global", "Xiaomi 11T Pro");
+          set_device_props("Xiaomi", "viligl", "2107113SG", "vili_global", "Xiaomi 11T Pro");
       }
    }
 
