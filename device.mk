@@ -164,6 +164,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.use_layer_ext=1 \
     ro.surface_flinger.refresh_rate_switching=true \
+    ro.surface_flinger.set_idle_timer_ms=80 \
+    ro.surface_flinger.set_touch_timer_ms=200 \
+    ro.surface_flinger.set_display_power_timer_ms=1000 \
     ro.surface_flinger.use_content_detection_for_refresh_rate=true
 
 # Fastboot
@@ -218,7 +221,7 @@ PRODUCT_PACKAGES += \
     init.xiaomi.rc \
     init.xiaomi.audio.rc \
     init.xiaomi.recovery.rc \
-    init.xiaomi.perf.rc
+    init.xiaomi.perf.rc \
     init.xiaomi.camera.rc \
     init.class_main.sh \
     init.qcom.early_boot.sh \
