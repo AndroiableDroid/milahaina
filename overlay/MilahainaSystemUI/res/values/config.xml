@@ -22,4 +22,17 @@
     <!-- Doze: check proximity sensor before pulsing? -->
     <bool name="doze_proximity_check_before_pulse">false</bool>
 
+    <!-- Preferred refresh rate at keyguard, if supported by the display -->
+    <integer name="config_keyguardRefreshRate">60</integer>
+
+    <!-- Location on the screen of the center of the physical power button. -->
+    <dimen name="physical_power_button_center_screen_location_y">1070px</dimen>
+
+    <!-- Location on the screen of the center of the physical volume up/down buttons. -->
+    <dimen name="physical_volume_up_button_center_screen_location_y">620px</dimen>
+    <dimen name="physical_volume_down_button_center_screen_location_y">765px</dimen>
+
+    <!-- Location on the screen of the center of the fingerprint sensor. -->
+    <dimen name="physical_fingerprint_sensor_center_screen_location_y">1070px</dimen>
+
 </resources>
