@@ -169,6 +169,7 @@ PRODUCT_PACKAGES += \
 $(call inherit-product, hardware/qcom-caf/sm8350/display/config/display-product.mk)
 $(call inherit-product, vendor/qcom/opensource/commonsys-intf/display/config/display-interfaces-product.mk)
 $(call inherit-product, vendor/qcom/opensource/commonsys-intf/display/config/display-product-system.mk)
+$(call inherit-product, vendor/qcom/opensource/display/config/display-product-vendor.mk)
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
