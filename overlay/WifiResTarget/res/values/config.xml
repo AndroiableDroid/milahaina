@@ -23,10 +23,28 @@
     <!-- WiFi driver supports IEEE80211AX for SoftAP. -->
     <bool name="config_wifiSoftapIeee80211axSupported">true</bool>
 
+    <!-- Wifi driver supports IEEE80211AX TWT (Target Wake Time) for softap -->
+    <bool translatable="false" name="config_wifiSoftapHeTwtSupported">false</bool>
+
     <!-- Boolean indicating enable or disable quick connect. -->
     <bool name="config_wifi_framework_enable_quick_connect">true</bool>
 
     <!-- Integer for WiFi Partial scan results fetching period (in ms). -->
     <integer name="config_wifi_partial_scan_results_fetching_period_ms">1000</integer>
+
+    <!-- Configure wifi tcp buffersizes in the form:
+         rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
+    <string name="config_wifi_tcp_buffers" translatable="false">524288,1048576,8808040,262144,524288,6710886</string>
+
+    <!-- Array describing scanning schedule in seconds when device is disconnected and screen is on -->
+    <integer-array translatable="false" name="config_wifiDisconnectedScanIntervalScheduleSec">
+        <item>20</item>
+    </integer-array>
+
+    <!-- Indicates that 11ax mode is supported on this device
+         Note that if this flag is set to true, then 11ax is assumed to be supported.
+         However, if it is left to the default value of false, the 11ax support will
+         be checked via NL80211 interface -->
+    <bool translatable="false" name="config_wifi11axSupportOverride">true</bool>
 
 </resources>
