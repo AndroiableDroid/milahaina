@@ -1,8 +1,0 @@
-# Fingerprint
-type vendor_fingerprint_prop, property_type;
-
-# GPS
-type vendor_gps_prop, property_type;
-
-# Thermal
-vendor_internal_prop(vendor_thermal_prop);
