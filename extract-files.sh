@@ -55,7 +55,7 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-    vendor/etc/camera/pureShot_parameter.xml)
+    vendor/etc/camera/pure*_parameter.xml)
         sed -i 's:=100:="100":g; s;=200;="200";g; s;=400;="400";g; s;=800;="800";g; s;=1600;="1600";g; s;=3200;="3200";g; s;=6400;="6400";g; s;Id=0;Id="0";g; s:Id=1:Id="1":g' "${2}"
     ;;
     esac

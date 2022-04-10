@@ -121,9 +121,7 @@ BOARD_KERNEL_CMDLINE := \
     pcie_ports=compat \
     service_locator.enable=1 \
     swiotlb=0 \
-    loop.max_part=7 \
-    firmware_class.path=/vendor/firmware \
-    androidboot.selinux=permissive
+    loop.max_part=7
 
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load))
 
@@ -191,10 +189,21 @@ TARGET_USERIMAGES_USE_F2FS := true
 # SELinux
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 
-BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
-SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
-SELINUX_IGNORE_NEVERALLOWS := true
+BOARD_VENDOR_SEPOLICY_DIRS += \
+    $(DEVICE_PATH)/sepolicy/audio/vendor \
+    $(DEVICE_PATH)/sepolicy/batterysecret/vendor \
+    $(DEVICE_PATH)/sepolicy/power/vendor \
+    $(DEVICE_PATH)/sepolicy/camera/vendor \
+    $(DEVICE_PATH)/sepolicy/ir/vendor \
+    $(DEVICE_PATH)/sepolicy/fingerprint/vendor \
+    $(DEVICE_PATH)/sepolicy/qcom-extra/vendor \
+    $(DEVICE_PATH)/sepolicy/thermal/vendor \
+    $(DEVICE_PATH)/sepolicy/sensors/vendor \
+    $(DEVICE_PATH)/sepolicy/display/vendor \
+    $(DEVICE_PATH)/sepolicy/nfc/vendor \
+    $(DEVICE_PATH)/sepolicy/media/vendor \
+    $(DEVICE_PATH)/sepolicy/vili/vendor
 
 # Soong
 SOONG_CONFIG_NAMESPACES += ufsbsg
@@ -202,18 +211,16 @@ SOONG_CONFIG_ufsbsg += ufsframework
 SOONG_CONFIG_ufsbsg_ufsframework := bsg
 
 # WLAN
-BOARD_HAS_QCOM_WLAN := true
-BOARD_WLAN_DEVICE := qcwcn
-BOARD_HOSTAPD_DRIVER := NL80211
-BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
-BOARD_WPA_SUPPLICANT_DRIVER := $(BOARD_HOSTAPD_DRIVER)
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB := $(BOARD_HOSTAPD_PRIVATE_LIB)
 HOSTAPD_VERSION := VER_0_8_X
 WPA_SUPPLICANT_VERSION := $(HOSTAPD_VERSION)
 
 CONFIG_ACS := true
+CONFIG_FST := true
 CONFIG_IEEE80211AC := true
 CONFIG_IEEE80211AX := true
+CONFIG_MBO := true
+CONFIG_OCV := true
+CONFIG_OWE := true
 WIFI_HIDL_FEATURE_AWARE := true
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 QC_WIFI_HIDL_FEATURE_DUAL_AP := true
@@ -221,3 +228,5 @@ WIFI_DRIVER_DEFAULT := wlan
 WIFI_DRIVER_STATE_CTRL_PARAM := "/dev/wlan"
 WIFI_DRIVER_STATE_OFF := "OFF"
 WIFI_DRIVER_STATE_ON := "ON"
+WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
+WIFI_AVOID_IFACE_RESET_MAC_CHANGE := true

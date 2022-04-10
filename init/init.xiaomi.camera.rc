@@ -30,6 +30,8 @@ on early-init
     write /dev/memcg/camera/media/codec/sw/memory.cache 6
 
 on post-fs-data
+    setprop persist.sys.offlinelog.logcat true
+    setprop persist.sys.offlinelog.logcatkernel true
     # Create folder of cameralog
     mkdir /data/vendor/camera/offlinelog 0777 cameraserver audio
     chmod 0666 /dev/camlog
