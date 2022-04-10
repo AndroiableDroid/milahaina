@@ -1,5 +1,0 @@
-# Display (Pixelworks)
-type hal_display_iris_hwservice, hwservice_manager_type;
-
-# Mlipay
-type hal_mlipay_hwservice, hwservice_manager_type;
