@@ -6,6 +6,15 @@
 
 on early-boot
     exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.xiaomi.early_boot.sh
+    # SSR Setup
+    write /sys/bus/msm_subsys/devices/subsys0/restart_level RELATED
+    write /sys/bus/msm_subsys/devices/subsys1/restart_level RELATED
+    write /sys/bus/msm_subsys/devices/subsys2/restart_level RELATED
+    write /sys/bus/msm_subsys/devices/subsys3/restart_level RELATED
+    write /sys/bus/msm_subsys/devices/subsys4/restart_level RELATED
+    write /sys/bus/msm_subsys/devices/subsys5/restart_level RELATED
+    write /sys/bus/msm_subsys/devices/subsys6/restart_level RELATED
+    write /sys/bus/msm_subsys/devices/subsys7/restart_level RELATED
 
 on fs
     mkdir /mnt/vendor/persist/audio 0755 system system
@@ -109,6 +118,12 @@ on post-fs-data
     mkdir /data/vendor/qxwz 0770 gps system
     chmod 0660 /dev/al6021
     chown system camera /dev/al6021
+
+    # Bind mount fastrpc_shell_3 for labelling
+    mkdir /mnt/vendor/dsp 0770 root root
+    copy /vendor/dsp/cdsp/fastrpc_shell_3 /mnt/vendor/dsp/fastrpc_shell_3
+    chmod 0644 /mnt/vendor/dsp/fastrpc_shell_3
+    mount none /mnt/vendor/dsp/fastrpc_shell_3 /vendor/dsp/cdsp/fastrpc_shell_3 bind
 
 on charger
     chown system system /sys/class/backlight/panel0-backlight/brightness

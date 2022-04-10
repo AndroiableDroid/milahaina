@@ -39,7 +39,6 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/sound_trigger_mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_lahaina/sound_trigger_mixer_paths.xml \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml
 
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -90,7 +89,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml
 
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth.audio@2.0-impl \
+    android.hardware.bluetooth.audio@2.1-impl \
     audio.bluetooth.default \
     com.dsi.ant@1.0.vendor \
     android.hardware.bluetooth@1.1.vendor \
@@ -102,6 +101,22 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.btconfigstore@2.0.vendor \
     vendor.qti.hardware.fm@1.0.vendor
+
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    persist.vendor.bt.a2dp.aac_whitelist=false
+
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.sys.fflag.override.settings_bluetooth_hearing_aid=true \
+    persist.vendor.bluetooth.modem_nv_support=true \
+    persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptiver2 \
+    persist.vendor.qcom.bluetooth.a2dp_mcast_test.enabled=false \
+    persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true \
+    persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=true \
+    persist.vendor.qcom.bluetooth.aptxadaptiver2_1_support=true \
+    persist.vendor.qcom.bluetooth.enable.swb=true \
+    persist.vendor.qcom.bluetooth.enable.swbpm=true \
+    persist.vendor.qcom.bluetooth.scram.enabled=false \
+    persist.vendor.qcom.bluetooth.twsp_state.enabled=false
 
 # Boot Control
 PRODUCT_PACKAGES += \
@@ -253,6 +268,7 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml
 
 PRODUCT_PACKAGES += \
+    codec2_shim_vendor \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxCore \
@@ -262,9 +278,11 @@ PRODUCT_PACKAGES += \
     libavservices_minijail \
     libavservices_minijail.vendor \
     libavservices_minijail_vendor \
+    libcodec2_soft_common.vendor \
     libcodec2_hidl@1.0.vendor \
     libcodec2_vndk.vendor \
     libmm-omxcore \
+    libsfplugin_ccodec_utils.vendor \
     libstagefright_softomx.vendor \
     libstagefrighthw \
     libgui_vendor
@@ -359,8 +377,12 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.3.vendor \
     android.hardware.radio.deprecated@1.0.vendor
 
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # Security
-BOOT_SECURITY_PATCH := 2021-11-01
+BOOT_SECURITY_PATCH := 2022-02-01
 VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
 PRODUCT_PACKAGES += \
@@ -450,9 +472,6 @@ PRODUCT_COPY_FILES += \
 
 # vm-bootsys
 TARGET_ENABLE_VM_SUPPORT := true
-
-# VNDK
-PRODUCT_EXTRA_VNDK_VERSIONS := 30
 
 # WFD
 PRODUCT_BOOT_JARS += \
