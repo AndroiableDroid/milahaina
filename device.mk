@@ -340,7 +340,8 @@ PRODUCT_PACKAGES += \
     TetheringResCommon \
     WifiResCommon \
     WifiResTarget \
-    PanelConfig \
+    PanelConfigHaydn \
+    PanelConfigVili \
     MiLahainaFrameworks \
     MilahainaSystemUI
 
