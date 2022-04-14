@@ -42,6 +42,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.xiaomi.overlay.rc",
+    src: "init.xiaomi.overlay.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.xiaomi.perf.rc",
     src: "init.xiaomi.perf.rc",
     sub_dir: "init",

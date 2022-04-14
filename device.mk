@@ -235,6 +235,7 @@ PRODUCT_PACKAGES += \
     fstab.default \
     init.xiaomi.rc \
     init.xiaomi.audio.rc \
+    init.xiaomi.overlay.rc \
     init.xiaomi.recovery.rc \
     init.xiaomi.perf.rc \
     init.xiaomi.camera.rc \
