@@ -97,3 +97,4 @@ xc4000.ko
 xc5000.ko
 fts_touch_spi.ko
 xiaomi_touch.ko
+focaltech_touch.ko

@@ -95,6 +95,22 @@ void vili_vendor_properties()
     }
 }
 
+void haydn_vendor_properties()
+{
+    // Detect device and configure properties
+    string region = GetProperty("ro.boot.hwc", "");
+
+    property_override("ro.boot.milahaina_version", "haydn");
+
+    if (region == "IN") { // India
+        set_device_props("Xiaomi", "haydnin", "M2012K11I", "haydn_in", "Mi 11X Pro");
+    } else if (region == "CN") { // China
+        set_device_props("Redmi", "haydnpro", "M2012K11C", "haydnpro", "Redmi K40 Pro+");
+    } else { // Global
+        set_device_props("Xiaomi", "haydn", "M2012K11G", "haydn_global", "Mi 11i Globa");
+    }
+}
+
 void vendor_load_properties()
 {
     string device = GetProperty("ro.boot.product.hardware.sku", "");
@@ -105,6 +121,12 @@ void vendor_load_properties()
             vili_vendor_properties();
         } else if (device == "viligl") {
             vili_vendor_properties();
+        } else if (device == "haydn") {
+            haydn_vendor_properties();
+        } else if (device == "haydn_in") {
+            haydn_vendor_properties();
+        } else if (device == "haydnpro") {
+            haydn_vendor_properties();
         } else {
             set_device_props("Xiaomi", "milahaina", "milahaina", "milahaina", "milahaina for xiaomi 888");
         }
