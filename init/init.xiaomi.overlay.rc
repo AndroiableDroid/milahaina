@@ -17,9 +17,10 @@
 on init
     mount overlay overlay /vendor/etc/acdbdata lowerdir=/odm/etc/${ro.boot.milahaina_version}/acdbdata:/vendor/etc/acdbdata,context=u:object_r:vendor_configs_file:s0
     mount overlay overlay /vendor/etc/audio lowerdir=/odm/etc/${ro.boot.milahaina_version}/audio:/vendor/etc/audio,context=u:object_r:vendor_configs_file:s0
+    mount overlay overlay /vendor/lib lowerdir=/odm/${ro.boot.milahaina_version}/lib:/vendor/lib,context=u:object_r:vendor_file:s0
+    mount overlay overlay /vendor/lib64 lowerdir=/odm/${ro.boot.milahaina_version}/lib64:/vendor/lib64,context=u:object_r:vendor_file:s0
 
 on post-fs
     mount overlay overlay /vendor/etc/sensors lowerdir=/odm/etc/${ro.boot.milahaina_version}/sensors:/vendor/etc/sensors,context=u:object_r:vendor_configs_file:s0
-    mount overlay overlay /vendor/lib64/hw lowerdir=/odm/${ro.boot.milahaina_version}/lib64/hw:/vendor/lib64/hw,context=u:object_r:vendor_file:s0
     mount overlay overlay /vendor/firmware lowerdir=/odm/${ro.boot.milahaina_version}/firmware:/vendor/firmware,context=u:object_r:vendor_file:s0
 
