@@ -98,8 +98,20 @@ DEVICE_MANIFEST_FILE := \
 DEVICE_MATRIX_FILE := \
     $(DEVICE_PATH)/hidl/compatibility_matrix.xml
 
-ODM_MANIFEST_SKUS := haydnpro
-ODM_MANIFEST_HAYDNPRO_FILES := $(DEVICE_PATH)/hidl/haydnpro_manifest.xml
+ODM_MANIFEST_SKUS += \
+    haydn \
+    haydnpro \
+    vili \
+    viligl \
+    viliin \
+    vilijp
+
+ODM_MANIFEST_HAYDN_FILES := $(DEVICE_PATH)/hidl/manifest_haydn.xml
+ODM_MANIFEST_HAYDNPRO_FILES := $(DEVICE_PATH)/hidl/manifest_haydnpro.xml
+ODM_MANIFEST_VILI_FILES := $(DEVICE_PATH)/hidl/manifest_vili.xml
+ODM_MANIFEST_VILIGL_FILES := $(DEVICE_PATH)/hidl/manifest_viligl.xml
+ODM_MANIFEST_VILIIN_FILES := $(DEVICE_PATH)/hidl/manifest_viliin.xml
+ODM_MANIFEST_VILIJP_FILES := $(DEVICE_PATH)/hidl/manifest_vilijp.xml
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_milahaina

@@ -233,10 +233,11 @@ PRODUCT_PACKAGES += \
     fstab.default \
     init.xiaomi.rc \
     init.xiaomi.audio.rc \
+    init.xiaomi.camera.rc \
+    init.xiaomi.nfc.rc \
     init.xiaomi.overlay.rc \
     init.xiaomi.recovery.rc \
     init.xiaomi.perf.rc \
-    init.xiaomi.camera.rc \
     init.class_main.sh \
     init.qcom.early_boot.sh \
     init.qcom.rc \
@@ -297,6 +298,8 @@ TARGET_USES_NQ_NFC := true
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.se.omapi.ese.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_haydnpro/android.hardware.se.omapi.ese.xml \
     frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.uicc.xml
+
+TARGET_NFC_SKU := milahaina
 
 PRODUCT_PACKAGES += \
     SecureElement \

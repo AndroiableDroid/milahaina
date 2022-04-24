@@ -85,6 +85,7 @@ void vili_vendor_properties()
     string region = GetProperty("ro.boot.hwc", "");
 
     property_override("ro.boot.milahaina_version", "vili");
+    property_override("ro.milahaina.nfc", "true");
 
     if (region == "IN") { // India
         set_device_props("Xiaomi", "viliin", "2107113SI", "vili_in", "Xiaomi 11T Pro");
@@ -106,8 +107,10 @@ void haydn_vendor_properties()
         set_device_props("Xiaomi", "haydnin", "M2012K11I", "haydn_in", "Mi 11X Pro");
     } else if (region == "CN") { // China
         set_device_props("Redmi", "haydnpro", "M2012K11C", "haydnpro", "Redmi K40 Pro+");
+        property_override("ro.milahaina.nfc", "true");
     } else { // Global
         set_device_props("Xiaomi", "haydn", "M2012K11G", "haydn_global", "Mi 11i Globa");
+        property_override("ro.milahaina.nfc", "true");
     }
 }
 
