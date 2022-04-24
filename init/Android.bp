@@ -49,6 +49,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.xiaomi.nfc.rc",
+    src: "init.xiaomi.nfc.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.xiaomi.perf.rc",
     src: "init.xiaomi.perf.rc",
     sub_dir: "init",
