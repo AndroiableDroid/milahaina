@@ -134,6 +134,20 @@ vendor/lib/rfsa/adsp/misound_karaoke_res.bin:odm/haydn/lib/rfsa/adsp/misound_kar
 vendor/lib/rfsa/adsp/misound_res_headphone.bin:odm/haydn/lib/rfsa/adsp/misound_res_headphone.bin
 vendor/lib/rfsa/adsp/misound_res_spk.bin:odm/haydn/lib/rfsa/adsp/misound_res_spk.bin
 
+# ADSPRPC (star)
+vendor/lib/rfsa/adsp/libQnnHtpSkel.so:odm/star/lib/rfsa/adsp/libQnnHtpSkel.so
+vendor/lib/rfsa/adsp/libarcsoft_hdrplus_hvx_skel.so:odm/star/lib/rfsa/adsp/libarcsoft_hdrplus_hvx_skel.so
+vendor/lib/rfsa/adsp/libmialgo_basic_cdsp_skel.so:odm/star/lib/rfsa/adsp/libmialgo_basic_cdsp_skel.so
+vendor/lib/rfsa/adsp/libmialgo_rfs_cdsp_skel.so:odm/star/lib/rfsa/adsp/libmialgo_rfs_cdsp_skel.so
+vendor/lib/rfsa/adsp/libhap_blink_skel.so:odm/star/lib/rfsa/adsp/libhap_blink_skel.so
+vendor/lib/rfsa/adsp/libsnpe_htp_v65_skel.so:odm/star/lib/rfsa/adsp/libsnpe_htp_v65_skel.so
+vendor/lib/rfsa/adsp/libsnpe_htp_v66_skel.so:odm/star/lib/rfsa/adsp/libsnpe_htp_v66_skel.so
+vendor/lib/rfsa/adsp/libsnpe_htp_v68_skel.so:odm/star/lib/rfsa/adsp/libsnpe_htp_v68_skel.so
+vendor/lib/rfsa/adsp/misound_karaokemix_res.bin:odm/star/lib/rfsa/adsp/misound_karaokemix_res.bin
+vendor/lib/rfsa/adsp/misound_karaoke_res.bin:odm/star/lib/rfsa/adsp/misound_karaoke_res.bin
+vendor/lib/rfsa/adsp/misound_res_headphone.bin:odm/star/lib/rfsa/adsp/misound_res_headphone.bin
+vendor/lib/rfsa/adsp/misound_res_spk.bin:odm/star/lib/rfsa/adsp/misound_res_spk.bin
+
 # Adreno (firmware)
 vendor/firmware/a660_gmu.bin
 vendor/firmware/a660_sqe.fw
@@ -150,6 +164,7 @@ vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 # Audio
 vendor/lib/hw/audio.primary.lahaina.so:odm/vili/lib/hw/audio.primary.lahaina.so
 vendor/lib/hw/audio.primary.lahaina.so:odm/haydn/lib/hw/audio.primary.lahaina.so
+vendor/lib/hw/audio.primary.lahaina.so:odm/star/lib/hw/audio.primary.lahaina.so
 vendor/lib/liba2dpoffload.so
 vendor/lib/libacdbloader.so
 vendor/lib/libaudio_log_utils.so
@@ -193,6 +208,7 @@ vendor/lib64/libspkrprot.so
 vendor/lib64/libssrec.so
 vendor/lib64/hw/audio.primary.lahaina.so:odm/haydn/lib64/hw/audio.primary.lahaina.so
 vendor/lib64/hw/audio.primary.lahaina.so:odm/vili/lib64/hw/audio.primary.lahaina.so
+vendor/lib64/hw/audio.primary.lahaina.so:odm/star/lib64/hw/audio.primary.lahaina.so
 
 # Audio (acdbdata_vili)
 vendor/etc/acdbdata/adsp_avs_config.acdb
@@ -226,6 +242,31 @@ vendor/etc/acdbdata/Forte/Forte_Hdmi_cal.acdb:odm/etc/haydn/acdbdata/Forte/Forte
 vendor/etc/acdbdata/Forte/Forte_Headset_cal.acdb:odm/etc/haydn/acdbdata/Forte/Forte_Headset_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_Speaker_cal.acdb:odm/etc/haydn/acdbdata/Forte/Forte_Speaker_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_workspaceFile.qwsp:odm/etc/haydn/acdbdata/Forte/Forte_workspaceFile.qwsp
+
+# Audio (acdbdata_star)
+vendor/etc/acdbdata/adsp_avs_config.acdb:odm/etc/star/acdbdata/adsp_avs_config.acdb
+vendor/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.00.pmd:odm/etc/star/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.00.pmd
+vendor/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.10.pmd:odm/etc/star/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.10.pmd
+vendor/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.00.pmd:odm/etc/star/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.00.pmd
+vendor/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.10.pmd:odm/etc/star/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.10.pmd
+vendor/etc/acdbdata/nn_vad_models/fai_3.0.0_0.0_eai_1.00.pmd:odm/etc/star/acdbdata/nn_vad_models/fai_3.0.0_0.0_eai_1.00.pmd
+vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_1.10.pmd:odm/etc/star/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_1.10.pmd
+vendor/etc/acdbdata/Tutu/Tutu_Bluetooth_cal.acdb:odm/etc/star/acdbdata/Tutu/Tutu_Bluetooth_cal.acdb
+vendor/etc/acdbdata/Tutu/Tutu_General_cal.acdb:odm/etc/star/acdbdata/Tutu/Tutu_General_cal.acdb
+vendor/etc/acdbdata/Tutu/Tutu_Global_cal.acdb:odm/etc/star/acdbdata/Tutu/Tutu_Global_cal.acdb
+vendor/etc/acdbdata/Tutu/Tutu_Handset_cal.acdb:odm/etc/star/acdbdata/Tutu/Tutu_Handset_cal.acdb
+vendor/etc/acdbdata/Tutu/Tutu_Hdmi_cal.acdb:odm/etc/star/acdbdata/Tutu/Tutu_Hdmi_cal.acdb
+vendor/etc/acdbdata/Tutu/Tutu_Headset_cal.acdb:odm/etc/star/acdbdata/Tutu/Tutu_Headset_cal.acdb
+vendor/etc/acdbdata/Tutu/Tutu_Speaker_cal.acdb:odm/etc/star/acdbdata/Tutu/Tutu_Speaker_cal.acdb
+vendor/etc/acdbdata/Tutu/Tutu_workspaceFile.qwsp:odm/etc/star/acdbdata/Tutu/Tutu_workspaceFile.qwsp
+vendor/etc/acdbdata/Tutu/mars/Tutu_Bluetooth_cal_mars.acdb:odm/etc/star/acdbdata/Tutu/mars/Tutu_Bluetooth_cal_mars.acdb
+vendor/etc/acdbdata/Tutu/mars/Tutu_General_cal_mars.acdb:odm/etc/star/acdbdata/Tutu/mars/Tutu_General_cal_mars.acdb
+vendor/etc/acdbdata/Tutu/mars/Tutu_Global_cal_mars.acdb:odm/etc/star/acdbdata/Tutu/mars/Tutu_Global_cal_mars.acdb
+vendor/etc/acdbdata/Tutu/mars/Tutu_Handset_cal_mars.acdb:odm/etc/star/acdbdata/Tutu/mars/Tutu_Handset_cal_mars.acdb
+vendor/etc/acdbdata/Tutu/mars/Tutu_Hdmi_cal_mars.acdb:odm/etc/star/acdbdata/Tutu/mars/Tutu_Hdmi_cal_mars.acdb
+vendor/etc/acdbdata/Tutu/mars/Tutu_Headset_cal_mars.acdb:odm/etc/star/acdbdata/Tutu/mars/Tutu_Headset_cal_mars.acdb
+vendor/etc/acdbdata/Tutu/mars/Tutu_Speaker_cal_mars.acdb:odm/etc/star/acdbdata/Tutu/mars/Tutu_Speaker_cal_mars.acdb
+vendor/etc/acdbdata/Tutu/mars/Tutu_workspaceFile_mars.qwsp:odm/etc/star/acdbdata/Tutu/mars/Tutu_workspaceFile_mars.qwsp
 
 # Audio (configs)
 vendor/etc/audio/audio_policy_configuration.xml
@@ -264,6 +305,16 @@ vendor/etc/audio/sku_lahaina/mixer_paths_overlay_static.xml:odm/etc/haydn/audio/
 vendor/etc/audio/sku_lahaina/mixer_paths.xml:odm/etc/haydn/audio/sku_lahaina/mixer_paths.xml
 vendor/etc/audio/sku_lahaina/sound_trigger_platform_info.xml:odm/etc/haydn/audio/sku_lahaina/sound_trigger_platform_info.xml
 vendor/etc/audio/sku_lahaina/sound_trigger_mixer_paths.xml:odm/etc/haydn/audio/sku_lahaina/sound_trigger_mixer_paths.xml
+
+# Audio (configs_star)
+vendor/etc/audio/sku_lahaina/audio_platform_info.xml:odm/etc/star/audio/sku_lahaina/audio_platform_info.xml
+vendor/etc/audio/sku_lahaina/audio_platform_info_intcodec.xml:odm/etc/star/audio/sku_lahaina/audio_platform_info_intcodec.xml
+vendor/etc/audio/sku_lahaina/audio_platform_info_qrd.xml:odm/etc/star/audio/sku_lahaina/audio_platform_info_qrd.xml
+vendor/etc/audio/sku_lahaina/mixer_paths_overlay_dynamic.xml:odm/etc/star/audio/sku_lahaina/mixer_paths_overlay_dynamic.xml
+vendor/etc/audio/sku_lahaina/mixer_paths_overlay_static.xml:odm/etc/star/audio/sku_lahaina/mixer_paths_overlay_static.xml
+vendor/etc/audio/sku_lahaina/mixer_paths.xml:odm/etc/star/audio/sku_lahaina/mixer_paths.xml
+vendor/etc/audio/sku_lahaina/sound_trigger_platform_info.xml:odm/etc/star/audio/sku_lahaina/sound_trigger_platform_info.xml
+vendor/etc/audio/sku_lahaina/sound_trigger_mixer_paths.xml:odm/etc/star/audio/sku_lahaina/sound_trigger_mixer_paths.xml
 
 # Audio (firmware_vili)
 vendor/firmware/rcv_voice_delta.txt:odm/vili/firmware/rcv_voice_delta.txt
@@ -305,6 +356,26 @@ vendor/firmware/cs35l41-dsp1-spk-prot-revb2.wmfw:odm/haydn/firmware/cs35l41-dsp1
 vendor/firmware/cs35l41-dsp1-spk-prot.bin:odm/haydn/firmware/cs35l41-dsp1-spk-prot.bin
 vendor/firmware/cs35l41-dsp1-spk-prot.wmfw:odm/haydn/firmware/cs35l41-dsp1-spk-prot.wmfw
 
+# Audio (firmware_star)
+vendor/firmware/rcv_voice_delta.txt:odm/star/firmware/rcv_voice_delta.txt
+vendor/firmware/spk1_playback_delta.txt:odm/star/firmware/spk1_playback_delta.txt
+vendor/firmware/spk1_voice_delta.txt:odm/star/firmware/spk1_voice_delta.txt
+vendor/firmware/spk2_playback_delta.txt:odm/star/firmware/spk2_playback_delta.txt
+vendor/firmware/spk2_voice_delta.txt:odm/star/firmware/spk2_voice_delta.txt
+vendor/firmware/cs35l41-dsp1-diag-revb2.wmfw:odm/star/firmware/cs35l41-dsp1-diag-revb2.wmfw
+vendor/firmware/cs35l41-dsp1-diag-z-RCV-revb2.bin:odm/star/firmware/cs35l41-dsp1-diag-z-RCV-revb2.bin
+vendor/firmware/cs35l41-dsp1-diag-z-revb2.bin:odm/star/firmware/cs35l41-dsp1-diag-z-revb2.bin
+vendor/firmware/cs35l41-dsp1-diag-z-revb2.wmfw:odm/star/firmware/cs35l41-dsp1-diag-z-revb2.wmfw
+vendor/firmware/cs35l41-dsp1-diag-z.bin:odm/star/firmware/cs35l41-dsp1-diag-z.bin
+vendor/firmware/cs35l41-dsp1-diag-z.wmfw:odm/star/firmware/cs35l41-dsp1-diag-z.wmfw
+vendor/firmware/cs35l41-dsp1-diag.wmfw:odm/star/firmware/cs35l41-dsp1-diag.wmfw
+vendor/firmware/cs35l41-dsp1-spk-prot-RCV-revb2.bin:odm/star/firmware/cs35l41-dsp1-spk-prot-RCV-revb2.bin
+vendor/firmware/cs35l41-dsp1-spk-prot-RCV.bin:odm/star/firmware/cs35l41-dsp1-spk-prot-RCV.bin
+vendor/firmware/cs35l41-dsp1-spk-prot-revb2.bin:odm/star/firmware/cs35l41-dsp1-spk-prot-revb2.bin
+vendor/firmware/cs35l41-dsp1-spk-prot-revb2.wmfw:odm/star/firmware/cs35l41-dsp1-spk-prot-revb2.wmfw
+vendor/firmware/cs35l41-dsp1-spk-prot.bin:odm/star/firmware/cs35l41-dsp1-spk-prot.bin
+vendor/firmware/cs35l41-dsp1-spk-prot.wmfw:odm/star/firmware/cs35l41-dsp1-spk-prot.wmfw
+
 # Audio (FX)
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libmisoundfx.so
@@ -322,6 +393,7 @@ vendor/lib64/soundfx/libshoebox.so
 # Audio (SoundTrigger)
 vendor/lib/hw/sound_trigger.primary.lahaina.so:odm/vili/lib/hw/sound_trigger.primary.lahaina.so
 vendor/lib/hw/sound_trigger.primary.lahaina.so:odm/haydn/lib/hw/sound_trigger.primary.lahaina.so
+vendor/lib/hw/sound_trigger.primary.lahaina.so:odm/star/lib/hw/sound_trigger.primary.lahaina.so
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbrtac.so
 vendor/lib/libadiertac.so
@@ -911,6 +983,10 @@ vendor/firmware/CAMERA_ICP_170.elf:odm/vili/firmware/CAMERA_ICP_170.elf
 vendor/firmware/CAMERA_ICP.elf:odm/haydn/firmware/CAMERA_ICP.elf
 vendor/firmware/CAMERA_ICP_170.elf:odm/haydn/firmware/CAMERA_ICP_170.elf
 
+# Camera (firmware_star)
+vendor/firmware/CAMERA_ICP.elf:odm/star/firmware/CAMERA_ICP.elf
+vendor/firmware/CAMERA_ICP_170.elf:odm/star/firmware/CAMERA_ICP_170.elf
+
 # Camera (sensors)
 vendor/lib/libjpege.so
 vendor/lib/libmctfengine_stub.so
@@ -1024,6 +1100,13 @@ vendor/etc/ltm_config_xiaomi_38_08_0a_cmd_mode_dsc_dsi_panel.xml
 vendor/etc/mdss_dsi_k11_38_08_0a_dsc_cmd_mi.xml
 vendor/etc/qdcm_calib_data_xiaomi_38_08_0a_cmd_mode_dsc_dsi_panel.xml
 
+# Display calibration data (star)
+vendor/etc/ltm_config_xiaomi_38_08_0a_cmd_mode_dsc_dsi_panel.xml
+vendor/etc/mdss_dsi_k2_38_08_0a_dsc_cmd_mi.xml
+vendor/etc/mdss_dsi_k2_38_08_0a_mp_dsc_cmd_mi.xml
+vendor/etc/qdcm_calib_data_xiaomi_38_08_0a_cmd_mode_dsc_dsi_panel.xml
+vendor/etc/qdcm_calib_data_xiaomi_43_06_00_cmd_mode_secondary_dsi_panel.xml
+
 # Display calibration data
 vendor/etc/snapdragon_color_libs_config.xml
 vendor/lib64/libmi-stc-HW-modulate.so
@@ -1071,17 +1154,21 @@ vendor/lib64/libfastcvdsp_stub.so
 vendor/etc/permissions/com.fingerprints.extension.xml
 -vendor/framework/com.fingerprints.extension.jar
 vendor/lib64/com.fingerprints.extension@3.0.so
+vendor/lib64/vendor.xiaomi.hardware.fx.tunnel@1.0.so
 
 # Fingerprint modules (vili)
 vendor/lib64/hw/fingerprint.fpc.so:odm/vili/lib64/hw/fingerprint.fpc.lahaina.so
 vendor/lib64/hw/fingerprint.goodix.so:odm/vili/lib64/hw/fingerprint.goodix.lahaina.so
-vendor/lib64/libgoodixhwfingerprint.so
-vendor/lib64/libgf_hal.so
-vendor/lib64/libgf_ca.so
-vendor/lib64/vendor.xiaomi.hardware.fx.tunnel@1.0.so
+vendor/lib64/libgoodixhwfingerprint.so:odm/vili/lib64/libgoodixhwfingerprint.so
+vendor/lib64/libgf_hal.so:odm/vili/lib64/libgf_hal.so
+vendor/lib64/libgf_ca.so:odm/vili/lib64/libgf_ca.so
 
 # Fingerprint modules (haydn)
 vendor/lib64/hw/fingerprint.fpc.so:odm/haydn/lib64/hw/fingerprint.fpc.lahaina.so
+
+# Fingerprint modules (star)
+vendor/lib64/hw/fingerprint.goodix_fod.so:odm/haydn/lib64/hw/fingerprint.goodix_fod.lahaina.so
+vendor/lib64/libgf_hal.so:odm/haydn/lib64/libgf_hal.so
 
 # FM
 vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so
@@ -1884,6 +1971,82 @@ vendor/etc/sensors/hals.conf:odm/etc/haydn/sensors/hals.conf
 vendor/etc/sensors/judge_calibrated.json:odm/etc/haydn/sensors/judge_calibrated.json
 vendor/etc/sensors/sns_reg_config:odm/etc/haydn/sensors/sns_reg_config
 
+# Sensors configs (star)
+vendor/etc/sensors/config/ak991x_dri_0.json:odm/etc/star/sensors/config/ak991x_dri_0.json
+vendor/etc/sensors/config/bmp285_0.json:odm/etc/star/sensors/config/bmp285_0.json
+vendor/etc/sensors/config/bu27030_0_back.json:odm/etc/star/sensors/config/bu27030_0_back.json
+vendor/etc/sensors/config/lsm6dso_0.json:odm/etc/star/sensors/config/lsm6dso_0.json
+vendor/etc/sensors/config/power_0.json:odm/etc/star/sensors/config/power_0.json
+vendor/etc/sensors/config/sm8350_ak991x_0.json:odm/etc/star/sensors/config/sm8350_ak991x_0.json
+vendor/etc/sensors/config/sm8350_bmp285_0.json:odm/etc/star/sensors/config/sm8350_bmp285_0.json
+vendor/etc/sensors/config/sm8350_bu27030_0_back.json:odm/etc/star/sensors/config/sm8350_bu27030_0_back.json
+vendor/etc/sensors/config/sm8350_bu52053nvx_0.json:odm/etc/star/sensors/config/sm8350_bu52053nvx_0.json
+vendor/etc/sensors/config/sm8350_default_sensors.json:odm/etc/star/sensors/config/sm8350_default_sensors.json
+vendor/etc/sensors/config/sm8350_dynamic_sensors.json:odm/etc/star/sensors/config/sm8350_dynamic_sensors.json
+vendor/etc/sensors/config/sm8350_irq.json:odm/etc/star/sensors/config/sm8350_irq.json
+vendor/etc/sensors/config/sm8350_lsm6dso_0.json:odm/etc/star/sensors/config/sm8350_lsm6dso_0.json
+vendor/etc/sensors/config/sm8350_power_0.json:odm/etc/star/sensors/config/sm8350_power_0.json
+vendor/etc/sensors/config/sm8350_sx932x_0.json:odm/etc/star/sensors/config/sm8350_sx932x_0.json
+vendor/etc/sensors/config/sm8350_sx933x_0.json:odm/etc/star/sensors/config/sm8350_sx933x_0.json
+vendor/etc/sensors/config/sm8350_tcs3408.json:odm/etc/star/sensors/config/sm8350_tcs3408.json
+vendor/etc/sensors/config/sm8350_tmd3719.json:odm/etc/star/sensors/config/sm8350_tmd3719.json
+vendor/etc/sensors/config/sns_amd.json:odm/etc/star/sensors/config/sns_amd.json
+vendor/etc/sensors/config/sns_amd_sw_disabled.json:odm/etc/star/sensors/config/sns_amd_sw_disabled.json
+vendor/etc/sensors/config/sns_amd_sw_enabled.json:odm/etc/star/sensors/config/sns_amd_sw_enabled.json
+vendor/etc/sensors/config/sns_aod.json:odm/etc/star/sensors/config/sns_aod.json
+vendor/etc/sensors/config/sns_aont.json:odm/etc/star/sensors/config/sns_aont.json
+vendor/etc/sensors/config/sns_basic_gestures.json:odm/etc/star/sensors/config/sns_basic_gestures.json
+vendor/etc/sensors/config/sns_bring_to_ear.json:odm/etc/star/sensors/config/sns_bring_to_ear.json
+vendor/etc/sensors/config/sns_ccd.json:odm/etc/star/sensors/config/sns_ccd.json
+vendor/etc/sensors/config/sns_ccd_v2_walk.json:odm/etc/star/sensors/config/sns_ccd_v2_walk.json
+vendor/etc/sensors/config/sns_ccd_v3_1_walk.json:odm/etc/star/sensors/config/sns_ccd_v3_1_walk.json
+vendor/etc/sensors/config/sns_ccd_v3_walk.json:odm/etc/star/sensors/config/sns_ccd_v3_walk.json
+vendor/etc/sensors/config/sns_cm.json:odm/etc/star/sensors/config/sns_cm.json
+vendor/etc/sensors/config/sns_dae.json:odm/etc/star/sensors/config/sns_dae.json
+vendor/etc/sensors/config/sns_dbtap.json:odm/etc/star/sensors/config/sns_dbtap.json
+vendor/etc/sensors/config/sns_device_orient.json:odm/etc/star/sensors/config/sns_device_orient.json
+vendor/etc/sensors/config/sns_diag_filter.json:odm/etc/star/sensors/config/sns_diag_filter.json
+vendor/etc/sensors/config/sns_distance_bound.json:odm/etc/star/sensors/config/sns_distance_bound.json
+vendor/etc/sensors/config/sns_dpc.json:odm/etc/star/sensors/config/sns_dpc.json
+vendor/etc/sensors/config/sns_facing.json:odm/etc/star/sensors/config/sns_facing.json
+vendor/etc/sensors/config/sns_fmv.json:odm/etc/star/sensors/config/sns_fmv.json
+vendor/etc/sensors/config/sns_geomag_rv.json:odm/etc/star/sensors/config/sns_geomag_rv.json
+vendor/etc/sensors/config/sns_gyro_cal.json:odm/etc/star/sensors/config/sns_gyro_cal.json
+vendor/etc/sensors/config/sns_hand_detect.json:odm/etc/star/sensors/config/sns_hand_detect.json
+vendor/etc/sensors/config/sns_heart_rate.json:odm/etc/star/sensors/config/sns_heart_rate.json
+vendor/etc/sensors/config/sns_mag_cal.json:odm/etc/star/sensors/config/sns_mag_cal.json
+vendor/etc/sensors/config/sns_mag_cal_legacy.json:odm/etc/star/sensors/config/sns_mag_cal_legacy.json
+vendor/etc/sensors/config/sns_multishake.json:odm/etc/star/sensors/config/sns_multishake.json
+vendor/etc/sensors/config/sns_nonui.json:odm/etc/star/sensors/config/sns_nonui.json
+vendor/etc/sensors/config/sns_oem13.json:odm/etc/star/sensors/config/sns_oem13.json
+vendor/etc/sensors/config/sns_pedometer.json:odm/etc/star/sensors/config/sns_pedometer.json
+vendor/etc/sensors/config/sns_rmd.json:odm/etc/star/sensors/config/sns_rmd.json
+vendor/etc/sensors/config/sns_rotv.json:odm/etc/star/sensors/config/sns_rotv.json
+vendor/etc/sensors/config/sns_sar_algo.json:odm/etc/star/sensors/config/sns_sar_algo.json
+vendor/etc/sensors/config/sns_sar_algo_1.json:odm/etc/star/sensors/config/sns_sar_algo_1.json
+vendor/etc/sensors/config/sns_screen_down.json:odm/etc/star/sensors/config/sns_screen_down.json
+vendor/etc/sensors/config/sns_smd.json:odm/etc/star/sensors/config/sns_smd.json
+vendor/etc/sensors/config/sns_tilt.json:odm/etc/star/sensors/config/sns_tilt.json
+vendor/etc/sensors/config/sns_tilt_sw_disabled.json:odm/etc/star/sensors/config/sns_tilt_sw_disabled.json
+vendor/etc/sensors/config/sns_tilt_sw_enabled.json:odm/etc/star/sensors/config/sns_tilt_sw_enabled.json
+vendor/etc/sensors/config/sns_tilt_to_wake.json:odm/etc/star/sensors/config/sns_tilt_to_wake.json
+vendor/etc/sensors/config/sns_wrist_pedo.json:odm/etc/star/sensors/config/sns_wrist_pedo.json
+vendor/etc/sensors/config/sx932x_0.json:odm/etc/star/sensors/config/sx932x_0.json
+vendor/etc/sensors/config/sx933x_0.json:odm/etc/star/sensors/config/sx933x_0.json
+vendor/etc/sensors/config/tcs3408.json:odm/etc/star/sensors/config/tcs3408.json
+vendor/etc/sensors/config/tmd3719.json:odm/etc/star/sensors/config/tmd3719.json
+vendor/etc/sensors/hals.conf:odm/etc/star/sensors/hals.conf
+vendor/etc/sensors/judge_calibrated.json:odm/etc/star/sensors/judge_calibrated.json
+vendor/etc/sensors/sns_reg_config:odm/etc/star/sensors/sns_reg_config
+
+# Sensors (ToF star)
+vendor/lib/libprotobuf-cpp-full-vendor-3.9.1.so:odm/star/lib/libprotobuf-cpp-full-vendor-3.9.1.so
+vendor/lib/vl53l5.hal@1.0.so:odm/star/lib/vl53l5.hal@1.0.so
+vendor/lib/vl53l5.hal@2.0.so:odm/star/lib/vl53l5.hal@2.0.so
+vendor/lib64/libprotobuf-cpp-full-vendor-3.9.1.so:odm/star/lib64/libprotobuf-cpp-full-vendor-3.9.1.so
+vendor/lib64/vl53l5.hal@1.0.so:odm/star/lib64/vl53l5.hal@1.0.so
+vendor/lib64/vl53l5.hal@2.0.so:odm/star/lib64/vl53l5.hal@2.0.so
+
 # SecureMSM (EID)
 vendor/bin/hw/vendor.qti.hardware.eid@1.0-service
 vendor/etc/init/vendor.qti.hardware.eid@1.0-service.rc
@@ -2060,6 +2223,9 @@ vendor/firmware/aw8697_haptic.bin:odm/vili/firmware/aw8697_haptic.bin
 # Vibrator (haydn)
 vendor/firmware/aw8697_haptic.bin:odm/haydn/firmware/aw8697_haptic.bin
 
+# Vibrator (star)
+vendor/firmware/aw8697_haptic.bin:odm/star/firmware/aw8697_haptic.bin
+
 # Vibrator effects (vili)
 vendor/firmware/0_click_P_RTP.bin:odm/vili/firmware/0_click_P_RTP.bin
 vendor/firmware/1_doubelClick_P_RTP.bin:odm/vili/firmware/1_doubelClick_P_RTP.bin
@@ -2069,12 +2235,20 @@ vendor/firmware/4_pop_P_RTP.bin:odm/vili/firmware/4_pop_P_RTP.bin
 vendor/firmware/5_heavyClick_P_RTP.bin:odm/vili/firmware/5_heavyClick_P_RTP
 
 # Vibrator effects (haydn)
-vendor/firmware/0_click_P_RTP.bin:odm/vili/firmware/0_click_P_RTP.bin
-vendor/firmware/1_doubelClick_P_RTP.bin:odm/vili/firmware/1_doubelClick_P_RTP.bin
-vendor/firmware/2_tick_P_RTP.bin:odm/vili/firmware/2_tick_P_RTP.bin
-vendor/firmware/3_thud_P_RTP.bin:odm/vili/firmware/3_thud_P_RTP.bin
-vendor/firmware/4_pop_P_RTP.bin:odm/vili/firmware/4_pop_P_RTP.bin
-vendor/firmware/5_heavyClick_P_RTP.bin:odm/vili/firmware/5_heavyClick_P_RTP.bin
+vendor/firmware/0_click_P_RTP.bin:odm/haydn/firmware/0_click_P_RTP.bin
+vendor/firmware/1_doubelClick_P_RTP.bin:odm/haydn/firmware/1_doubelClick_P_RTP.bin
+vendor/firmware/2_tick_P_RTP.bin:odm/haydn/firmware/2_tick_P_RTP.bin
+vendor/firmware/3_thud_P_RTP.bin:odm/haydn/firmware/3_thud_P_RTP.bin
+vendor/firmware/4_pop_P_RTP.bin:odm/haydn/firmware/4_pop_P_RTP.bin
+vendor/firmware/5_heavyClick_P_RTP.bin:odm/haydn/firmware/5_heavyClick_P_RTP.bin
+
+# Vibrator effects (star)
+vendor/firmware/0_click_P_RTP.bin:odm/star/firmware/0_click_P_RTP.bin
+vendor/firmware/1_doubelClick_P_RTP.bin:odm/star/firmware/1_doubelClick_P_RTP.bin
+vendor/firmware/2_tick_P_RTP.bin:odm/star/firmware/2_tick_P_RTP.bin
+vendor/firmware/3_thud_P_RTP.bin:odm/star/firmware/3_thud_P_RTP.bin
+vendor/firmware/4_pop_P_RTP.bin:odm/star/firmware/4_pop_P_RTP.bin
+vendor/firmware/5_heavyClick_P_RTP.bin:odm/star/firmware/5_heavyClick_P_RTP.bin
 
 # Touch firmware (vili)
 vendor/firmware/st_fts_k3s.ftb
@@ -2082,6 +2256,10 @@ vendor/firmware/st_fts_k3s.ftb
 # Touch firmware (haydn)
 vendor/firmware/focaltech_ts_fw.bin
 vendor/firmware/focaltech_ts_ht_fw.bin
+
+# Touch firmware (star)
+vendor/firmware/st_fts_k2.ftb
+vendor/firmware/st_fts_k2_htp.ftb
 
 # WFD
 -system/framework/WfdCommon.jar
