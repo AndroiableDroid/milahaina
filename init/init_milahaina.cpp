@@ -124,6 +124,8 @@ void vendor_load_properties()
             vili_vendor_properties();
         } else if (device == "viligl") {
             vili_vendor_properties();
+        } else if (device == "vilijp") {
+            vili_vendor_properties();
         } else if (device == "haydn") {
             haydn_vendor_properties();
         } else if (device == "haydn_in") {
