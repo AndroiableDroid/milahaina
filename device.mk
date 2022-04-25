@@ -414,6 +414,17 @@ PRODUCT_PACKAGES += \
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 30
 
+# SKU
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/sku/haydn.build.prop:$(TARGET_COPY_OUT_ODM)/etc/haydn.build.prop \
+    $(LOCAL_PATH)/sku/haydn_in.build.prop:$(TARGET_COPY_OUT_ODM)/etc/haydn_in.build.prop \
+    $(LOCAL_PATH)/sku/haydnpro.build.prop:$(TARGET_COPY_OUT_ODM)/etc/haydnpro.build.prop \
+    $(LOCAL_PATH)/sku/star.build.prop:$(TARGET_COPY_OUT_ODM)/etc/star.build.prop \
+    $(LOCAL_PATH)/sku/vili.build.prop:$(TARGET_COPY_OUT_ODM)/etc/vili.build.prop \
+    $(LOCAL_PATH)/sku/viligl.build.prop:$(TARGET_COPY_OUT_ODM)/etc/viligl.build.prop \
+    $(LOCAL_PATH)/sku/viliin.build.prop:$(TARGET_COPY_OUT_ODM)/etc/viliin.build.prop \
+    $(LOCAL_PATH)/sku/vilijp.build.prop:$(TARGET_COPY_OUT_ODM)/etc/vilijp.build.prop
+
 # Storage
 PRODUCT_CHARACTERISTICS := nosdcard
 
