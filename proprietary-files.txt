@@ -1167,8 +1167,13 @@ vendor/lib64/libgf_ca.so:odm/vili/lib64/libgf_ca.so
 vendor/lib64/hw/fingerprint.fpc.so:odm/haydn/lib64/hw/fingerprint.fpc.lahaina.so
 
 # Fingerprint modules (star)
-vendor/lib64/hw/fingerprint.goodix_fod.so:odm/haydn/lib64/hw/fingerprint.goodix_fod.lahaina.so
-vendor/lib64/libgf_hal.so:odm/haydn/lib64/libgf_hal.so
+vendor/lib64/hw/fingerprint.goodix_fod.so:odm/star/lib64/hw/fingerprint.goodix_fod.lahaina.so
+vendor/lib64/libgf_hal.so:odm/star/lib64/libgf_hal.so
+
+# Fingerprint dtool
+vendor/bin/hw/vendor.xiaomi.hardware.dtool@1.0-service
+vendor/etc/init/vendor.xiaomi.hardware.dtool@1.0-service.rc
+vendor/lib64/vendor.xiaomi.hardware.dtool@1.0.so
 
 # FM
 vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so
