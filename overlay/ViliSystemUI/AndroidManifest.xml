@@ -4,10 +4,12 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.systemui.milahaina">
+    package="com.android.systemui.vili">
 
     <overlay
         android:isStatic="true"
         android:priority="800"
+        android:requiredSystemPropertyName="ro.boot.milahaina_version"
+        android:requiredSystemPropertyValue="vili"
         android:targetPackage="com.android.systemui" />
 </manifest>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2021 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="168px"
+    android:height="168px"
+    android:viewportWidth="168"
+    android:viewportHeight="168">
+
+    <path
+        android:fillColor="#000000"
+        android:pathData="M 0.00 0.00 L 168.00 0.00 C 148.62 2.16 129.20 5.12 110.86 11.69 C 84.28 21.09 60.96 38.32 42.03 59.00 C 32.28 69.97 24.08 82.28 17.51 95.39 C 6.55 117.97 2.48 143.16 0 168 L 0.00 0.00 Z" />
+</vector>

@@ -101,6 +101,7 @@ DEVICE_MATRIX_FILE := \
 ODM_MANIFEST_SKUS += \
     haydn \
     haydnpro \
+    star \
     vili \
     viligl \
     viliin \
@@ -108,6 +109,7 @@ ODM_MANIFEST_SKUS += \
 
 ODM_MANIFEST_HAYDN_FILES := $(DEVICE_PATH)/hidl/manifest_haydn.xml
 ODM_MANIFEST_HAYDNPRO_FILES := $(DEVICE_PATH)/hidl/manifest_haydnpro.xml
+ODM_MANIFEST_STAR_FILES := $(DEVICE_PATH)/hidl/manifest_star.xml
 ODM_MANIFEST_VILI_FILES := $(DEVICE_PATH)/hidl/manifest_vili.xml
 ODM_MANIFEST_VILIGL_FILES := $(DEVICE_PATH)/hidl/manifest_viligl.xml
 ODM_MANIFEST_VILIIN_FILES := $(DEVICE_PATH)/hidl/manifest_viliin.xml

@@ -14,10 +14,12 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="android.milahaina">
+    package="android.haydn">
 
     <overlay
         android:isStatic="true"
         android:priority="850"
+        android:requiredSystemPropertyName="ro.boot.milahaina_version"
+        android:requiredSystemPropertyValue="haydn"
         android:targetPackage="android" />
 </manifest>
