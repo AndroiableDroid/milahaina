@@ -13,7 +13,7 @@
 // limitations under the License.
 
 runtime_resource_overlay {
-    name: "MilahainaFrameworksOverlay",
+    name: "StarFrameworksOverlay",
     sdk_version: "current",
     vendor: true,
 }

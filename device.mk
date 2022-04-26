@@ -336,7 +336,9 @@ PRODUCT_PACKAGES += \
     CarrierConfigResCommon \
     FrameworksResCommon \
     aptxalsOverlay \
-    MilahainaFrameworksOverlay \
+    HaydnFrameworksOverlay \
+    StarFrameworksOverlay \
+    ViliFrameworksOverlay \
     FrameworksResTarget \
     SystemUIResCommon \
     TelephonyResCommon \
@@ -345,8 +347,14 @@ PRODUCT_PACKAGES += \
     WifiResTarget \
     PanelConfigHaydn \
     PanelConfigVili \
+    PanelConfigStar \
     MiLahainaFrameworks \
-    MilahainaSystemUI
+    HaydnSystemUI \
+    StarSystemUI \
+    ViliSystemUI \
+    SettingsResHaydn \
+    SettingsResStar \
+    SettingsResVili
 
 # Platform
 TARGET_BOARD_PLATFORM := lahaina
