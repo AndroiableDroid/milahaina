@@ -137,7 +137,6 @@ vendor/lib64/libAF.so:odm/haydn/lib64/libAF.so
 vendor/lib64/libBlinkStub.so:odm/haydn/lib64/libBlinkStub.so
 vendor/lib64/libFlickerDet.so:odm/haydn/lib64/libFlickerDet.so
 vendor/lib64/libI420colorconvert.so:odm/haydn/lib64/libI420colorconvert.so
-vendor/lib64/libMegviiFacepp-0.5.2.so:odm/haydn/lib64/libMegviiFacepp-0.5.2.so
 vendor/lib64/libSNPE.so:odm/haydn/lib64/libSNPE.so
 vendor/lib64/lib_sr_models.so:odm/haydn/lib64/lib_sr_models.so
 vendor/lib64/libaidenoiser.so:odm/haydn/lib64/libaidenoiser.so
@@ -197,7 +196,6 @@ vendor/lib64/libhdrdynamic.so:odm/haydn/lib64/libhdrdynamic.so
 vendor/lib64/libhdrdynamicootf.so:odm/haydn/lib64/libhdrdynamicootf.so
 vendor/lib64/libhexagon_controller.so:odm/haydn/lib64/libhexagon_controller.so
 vendor/lib64/libipebpsstriping.so:odm/haydn/lib64/libipebpsstriping.so
-vendor/lib64/libmegface.so:odm/haydn/lib64/libmegface.so
 vendor/lib64/libmiai_deblur.so:odm/haydn/lib64/libmiai_deblur.so
 vendor/lib64/libmiai_portraitsupernight.so:odm/haydn/lib64/libmiai_portraitsupernight.so
 vendor/lib64/libmialgo_ai_vision.so:odm/haydn/lib64/libmialgo_ai_vision.so
@@ -437,7 +435,6 @@ vendor/etc/camera/deblur_wood_gpu.dlc:odm/etc/haydn/camera/deblur_wood_gpu.dlc
 vendor/etc/camera/det_quantize.dlc:odm/etc/haydn/camera/det_quantize.dlc
 vendor/etc/camera/eisoverridesettings.txt:odm/etc/haydn/camera/eisoverridesettings.txt
 vendor/etc/camera/ellc.bin:odm/etc/haydn/camera/ellc.bin
-vendor/etc/camera/megviifacepp_0_5_2_model:odm/etc/haydn/camera/megviifacepp_0_5_2_model
 vendor/etc/camera/mibokeh_855_opencl.bin:odm/etc/haydn/camera/mibokeh_855_opencl.bin
 vendor/etc/camera/mibokeh_855_parameter.bin:odm/etc/haydn/camera/mibokeh_855_parameter.bin
 vendor/etc/camera/model1.dlc:odm/etc/haydn/camera/model1.dlc
