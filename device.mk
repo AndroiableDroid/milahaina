@@ -207,9 +207,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
 
 # Initialization
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init/fstab.default:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.default
-
 PRODUCT_PACKAGES += \
     fstab.default \
     init.xiaomi.rc \
@@ -219,6 +216,7 @@ PRODUCT_PACKAGES += \
     init.xiaomi.overlay.rc \
     init.xiaomi.recovery.rc \
     init.xiaomi.perf.rc \
+    fstab.default.vendor_ramdisk \
     init.target.rc \
     init.xiaomi.early_boot.sh \
     init.xiaomi.post_boot.sh \
