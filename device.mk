@@ -85,7 +85,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.vendor.bt.a2dp.aac_whitelist=false \
-    ro.bluetooth.library_name=libbluetooth_qti.so
+    ro.bluetooth.library_name=libbluetooth_qti.so \
+    persist.vendor.btstack.enable.lpa=true
 
 PRODUCT_VENDOR_PROPERTIES += \
     persist.sys.fflag.override.settings_bluetooth_hearing_aid=true \
