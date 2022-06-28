@@ -75,7 +75,6 @@ PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     com.dsi.ant@1.0.vendor \
     android.hardware.bluetooth@1.1.vendor \
-    com.qualcomm.qti.bluetooth_audio@1.0.vendor \
     libbluetooth_audio_session \
     libbthost_if \
     vendor.qti.hardware.bluetooth_audio@2.1.vendor \
