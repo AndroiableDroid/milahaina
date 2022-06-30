@@ -32,6 +32,9 @@ SECTION=
 PROP_FILE="proprietary-files.txt"
 while [ "${#}" -gt 0 ]; do
     case "${1}" in
+        -c | --clean )
+                CLEAN_VENDOR=true
+                ;;
         -n | --no-cleanup )
                 CLEAN_VENDOR=false
                 ;;
@@ -42,8 +45,20 @@ while [ "${#}" -gt 0 ]; do
                 SECTION="${2}"; shift
                 CLEAN_VENDOR=false
                 ;;
-        -l | --lahaina )
+        --lahaina )
 		PROP_FILE="proprietary-files-lahaina.txt"
+                CLEAN_VENDOR=false
+                ;;
+        --vili )
+		PROP_FILE="proprietary-files-vili.txt"
+                CLEAN_VENDOR=false
+                ;;
+        --haydn )
+		PROP_FILE="proprietary-files-haydn.txt"
+                CLEAN_VENDOR=false
+                ;;
+        --star )
+		PROP_FILE="proprietary-files-star.txt"
                 CLEAN_VENDOR=false
                 ;;
         * )
