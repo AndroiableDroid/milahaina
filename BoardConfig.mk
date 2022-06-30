@@ -151,8 +151,8 @@ TARGET_KERNEL_ADDITIONAL_FLAGS := \
     LLVM=1
 
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CONFIG := vendor/milahaina_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/sm8350
+TARGET_KERNEL_CONFIG := vendor/vili-qgki_defconfig
+TARGET_KERNEL_SOURCE := kernel/msm-5.4
 
 # Partitions
 BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := odm product system system_ext vendor
