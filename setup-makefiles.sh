@@ -10,6 +10,11 @@ set -e
 
 DEVICE=milahaina
 VENDOR=xiaomi
+if [ -z $1 ]; then
+    PROP_FILE="proprietary-files.txt"
+else
+    PROP_FILE=$1
+fi
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -30,7 +35,7 @@ setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}"
 # Warning headers and guards
 write_headers
 
-write_makefiles "${MY_DIR}/proprietary-files.txt" true
+write_makefiles "${MY_DIR}/${PROP_FILE}" true
 
 # Finish
 write_footers

@@ -29,7 +29,7 @@ CLEAN_VENDOR=true
 
 KANG=
 SECTION=
-
+PROP_FILE="proprietary-files.txt"
 while [ "${#}" -gt 0 ]; do
     case "${1}" in
         -n | --no-cleanup )
@@ -40,6 +40,10 @@ while [ "${#}" -gt 0 ]; do
                 ;;
         -s | --section )
                 SECTION="${2}"; shift
+                CLEAN_VENDOR=false
+                ;;
+        -l | --lahaina )
+		PROP_FILE="proprietary-files-lahaina.txt"
                 CLEAN_VENDOR=false
                 ;;
         * )
@@ -64,6 +68,6 @@ function blob_fixup() {
 # Initialize the helper.
 setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
 
-extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
+extract "${MY_DIR}/${PROP_FILE}" "${SRC}" "${KANG}" --section "${SECTION}"
 
-"${MY_DIR}/setup-makefiles.sh"
+"${MY_DIR}/setup-makefiles.sh" "${PROP_FILE}"
