@@ -34,8 +34,15 @@ setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}"
 
 # Warning headers and guards
 write_headers
+TMP_FILE=".tmp.prop.txt"
+cat ${MY_DIR}/proprietary-files.txt > ${MY_DIR}/$TMP_FILE
+for i in lahaina vili haydn star; do
+	cat ${MY_DIR}/proprietary-files-$i.txt >> ${MY_DIR}/$TMP_FILE
+done
 
-write_makefiles "${MY_DIR}/${PROP_FILE}" true
+write_makefiles "${MY_DIR}/${TMP_FILE}" true
 
 # Finish
 write_footers
+
+rm ${MY_DIR}/$TMP_FILE
