@@ -37,6 +37,11 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vulkan.version-1_1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions//android.hardware.vulkan.version-1_1.xml \
     frameworks/native/data/etc/android.software.vulkan.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml
 
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.hardware.egl=adreno \
+    ro.hardware.vulkan=adreno \
+    ro.opengles.version=196610
+
 # Audio
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml
@@ -291,6 +296,11 @@ PRODUCT_PACKAGES += \
     libstagefrighthw \
     libgui_vendor
 
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    media.settings.xml=/vendor/etc/media_profiles_vendor.xml \
+    media.stagefright.thumbnail.prefer_hw_codecs=true \
+    ro.media.recorder-max-base-layer-fps=60
+
 # NFC
 $(call inherit-product, vendor/nxp/opensource/commonsys/packages/apps/Nfc/nfc_system_product.mk)
 $(call inherit-product, vendor/nxp/opensource/sn100x/halimpl/nfc_vendor_product.mk)
@@ -307,9 +317,10 @@ PRODUCT_PACKAGES += \
     SecureElement \
     android.hardware.secure_element@1.0:64 \
     android.hardware.secure_element@1.2.vendor \
+    se_nq_extn_client:64 \
     ls_nq_client:64 \
     jcos_nq_client:64 \
-    vendor.nxp.nxpnfc@1.0.vendor
+    vendor.nxp.nxpnfc@1.0.vendor \
 
 PRODUCT_SOONG_NAMESPACES += \
     vendor/nxp/opensource/halimpl
@@ -366,7 +377,17 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Performance
 PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0.vendor \
+    libavservices_minijail.vendor \
+    libpsi.vendor \
+    libtflite \
     vendor.qti.hardware.perf@2.2.vendor
+
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.vendor.perf-hal.ver=2.2 \
+    ro.vendor.extension_library=libqti-perfd-client.so \
+    vendor.power.pasr.enabled=true \
+    ro.vendor.qspm.enable=true
 
 # Power
 PRODUCT_PACKAGES += \
@@ -391,6 +412,15 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.6.vendor \
     android.hardware.radio.config@1.3.vendor \
     android.hardware.radio.deprecated@1.0.vendor
+
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.radio.multisim.config=dsds \
+    persist.vendor.radio.apm_sim_not_pwdn=1 \
+    persist.vendor.radio.custom_ecc=1 \
+    persist.vendor.radio.enableadvancedscan=true \
+    persist.vendor.radio.procedure_bytes=SKIP \
+    persist.vendor.radio.rat_on=combine \
+    persist.vendor.radio.sib16_support=1
 
 # Remove unwanted packages
 PRODUCT_PACKAGES += \
@@ -469,6 +499,9 @@ TARGET_HAS_DIAG_ROUTER := true
 TARGET_KERNEL_VERSION := 5.4
 $(call inherit-product, vendor/qcom/opensource/usb/vendor_product.mk)
 
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.accessory.xml \
     frameworks/native/data/etc/android.hardware.usb.host.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.host.xml
@@ -522,9 +555,15 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
+    fstman \
+    fstman.ini \
     hostapd \
+    hostapd.accept \
+    hostapd.deny \
+    hostapd_cli \
+    hostapd_default.conf \
+    libqsap_sdk \
     libwifi-hal-qcom \
+    sigma_dut \
     wpa_supplicant \
-    wpa_supplicant.conf \
-    vendor.qti.hardware.wifi.hostapd@1.2 \
-    vendor.qti.hardware.wifi.supplicant@2.2
+    wpa_supplicant.conf
