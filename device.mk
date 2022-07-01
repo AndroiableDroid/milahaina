@@ -46,12 +46,12 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.audio.bcl.enabled=false \
-    persist.vendor.audio.speaker.prot.enable=false \
-    persist.vendor.audio.vbat.enabled=false \
-    vendor.audio.spkr_prot.tx.sampling_rate=0 \
-    ro.vendor.audio.sdk.fluencetype=fluence
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    persist.vendor.audio.bcl.enabled=false \
+#    persist.vendor.audio.speaker.prot.enable=false \
+#    persist.vendor.audio.vbat.enabled=false \
+#    vendor.audio.spkr_prot.tx.sampling_rate=0 \
+#    ro.vendor.audio.sdk.fluencetype=fluence
 
 $(call inherit-product, hardware/qcom-caf/sm8350/audio/configs/lahaina/lahaina.mk)
 $(call inherit-product, vendor/qcom/opensource/audio/configs/qssi/qssi.mk)
@@ -251,7 +251,7 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.target.rc \
     init.xiaomi.early_boot.sh \
-    init.xiaomi.post_boot.sh
+    init.xiaomi.post_boot.sh \
     ueventd.lahaina.rc \
     ueventd.milahaina.rc \
     ueventd.qcom.rc
@@ -391,7 +391,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti
+    android.hardware.power-service-qti \
     android.hardware.power.stats@1.0-service.mock
 
 # Project ID Quota
@@ -498,9 +498,6 @@ PRODUCT_PACKAGES += \
 TARGET_HAS_DIAG_ROUTER := true
 TARGET_KERNEL_VERSION := 5.4
 $(call inherit-product, vendor/qcom/opensource/usb/vendor_product.mk)
-
-PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.accessory.xml \
