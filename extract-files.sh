@@ -47,6 +47,10 @@ while [ "${#}" -gt 0 ]; do
                 ;;
         --lahaina )
 		PROP_FILE="proprietary-files-lahaina.txt"
+                cat ${MY_DIR}/${PROP_FILE} > ${MY_DIR}/.tmp.prop.txt
+		PROP_FILE="proprietary-files-qssi.txt"
+                cat ${MY_DIR}/${PROP_FILE} >> ${MY_DIR}/.tmp.prop.txt
+                PROP_FILE=".tmp.prop.txt"
                 CLEAN_VENDOR=false
                 ;;
         --vili )
