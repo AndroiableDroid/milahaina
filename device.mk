@@ -244,16 +244,11 @@ PRODUCT_PACKAGES += \
     init.xiaomi.overlay.rc \
     init.xiaomi.recovery.rc \
     init.xiaomi.perf.rc \
-    init.class_main.sh \
-    init.qcom.early_boot.sh \
-    init.qcom.rc \
-    init.qcom.sh \
     init.target.rc \
     init.xiaomi.early_boot.sh \
     init.xiaomi.post_boot.sh \
     ueventd.lahaina.rc \
-    ueventd.milahaina.rc \
-    ueventd.qcom.rc
+    ueventd.milahaina.rc
 
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.post_boot.custom=true

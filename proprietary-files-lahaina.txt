@@ -278,6 +278,9 @@ vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 -vendor/app/com.qualcomm.qti.gpudrivers.lahaina.api30/com.qualcomm.qti.gpudrivers.lahaina.api30.apk;PRESIGNED
 
 # Init - from 
+vendor/bin/init.class_main.sh
+vendor/bin/init.qcom.early_boot.sh
+vendor/bin/init.qcom.sh
 vendor/bin/init.kernel.post_boot-lahaina.sh
 vendor/bin/init.kernel.post_boot.sh
 vendor/bin/init.qti.media.sh
@@ -285,6 +288,8 @@ vendor/bin/init.qti.qcv.sh
 vendor/bin/init.qti.chg_policy.sh
 vendor/bin/init.qti.kernel.sh
 vendor/bin/vendor_modprobe.sh
+vendor/ueventd.rc:vendor/etc/ueventd.qcom.rc
+vendor/etc/init/hw/init.qcom.rc
 vendor/etc/init/init.qti.media.rc
 vendor/etc/init/init.qti.qcv.rc
 vendor/etc/init/init.vendor.wlan.rc
