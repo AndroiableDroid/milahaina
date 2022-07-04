@@ -319,6 +319,7 @@ PRODUCT_PACKAGES += \
     vendor.nxp.nxpnfc@1.0.vendor \
 
 PRODUCT_SOONG_NAMESPACES += \
+    vendor/nxp/opensource/pn5xx \
     vendor/nxp/opensource/halimpl
 
 # Namespaces
