@@ -10,7 +10,41 @@ ifneq ($(filter milahaina,$(TARGET_DEVICE)),)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
+FIRMWARE_MOUNT_POINT := $(TARGET_OUT_VENDOR)/firmware_mnt
+$(FIRMWARE_MOUNT_POINT): $(LOCAL_INSTALLED_MODULE)
+	@echo "Creating $(FIRMWARE_MOUNT_POINT)"
+	@mkdir -p $(TARGET_OUT_VENDOR)/firmware_mnt
+
+BT_FIRMWARE_MOUNT_POINT := $(TARGET_OUT_VENDOR)/bt_firmware
+$(BT_FIRMWARE_MOUNT_POINT): $(LOCAL_INSTALLED_MODULE)
+	@echo "Creating $(BT_FIRMWARE_MOUNT_POINT)"
+	@mkdir -p $(TARGET_OUT_VENDOR)/bt_firmware
+
+DSP_MOUNT_POINT := $(TARGET_OUT_VENDOR)/dsp
+$(DSP_MOUNT_POINT): $(LOCAL_INSTALLED_MODULE)
+	@echo "Creating $(DSP_MOUNT_POINT)"
+	@mkdir -p $(TARGET_OUT_VENDOR)/dsp
+
+ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_MOUNT_POINT) $(BT_FIRMWARE_MOUNT_POINT) $(DSP_MOUNT_POINT)
+
 # Symlinks
+EGL_LIBRARIES := \
+        libEGL_adreno.so \
+        libGLESv2_adreno.so \
+        libq3dtools_adreno.so
+
+EGL_32_SYMLINKS := $(addprefix $(TARGET_OUT_VENDOR)/lib/,$(notdir $(EGL_LIBRARIES)))
+$(EGL_32_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf egl/$(notdir $@) $@
+
+EGL_64_SYMLINKS := $(addprefix $(TARGET_OUT_VENDOR)/lib64/,$(notdir $(EGL_LIBRARIES)))
+$(EGL_64_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf egl/$(notdir $@) $@
+
 RFS_MSM_ADSP_SYMLINKS := $(TARGET_OUT_VENDOR)/rfs/msm/adsp/
 $(RFS_MSM_ADSP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@rm -rf $@/*
@@ -83,6 +117,8 @@ $(foreach chip, $(WLAN_CHIPSETS), \
 	$(TARGET_OUT_VENDOR)/firmware/wlan/qca_cld/$(chip)/wlan_mac.bin))
 
 ALL_DEFAULT_INSTALLED_MODULES += \
+    $(EGL_32_SYMLINKS) \
+    $(EGL_64_SYMLINKS) \
     $(RFS_MSM_ADSP_SYMLINKS) \
     $(RFS_MSM_CDSP_SYMLINKS) \
     $(RFS_MSM_MPSS_SYMLINKS) \
