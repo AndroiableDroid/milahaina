@@ -332,7 +332,7 @@ vendor/lib64/libwa_opticalzoom_fusion.so
 vendor/lib64/libxmi_hdr_checker.so
 vendor/lib64/libxmi_high_dynamic_range.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
-vendor/lib64/vendor.xiaomi.hardware.cameraperf@1.0-impl.so
+vendor/lib64/vendor.xiaomi.hardware.cameraperf@1.0-impl.so|75048fd3ee11ab6a2892ebd93dcd0fd086684677
 vendor/lib64/vendor.xiaomi.hardware.cameraperf@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.campostproc@1.0-service-impl.so
 vendor/lib64/vendor.xiaomi.hardware.campostproc@1.0.so
