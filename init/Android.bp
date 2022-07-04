@@ -23,7 +23,7 @@ prebuilt_etc {
 prebuilt_etc {
     name: "init.xiaomi.camera.rc",
     src: "init.xiaomi.camera.rc",
-    sub_dir: "init/hw",
+    sub_dir: "init",
     vendor: true,
 }
 
@@ -51,7 +51,7 @@ prebuilt_etc {
 prebuilt_etc {
     name: "init.xiaomi.nfc.rc",
     src: "init.xiaomi.nfc.rc",
-    sub_dir: "init/hw",
+    sub_dir: "init",
     vendor: true,
 }
 
