@@ -18,14 +18,7 @@ vendor/lib/hw/audio.primary.lahaina.so:odm/vili/lib/hw/audio.primary.lahaina.so
 vendor/lib64/hw/audio.primary.lahaina.so:odm/vili/lib64/hw/audio.primary.lahaina.so
 
 # Audio (acdbdata_vili)
-vendor/etc/acdbdata/adsp_avs_config.acdb
 vendor/etc/acdbdata/adsp_avs_config.acdb:odm/etc/vili/acdbdata/adsp_avs_config.acdb
-vendor/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.00.pmd:odm/etc/vili/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.00.pmd
-vendor/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.10.pmd:odm/etc/vili/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.10.pmd
-vendor/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.00.pmd:odm/etc/vili/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.00.pmd
-vendor/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.10.pmd:odm/etc/vili/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.10.pmd
-vendor/etc/acdbdata/nn_vad_models/fai_3.0.0_0.0_eai_1.00.pmd:odm/etc/vili/acdbdata/nn_vad_models/fai_3.0.0_0.0_eai_1.00.pmd
-vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_1.10.pmd:odm/etc/vili/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_1.10.pmd
 vendor/etc/acdbdata/Tutu/Tutu_Bluetooth_cal.acdb:odm/etc/vili/acdbdata/Tutu/Tutu_Bluetooth_cal.acdb
 vendor/etc/acdbdata/Tutu/Tutu_General_cal.acdb:odm/etc/vili/acdbdata/Tutu/Tutu_General_cal.acdb
 vendor/etc/acdbdata/Tutu/Tutu_Global_cal.acdb:odm/etc/vili/acdbdata/Tutu/Tutu_Global_cal.acdb
@@ -36,14 +29,16 @@ vendor/etc/acdbdata/Tutu/Tutu_Speaker_cal.acdb:odm/etc/vili/acdbdata/Tutu/Tutu_S
 vendor/etc/acdbdata/Tutu/Tutu_workspaceFile.qwsp:odm/etc/vili/acdbdata/Tutu/Tutu_workspaceFile.qwsp
 
 # Audio (configs_vili)
-vendor/etc/audio/sku_lahaina/audio_platform_info.xml:odm/etc/vili/audio/sku_lahaina/audio_platform_info.xml
+#vendor/etc/audio/audio_policy_configuration.xml:odm/etc/vili/audio/audio_policy_configuration.xml
+#vendor/etc/audio/sku_lahaina/audio_effects.xml:odm/etc/vili/audio/sku_lahaina/audio_effects.xml
+vendor/etc/audio/sku_lahaina/audio_io_policy.conf:odm/etc/vili/audio/sku_lahaina/audio_io_policy.conf
 vendor/etc/audio/sku_lahaina/audio_platform_info_intcodec.xml:odm/etc/vili/audio/sku_lahaina/audio_platform_info_intcodec.xml
-vendor/etc/audio/sku_lahaina/audio_platform_info_qrd.xml:odm/etc/vili/audio/sku_lahaina/audio_platform_info_qrd.xml
+vendor/etc/audio/sku_lahaina/mixer_paths.xml:odm/etc/vili/audio/sku_lahaina/mixer_paths.xml
 vendor/etc/audio/sku_lahaina/mixer_paths_overlay_dynamic.xml:odm/etc/vili/audio/sku_lahaina/mixer_paths_overlay_dynamic.xml
 vendor/etc/audio/sku_lahaina/mixer_paths_overlay_static.xml:odm/etc/vili/audio/sku_lahaina/mixer_paths_overlay_static.xml
-vendor/etc/audio/sku_lahaina/mixer_paths.xml:odm/etc/vili/audio/sku_lahaina/mixer_paths.xml
-vendor/etc/audio/sku_lahaina/sound_trigger_platform_info.xml:odm/etc/vili/audio/sku_lahaina/sound_trigger_platform_info.xml
 vendor/etc/audio/sku_lahaina/sound_trigger_mixer_paths.xml:odm/etc/vili/audio/sku_lahaina/sound_trigger_mixer_paths.xml
+vendor/etc/audio/sku_lahaina/sound_trigger_platform_info.xml:odm/etc/vili/audio/sku_lahaina/sound_trigger_platform_info.xml
+vendor/etc/audio/sku_lahaina_qssi/audio_policy_configuration.xml:odm/etc/vili/audio/sku_lahaina_qssi/audio_policy_configuration.xml
 
 # Audio (firmware_vili)
 vendor/firmware/rcv_voice_delta.txt:odm/vili/firmware/rcv_voice_delta.txt

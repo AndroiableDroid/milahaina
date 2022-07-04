@@ -36,6 +36,7 @@ prebuilt_etc {
 
 prebuilt_etc {
     name: "init.xiaomi.audio.rc",
+    filename: "android.hardware.audio.service.rc",
     src: "init.xiaomi.audio.rc",
     sub_dir: "init",
     vendor: true,
