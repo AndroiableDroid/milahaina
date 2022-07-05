@@ -350,6 +350,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Performance
 PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0 \
     android.hardware.thermal@2.0.vendor \
     libavservices_minijail.vendor \
     libpsi.vendor \
