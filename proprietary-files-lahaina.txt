@@ -184,6 +184,16 @@ vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
 vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 
+# Diagnostics
+vendor/bin/diag-router
+vendor/bin/diagcommd
+vendor/etc/init/diagcommd.rc
+vendor/etc/init/vendor.qti.diag.rc
+vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml
+vendor/lib/libdiag.so
+vendor/lib64/libdiag.so
+vendor/lib64/vendor.qti.diaghal@1.0.so
+
 # DPM - from LA.UM.9.14.r1-18900-LAHAINA.QSSI12.0
 vendor/bin/dpmQmiMgr
 vendor/etc/init/dpmQmiMgr.rc
