@@ -97,7 +97,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.fm@1.0.vendor
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    persist.vendor.bt.a2dp.aac_whitelist=false
+    persist.vendor.bt.a2dp.aac_whitelist=false \
+    ro.bluetooth.library_name=libbluetooth_qti.so
 
 PRODUCT_VENDOR_PROPERTIES += \
     persist.sys.fflag.override.settings_bluetooth_hearing_aid=true \
