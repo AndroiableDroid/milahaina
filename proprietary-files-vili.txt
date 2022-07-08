@@ -176,6 +176,13 @@ vendor/etc/sensors/hals.conf:odm/etc/vili/sensors/hals.conf
 vendor/etc/sensors/judge_calibrated.json:odm/etc/vili/sensors/judge_calibrated.json
 vendor/etc/sensors/sns_reg_config:odm/etc/vili/sensors/sns_reg_config
 
+# Sensors
+vendor/lib64/sensors.elliptic@2.0.so:odm/vili/lib64/sensors.elliptic@2.0.so
+
+# Thermal
+vendor/etc/thermal-huanji.conf
+vendor/etc/thermal-india-huanji.conf
+
 # Vibrator (vili)
 vendor/firmware/aw8697_haptic.bin:odm/vili/firmware/aw8697_haptic.bin
 
