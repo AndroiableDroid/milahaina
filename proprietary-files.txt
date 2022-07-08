@@ -187,11 +187,10 @@ vendor/lib64/camera/fdconfigpreview.bin
 vendor/lib64/camera/fdconfigpreviewlite.bin
 vendor/lib64/camera/fdconfigvideo.bin
 vendor/lib64/camera/fdconfigvideolite.bin
-vendor/lib64/hw/camera.qcom.so
+vendor/lib64/hw/camera.qcom.so|38451628fd1a076100fd0e4204482acecd98ec4a
 vendor/lib64/hw/camera.xiaomi.so
-vendor/lib64/hw/com.qti.chi.override.so
+vendor/lib64/hw/com.qti.chi.override.so|b1a2bc5cecdda8fc3fd963fd3d4070746dc3a841
 vendor/lib64/HDR10plus.so
-vendor/lib64/libcamlog.so
 vendor/lib64/com.qti.chiusecaseselector.so
 vendor/lib64/com.qti.feature2.anchorsync.so
 vendor/lib64/com.qti.feature2.demux.so
@@ -199,7 +198,7 @@ vendor/lib64/com.qti.feature2.derivedoffline.so
 vendor/lib64/com.qti.feature2.frameselect.so
 vendor/lib64/com.qti.feature2.fusion.so
 vendor/lib64/com.qti.feature2.generic.so
-vendor/lib64/com.qti.feature2.gs.sm8350.so
+vendor/lib64/com.qti.feature2.gs.sm8350.so|ef07c374d3d6188f71cfedebb09f4922bcd2d25d
 vendor/lib64/com.qti.feature2.hdr.so
 vendor/lib64/com.qti.feature2.mcreprocrt.so
 vendor/lib64/com.qti.feature2.memcpy.so
@@ -233,22 +232,18 @@ vendor/lib64/libFlickerDet.so
 vendor/lib64/libI420colorconvert.so
 vendor/lib64/libMegviiFacepp-0.5.2.so
 vendor/lib64/libSNPE.so
-vendor/lib64/libancbase_rt.so
-vendor/lib64/libxmi_hdr_bokeh.so
 vendor/lib64/libaidenoiser.so
 vendor/lib64/libalAILDC.so
 vendor/lib64/libalCFR.so
 vendor/lib64/libalLDC.so
 vendor/lib64/libalhLDC.so
-vendor/lib64/libanc_superiq.so
 vendor/lib64/libQnnHtpStub.so
-vendor/lib64/libwa_sat.so
 vendor/lib64/libbitmlengine.so
 vendor/lib64/libc++_shared.so
+vendor/lib64/libcamlog.so|34c682b20be41dcf7115be40a469594ad6d9b0e6
 vendor/lib64/libcamera_dirty.so
 vendor/lib64/libcamera_nn_stub.so
 vendor/lib64/libcamera_scene.so
-vendor/lib64/libcamera_scene_dxo.so
 vendor/lib64/libcamerapostproc.so
 vendor/lib64/libcapiv2svacnn.so
 vendor/lib64/libcapiv2svarnn.so
@@ -256,7 +251,6 @@ vendor/lib64/libcapiv2vop.so
 vendor/lib64/libchilog.so
 vendor/lib64/libcom.qti.chinodeutils.so
 vendor/lib64/libcvface_api.so
-vendor/lib64/libcup_preview.so
 vendor/lib64/libfocus.so
 vendor/lib64/libhdrdynamic.so
 vendor/lib64/libhdrdynamicootf.so
@@ -266,7 +260,6 @@ vendor/lib64/libmegface.so
 vendor/lib64/libmiai_portraitsupernight.so
 vendor/lib64/libmialgo_ai_vision.so
 vendor/lib64/libmialgo_basic.so
-vendor/lib64/libmialgo_ellc.so
 vendor/lib64/libmialgo_ie_capture.so
 vendor/lib64/libmialgo_ie_preview.so
 vendor/lib64/libmialgo_image_colourkeeping.so
@@ -276,13 +269,10 @@ vendor/lib64/libmialgo_sd.so
 vendor/lib64/libmialgo_utils.so
 vendor/lib64/libmialgo_video_colourkeeping.so
 vendor/lib64/libmialgo_video_enhance.so
-vendor/lib64/libmialgo_video_seg_depth.so
 vendor/lib64/libmialgoengine.so
 vendor/lib64/libmibokeh_845_video.so
 vendor/lib64/libmibokeh_855.so
-vendor/lib64/libmibokeh_mask.so
 vendor/lib64/libmibokeh_mask_dsp.so
-vendor/lib64/libmiphone_capture_bokeh.so
 vendor/lib64/libmiphone_preview_bokeh.so
 vendor/lib64/libmpbase.so
 vendor/lib64/libnanopb.so
@@ -291,13 +281,10 @@ vendor/lib64/libofflinelog.so
 vendor/lib64/libopencv.so
 vendor/lib64/libopestriping.so
 vendor/lib64/libos.so
-vendor/lib64/libportrait_blur.so
 vendor/lib64/libqll10.so
 vendor/lib64/libqllengine.so
 vendor/lib64/libremosaic_wrapper.so
 vendor/lib64/libremosaiclib.so
-vendor/lib64/libsnpe_dsp_domains_v2.so
-vendor/lib64/libsnpe_dsp_domains_v3.so
 vendor/lib64/libsns_api.so
 vendor/lib64/libsns_device_mode_stub.so
 vendor/lib64/libsns_fastRPC_util.so
@@ -324,14 +311,10 @@ vendor/lib64/vendor.xiaomi.hardware.campostproc@1.0.so
 # Camera (arcsoft)
 vendor/lib64/libarcsoft_portrait_lighting.so
 vendor/lib64/libarcsoft_bodyslim.so
-vendor/lib64/libarcsoft_high_dynamic_range_v5.so
 vendor/lib64/libarcsoft_super_night_raw.so
-vendor/lib64/libarcsoft_low_light_hdr.so
 vendor/lib64/libarcsoft_portrait_lighting_c.so
 vendor/lib64/libarcsoft_distortion_correction.so
-vendor/lib64/libarcsoft_hdr_detection.so
 vendor/lib64/libarcsoft_hdrplus_hvx_stub.so
-vendor/lib64/libarcsoft_qnnhtp.so
 vendor/lib64/libarcsoft_beautyshot.so
 
 # Camera (camerax)
@@ -360,18 +343,18 @@ vendor/lib64/libcamxtintlessalgo.so
 
 # Camera (components)
 vendor/lib64/camera/components/com.mi.node.AIIE.so
-vendor/lib64/camera/components/com.mi.node.aiasd.so
+vendor/lib64/camera/components/com.mi.node.aiasd.so|506aa387ff57545d3ab7193d4ef082574311f88f
 vendor/lib64/camera/components/com.mi.node.bodyslim.so
 vendor/lib64/camera/components/com.mi.node.distortioncorrection.so
-vendor/lib64/camera/components/com.mi.node.hdr.so
+vendor/lib64/camera/components/com.mi.node.hdr.so|6d28531db995a2955224b51f0094b5f4894f2002
 vendor/lib64/camera/components/com.mi.node.mimovie.so
 vendor/lib64/camera/components/com.mi.node.mipitounpacketraw.so
 vendor/lib64/camera/components/com.mi.node.pureShot.so
-vendor/lib64/camera/components/com.mi.node.realtimebokeh.so
+vendor/lib64/camera/components/com.mi.node.realtimebokeh.so|f25b79483e4b5aca15feec81c3dcac3e5fd1051b
 vendor/lib64/camera/components/com.mi.node.rearvideo.so
 vendor/lib64/camera/components/com.mi.node.skinbeautifier.so
 vendor/lib64/camera/components/com.mi.node.superiq.so
-vendor/lib64/camera/components/com.mi.node.superlowlightraw.so
+vendor/lib64/camera/components/com.mi.node.superlowlightraw.so|498015323dbc21bfc2c1570809ae99f0438f485d
 vendor/lib64/camera/components/com.mi.node.videobokeh.so
 vendor/lib64/camera/components/com.mi.node.videonight.so
 vendor/lib64/camera/components/com.qti.camx.chiiqutils.so
@@ -390,7 +373,7 @@ vendor/lib64/camera/components/com.qti.node.formatconversion.so
 vendor/lib64/camera/components/com.qti.node.gpu.so
 vendor/lib64/camera/components/com.qti.node.hdr10plushist.so
 vendor/lib64/camera/components/com.qti.node.hdr10plusmeta.so
-vendor/lib64/camera/components/com.qti.node.ldc.so
+vendor/lib64/camera/components/com.qti.node.ldc.so|80021e5a4a4b39fd0bb0bcf74d939fb5bd51a737
 vendor/lib64/camera/components/com.qti.node.memcpy.so
 vendor/lib64/camera/components/com.qti.node.ml.so
 vendor/lib64/camera/components/com.qti.node.remosaic.so
@@ -525,11 +508,8 @@ vendor/etc/camera/vidhance_calibration
 # Camera (plugins)
 vendor/lib64/camera/plugins/com.qcom.plugin.gpu.so
 vendor/lib64/camera/plugins/com.qcom.plugin.offlinepostproc.so
-vendor/lib64/camera/plugins/com.xiaomi.plugin.anchor.so
 vendor/lib64/camera/plugins/com.xiaomi.plugin.bodyslim.so
 vendor/lib64/camera/plugins/com.xiaomi.plugin.capbokeh.so
-vendor/lib64/camera/plugins/com.xiaomi.plugin.cupraw.so
-vendor/lib64/camera/plugins/com.xiaomi.plugin.cupyuv.so
 vendor/lib64/camera/plugins/com.xiaomi.plugin.dc.so
 vendor/lib64/camera/plugins/com.xiaomi.plugin.depurple.so
 vendor/lib64/camera/plugins/com.xiaomi.plugin.ellc.so
@@ -551,7 +531,7 @@ vendor/lib64/lib_sr_models.so
 vendor/lib64/libanc_dc_base.so
 vendor/lib64/libanc_hdr.so
 vendor/lib64/libancbase.so
-vendor/lib64/libcom.xiaomi.debug.so
+vendor/lib64/libcom.xiaomi.debug.so|0d16c9696ad72b9b34fc95e1e5989c375242d580
 vendor/lib64/libcom.xiaomi.grallocutils.so
 vendor/lib64/libcom.xiaomi.metadatautils.so
 vendor/lib64/libcom.xiaomi.pluginutils.so
