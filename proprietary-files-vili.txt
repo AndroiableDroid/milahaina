@@ -270,3 +270,6 @@ vendor/firmware/5_heavyClick_P_RTP.bin:odm/vili/firmware/5_heavyClick_P_RTP
 
 # Touch firmware (vili)
 vendor/firmware/st_fts_k3s.ftb
+
+# Wifi
+vendor/etc/wifi/passpointProfile.conf
