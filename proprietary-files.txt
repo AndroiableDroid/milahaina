@@ -70,7 +70,6 @@ vendor/lib/libspkrprot.so
 vendor/lib/libssrec.so
 vendor/lib/libsurround_3mic_proc.so
 vendor/lib/libresampler.so
-vendor/lib/libvideoNS.so
 vendor/lib64/liba2dpoffload.so
 vendor/lib64/libacdbloader.so
 vendor/lib64/libaudioalsa.so
