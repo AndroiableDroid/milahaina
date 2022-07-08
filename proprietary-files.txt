@@ -761,10 +761,10 @@ vendor/lib/libdolbyottcameracontrol.so|3758b2541004c5d9a2935ed134afbabb66d6a315
 vendor/lib/libdovi.so|185d52f232cfd2ec7156ee5103593ac12f04cb1f
 
 # NFC
-vendor/etc/libnfc-nci.conf
-vendor/etc/libnfc-nxp.conf
-vendor/etc/libnfc-nxp_RF.conf
-vendor/lib/libsn100u_fw.so
+vendor/etc/libnfc-nci.conf|d55fb720a8388e6e80e058e4bb7284974a535c08
+vendor/etc/libnfc-nxp.conf|e1706f50fa5ccd21e2b11c5e91844b07c8c691fe
+vendor/etc/libnfc-nxp_RF.conf|4db6c4629db744561d6040e7d5f5943c5944ec7c
+vendor/lib/libsn100u_fw.so|005273ef076ed7e4c2eaa5ac572e5fe05043c2ba
 
 # NVMAC
 -vendor/bin/nv_mac
