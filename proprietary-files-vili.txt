@@ -1,22 +1,24 @@
 # ADSPRPC (vili)
-vendor/lib/rfsa/adsp/libQnnHtpSkel.so:odm/vili/lib/rfsa/adsp/libQnnHtpSkel.so
 vendor/lib/rfsa/adsp/libarcsoft_hdrplus_hvx_skel.so:odm/vili/lib/rfsa/adsp/libarcsoft_hdrplus_hvx_skel.so
 vendor/lib/rfsa/adsp/libcalculator_skel.so:odm/vili/lib/rfsa/adsp/libcalculator_skel.so
 vendor/lib/rfsa/adsp/libmialgo_basic_cdsp_skel.so:odm/vili/lib/rfsa/adsp/libmialgo_basic_cdsp_skel.so
-vendor/lib/rfsa/adsp/libmialgo_rfs_cdsp_skel.so:odm/vili/lib/rfsa/adsp/libmialgo_rfs_cdsp_skel.so
 vendor/lib/rfsa/adsp/libmialgo_mc_bokeh_cdsp_skel.so:odm/vili/lib/rfsa/adsp/libmialgo_mc_bokeh_cdsp_skel.so
+vendor/lib/rfsa/adsp/libmialgo_rfs_cdsp_skel.so:odm/vili/lib/rfsa/adsp/libmialgo_rfs_cdsp_skel.so
+vendor/lib/rfsa/adsp/libQnnHtpSkel.so:odm/vili/lib/rfsa/adsp/libQnnHtpSkel.so
 vendor/lib/rfsa/adsp/libsnpe_dsp_v65_domains_v2_skel.so:odm/vili/lib/rfsa/adsp/libsnpe_dsp_v65_domains_v2_skel.so
 vendor/lib/rfsa/adsp/libsnpe_dsp_v66_domains_v2_skel.so:odm/vili/lib/rfsa/adsp/libsnpe_dsp_v66_domains_v2_skel.so
 vendor/lib/rfsa/adsp/libsnpe_dsp_v68_domains_v3_skel.so:odm/vili/lib/rfsa/adsp/libsnpe_dsp_v68_domains_v2_skel.so
-vendor/lib/rfsa/adsp/misound_karaokemix_res.bin:odm/vili/lib/rfsa/adsp/misound_karaokemix_res.bin
 vendor/lib/rfsa/adsp/misound_karaoke_res.bin:odm/vili/lib/rfsa/adsp/misound_karaoke_res.bin
+vendor/lib/rfsa/adsp/misound_karaokemix_res.bin:odm/vili/lib/rfsa/adsp/misound_karaokemix_res.bin
 vendor/lib/rfsa/adsp/misound_res_headphone.bin:odm/vili/lib/rfsa/adsp/misound_res_headphone.bin
 vendor/lib/rfsa/adsp/misound_res_spk.bin:odm/vili/lib/rfsa/adsp/misound_res_spk.bin
 
 # Audio
 vendor/lib/hw/audio.primary.lahaina.so:odm/vili/lib/hw/audio.primary.lahaina.so
+vendor/lib/libacdbloader.so:odm/vili/lib/libacdbloader.so
 vendor/lib/libvideoNS.so:odm/vili/lib/libvideoNS.so
 vendor/lib64/hw/audio.primary.lahaina.so:odm/vili/lib64/hw/audio.primary.lahaina.so
+vendor/lib64/libacdbloader.so:odm/vili/lib64/libacdbloader.so
 
 # Audio (acdbdata_vili)
 vendor/etc/acdbdata/adsp_avs_config.acdb:odm/etc/vili/acdbdata/adsp_avs_config.acdb
@@ -42,11 +44,6 @@ vendor/etc/audio/sku_lahaina/sound_trigger_platform_info.xml:odm/etc/vili/audio/
 vendor/etc/audio/sku_lahaina_qssi/audio_policy_configuration.xml:odm/etc/vili/audio/sku_lahaina_qssi/audio_policy_configuration.xml
 
 # Audio (firmware_vili)
-vendor/firmware/rcv_voice_delta.txt:odm/vili/firmware/rcv_voice_delta.txt
-vendor/firmware/spk1_playback_delta.txt:odm/vili/firmware/spk1_playback_delta.txt
-vendor/firmware/spk1_voice_delta.txt:odm/vili/firmware/spk1_voice_delta.txt
-vendor/firmware/spk2_playback_delta.txt:odm/vili/firmware/spk2_playback_delta.txt
-vendor/firmware/spk2_voice_delta.txt:odm/vili/firmware/spk2_voice_delta.txt
 vendor/firmware/cs35l41-dsp1-diag-revb2.wmfw:odm/vili/firmware/cs35l41-dsp1-diag-revb2.wmfw
 vendor/firmware/cs35l41-dsp1-diag-z-RCV-revb2.bin:odm/vili/firmware/cs35l41-dsp1-diag-z-RCV-revb2.bin
 vendor/firmware/cs35l41-dsp1-diag-z-revb2.bin:odm/vili/firmware/cs35l41-dsp1-diag-z-revb2.bin
@@ -60,24 +57,28 @@ vendor/firmware/cs35l41-dsp1-spk-prot-revb2.bin:odm/vili/firmware/cs35l41-dsp1-s
 vendor/firmware/cs35l41-dsp1-spk-prot-revb2.wmfw:odm/vili/firmware/cs35l41-dsp1-spk-prot-revb2.wmfw
 vendor/firmware/cs35l41-dsp1-spk-prot.bin:odm/vili/firmware/cs35l41-dsp1-spk-prot.bin
 vendor/firmware/cs35l41-dsp1-spk-prot.wmfw:odm/vili/firmware/cs35l41-dsp1-spk-prot.wmfw
+vendor/firmware/rcv_voice_delta.txt:odm/vili/firmware/rcv_voice_delta.txt
+vendor/firmware/spk1_playback_delta.txt:odm/vili/firmware/spk1_playback_delta.txt
+vendor/firmware/spk1_voice_delta.txt:odm/vili/firmware/spk1_voice_delta.txt
+vendor/firmware/spk2_playback_delta.txt:odm/vili/firmware/spk2_playback_delta.txt
+vendor/firmware/spk2_voice_delta.txt:odm/vili/firmware/spk2_voice_delta.txt
 
 # Audio (SoundTrigger)
 vendor/lib/hw/sound_trigger.primary.lahaina.so:odm/vili/lib/hw/sound_trigger.primary.lahaina.so
 
 # Camera
-vendor/lib64/hw/camera.xiaomi.so:odm/haydn/lib64/hw/camera.xiaomi.so
 vendor/lib64/camera/com.qti.eeprom.vili_ofilm_ov16a1q_bl24sa64_front_eeprom.so:odm/vili/lib64/camera/com.qti.eeprom.vili_ofilm_ov16a1q_bl24sa64_front_eeprom.so
 vendor/lib64/camera/com.qti.eeprom.vili_sunny_imx355_gt24p64e_ultra_eeprom.so:odm/vili/lib64/camera/com.qti.eeprom.vili_sunny_imx355_gt24p64e_ultra_eeprom.so
 vendor/lib64/camera/com.qti.eeprom.vili_sunny_s5k5e9yx04_p24c64f_macro_eeprom.so:odm/vili/lib64/camera/com.qti.eeprom.vili_sunny_s5k5e9yx04_p24c64f_macro_eeprom.so
 vendor/lib64/camera/com.qti.eeprom.vili_sunny_s5khm2_gt24p128e_wide_eeprom.so:odm/vili/lib64/camera/com.qti.eeprom.vili_sunny_s5khm2_gt24p128e_wide_eeprom.so
-vendor/lib64/camera/com.qti.sensormodule.vili_ofilm_ov16a1q_front.bin:odm/vili/lib64/camera/com.qti.sensormodule.vili_ofilm_ov16a1q_front.bin
-vendor/lib64/camera/com.qti.sensormodule.vili_sunny_imx355_ultra.bin:odm/vili/lib64/camera/com.qti.sensormodule.vili_sunny_imx355_ultra.bin
-vendor/lib64/camera/com.qti.sensormodule.vili_sunny_s5k5e9yx04_macro.bin:odm/vili/lib64/camera/com.qti.sensormodule.vili_sunny_s5k5e9yx04_macro.bin
-vendor/lib64/camera/com.qti.sensormodule.vili_sunny_s5khm2_wide.bin:odm/vili/lib64/camera/com.qti.sensormodule.vili_sunny_s5khm2_wide.bin
 vendor/lib64/camera/com.qti.sensor.vili_ofilm_ov16a1q_front.so:odm/vili/lib64/camera/com.qti.sensor.vili_ofilm_ov16a1q_front.so
 vendor/lib64/camera/com.qti.sensor.vili_sunny_imx355_ultra.so:odm/vili/lib64/camera/com.qti.sensor.vili_sunny_imx355_ultra.so
 vendor/lib64/camera/com.qti.sensor.vili_sunny_s5k5e9yx04_macro.so:odm/vili/lib64/camera/com.qti.sensor.vili_sunny_s5k5e9yx04_macro.so
 vendor/lib64/camera/com.qti.sensor.vili_sunny_s5khm2_wide.so:odm/vili/lib64/camera/com.qti.sensor.vili_sunny_s5khm2_wide.so
+vendor/lib64/camera/com.qti.sensormodule.vili_ofilm_ov16a1q_front.bin:odm/vili/lib64/camera/com.qti.sensormodule.vili_ofilm_ov16a1q_front.bin
+vendor/lib64/camera/com.qti.sensormodule.vili_sunny_imx355_ultra.bin:odm/vili/lib64/camera/com.qti.sensormodule.vili_sunny_imx355_ultra.bin
+vendor/lib64/camera/com.qti.sensormodule.vili_sunny_s5k5e9yx04_macro.bin:odm/vili/lib64/camera/com.qti.sensormodule.vili_sunny_s5k5e9yx04_macro.bin
+vendor/lib64/camera/com.qti.sensormodule.vili_sunny_s5khm2_wide.bin:odm/vili/lib64/camera/com.qti.sensormodule.vili_sunny_s5khm2_wide.bin
 vendor/lib64/camera/com.qti.tuned.vili_ofilm_ov16a1q_front.bin:odm/vili/lib64/camera/com.qti.tuned.vili_ofilm_ov16a1q_front.bin
 vendor/lib64/camera/com.qti.tuned.vili_sunny_imx355_ultra.bin:odm/vili/lib64/camera/com.qti.tuned.vili_sunny_imx355_ultra.bin
 vendor/lib64/camera/com.qti.tuned.vili_sunny_s5k5e9yx04_macro.bin:odm/vili/lib64/camera/com.qti.tuned.vili_sunny_s5k5e9yx04_macro.bin
@@ -85,6 +86,9 @@ vendor/lib64/camera/com.qti.tuned.vili_sunny_s5khm2_wide.bin:odm/vili/lib64/came
 vendor/lib64/camera/plugins/com.xiaomi.plugin.anchor.so:odm/vili/lib64/camera/plugins/com.xiaomi.plugin.anchor.so
 vendor/lib64/camera/plugins/com.xiaomi.plugin.cupraw.so:odm/vili/lib64/camera/plugins/com.xiaomi.plugin.cupraw.so
 vendor/lib64/camera/plugins/com.xiaomi.plugin.cupyuv.so:odm/vili/lib64/camera/plugins/com.xiaomi.plugin.cupyuv.so
+vendor/lib64/hw/camera.qcom.so:odm/vili/lib64/hw/camera.qcom.so
+vendor/lib64/hw/camera.xiaomi.so:odm/vili/lib64/hw/camera.xiaomi.so
+vendor/lib64/hw/camera.xiaomi.so:odm/vili/lib64/hw/camera.xiaomi.so
 vendor/lib64/libanc_superiq.so:odm/vili/lib64/libanc_superiq.so
 vendor/lib64/libancbase_rt.so:odm/vili/lib64/libancbase_rt.so
 vendor/lib64/libarcsoft_hdr_detection.so:odm/vili/lib64/libarcsoft_hdr_detection.so
@@ -103,39 +107,7 @@ vendor/lib64/libsnpe_dsp_domains_v3.so:odm/vili/lib64/libsnpe_dsp_domains_v3.so
 vendor/lib64/libwa_sat.so:odm/vili/lib64/libwa_sat.so
 vendor/lib64/libxmi_hdr_bokeh.so:odm/vili/lib64/libxmi_hdr_bokeh.so
 
-
 # Camera (configs)
-vendor/etc/camera/CFR_para_UW_V01.bin:odm/etc/vili/camera/CFR_para_UW_V01.bin
-vendor/etc/camera/CFR_para_W_V01.bin:odm/etc/vili/camera/CFR_para_W_V01.bin
-vendor/etc/camera/CFR_para_W_V01_HD.bin:odm/etc/vili/camera/CFR_para_W_V01_HD.bin
-vendor/etc/camera/CFR_para_W_V01_HD_L.bin:odm/etc/vili/camera/CFR_para_W_V01_HD_L.bin
-vendor/etc/camera/CFR_para_W_V01_IZOOM.bin:odm/etc/vili/camera/CFR_para_W_V01_IZOOM.bin
-vendor/etc/camera/CFR_para_W_V01_SN.bin:odm/etc/vili/camera/CFR_para_W_V01_SN.bin
-vendor/etc/camera/LDC_PACKDATA_VENDORID_0x01.bin:odm/etc/vili/camera/LDC_PACKDATA_VENDORID_0x01.bin
-vendor/etc/camera/LDC_PACKDATA_VENDORID_0x03.bin:odm/etc/vili/camera/LDC_PACKDATA_VENDORID_0x03.bin
-vendor/etc/camera/LDC_PACKDATA_VENDORID_0x07.bin:odm/etc/vili/camera/LDC_PACKDATA_VENDORID_0x07.bin
-vendor/etc/camera/bokehParams.json:odm/etc/vili/camera/bokehParams.json
-vendor/etc/camera/det_quantize.dlc:odm/etc/vili/camera/det_quantize.dlc
-vendor/etc/camera/ellc.bin:odm/etc/vili/camera/ellc.bin
-vendor/etc/camera/fusion_models/fusion_cache:odm/etc/vili/camera/fusion_models/fusion_cache
-vendor/etc/camera/fusion_models/fusion_model:odm/etc/vili/camera/fusion_models/fusion_model
-vendor/etc/camera/fusion_models/fusion_policy:odm/etc/vili/camera/fusion_models/fusion_policy
-vendor/etc/camera/mibokeh_855_opencl.bin:odm/etc/vili/camera/mibokeh_855_opencl.bin
-vendor/etc/camera/mibokeh_855_parameter.bin:odm/etc/vili/camera/mibokeh_855_parameter.bin
-vendor/etc/camera/model_ai_dxo.dlc:odm/etc/vili/camera/model_ai_dxo.dlc
-vendor/etc/camera/model_back.dlc:odm/etc/vili/camera/model_back.dlc
-vendor/etc/camera/model_front.dlc:odm/etc/vili/camera/model_front.dlc
-vendor/etc/camera/model_front_mibokeh_video.dlc:odm/etc/vili/camera/model_front_mibokeh_video.dlc
-vendor/etc/camera/model_glass.dlc:odm/etc/vili/camera/model_glass.dlc
-vendor/etc/camera/preview_bokeh_params.json:odm/etc/vili/camera/preview_bokeh_params.json
-vendor/etc/camera/reid_float.dlc:odm/etc/vili/camera/reid_float.dlc
-vendor/etc/camera/vidhance_calibration:odm/etc/vili/camera/vidhance_calibration
-vendor/etc/camera/xiaomi/manualsnapshot.json:odm/etc/vili/camera/xiaomi/manualsnapshot.json
-vendor/etc/camera/xiaomi/miviinfo.json:odm/etc/vili/camera/xiaomi/miviinfo.json
-vendor/etc/camera/xiaomi/mivisettings.txt:odm/etc/vili/camera/xiaomi/mivisettings.txt
-vendor/etc/camera/xiaomi/rearsupernightsnapshot.json:odm/etc/vili/camera/xiaomi/rearsupernightsnapshot.json
-vendor/etc/camera/xiaomi/satsnapshot.json:odm/etc/vili/camera/xiaomi/satsnapshot.json
-vendor/etc/camera/xiaomi/superhdsnapshot.json:odm/etc/vili/camera/xiaomi/superhdsnapshot.json
 vendor/etc/camera/aivsModels1:odm/etc/vili/camera/aivsModels1
 vendor/etc/camera/aivsParams:odm/etc/vili/camera/aivsParams
 vendor/etc/camera/beauty_style_blue.cng:odm/etc/vili/camera/beauty_style_blue.cng
@@ -144,19 +116,50 @@ vendor/etc/camera/beauty_style_neutral.cng:odm/etc/vili/camera/beauty_style_neut
 vendor/etc/camera/beauty_style_nude.cng:odm/etc/vili/camera/beauty_style_nude.cng
 vendor/etc/camera/beauty_style_pink.cng:odm/etc/vili/camera/beauty_style_pink.cng
 vendor/etc/camera/beauty_style_skin_gloss.cng:odm/etc/vili/camera/beauty_style_skin_gloss.cng
+vendor/etc/camera/bokehParams.json:odm/etc/vili/camera/bokehParams.json
 vendor/etc/camera/camxoverridesettings.txt:odm/etc/vili/camera/camxoverridesettings.txt
+vendor/etc/camera/CFR_para_UW_V01.bin:odm/etc/vili/camera/CFR_para_UW_V01.bin
+vendor/etc/camera/CFR_para_W_V01.bin:odm/etc/vili/camera/CFR_para_W_V01.bin
+vendor/etc/camera/CFR_para_W_V01_HD.bin:odm/etc/vili/camera/CFR_para_W_V01_HD.bin
+vendor/etc/camera/CFR_para_W_V01_HD_L.bin:odm/etc/vili/camera/CFR_para_W_V01_HD_L.bin
+vendor/etc/camera/CFR_para_W_V01_IZOOM.bin:odm/etc/vili/camera/CFR_para_W_V01_IZOOM.bin
+vendor/etc/camera/CFR_para_W_V01_SN.bin:odm/etc/vili/camera/CFR_para_W_V01_SN.bin
 vendor/etc/camera/deblur_sd_opencl_binary.bin:odm/etc/vili/camera/deblur_sd_opencl_binary.bin
 vendor/etc/camera/deblur_sd_opencl_params.bin:odm/etc/vili/camera/deblur_sd_opencl_params.bin
 vendor/etc/camera/deblur_txt_dsp.dlc:odm/etc/vili/camera/deblur_txt_dsp.dlc
+vendor/etc/camera/det_quantize.dlc:odm/etc/vili/camera/det_quantize.dlc
 vendor/etc/camera/dualcam_bokeh_params.json:odm/etc/vili/camera/dualcam_bokeh_params.json
+vendor/etc/camera/ellc.bin:odm/etc/vili/camera/ellc.bin
 vendor/etc/camera/ellc_params.xml:odm/etc/vili/camera/ellc_params.xml
 vendor/etc/camera/fusion_mecp.bin:odm/etc/vili/camera/fusion_mecp.bin
+vendor/etc/camera/fusion_models/fusion_cache:odm/etc/vili/camera/fusion_models/fusion_cache
+vendor/etc/camera/fusion_models/fusion_model:odm/etc/vili/camera/fusion_models/fusion_model
+vendor/etc/camera/fusion_models/fusion_policy:odm/etc/vili/camera/fusion_models/fusion_policy
 vendor/etc/camera/hdr_ui9_params.config:odm/etc/vili/camera/hdr_ui9_params.config
 vendor/etc/camera/intsense_config_optical_zoom_2sat.bin:odm/etc/vili/camera/intsense_config_optical_zoom_2sat.bin
-vendor/etc/camera/miSATTRatio_params_2sat.json:odm/etc/vili/camera/miSATTRatio_params_2sat.json
+vendor/etc/camera/LDC_PACKDATA_VENDORID_0x01.bin:odm/etc/vili/camera/LDC_PACKDATA_VENDORID_0x01.bin
+vendor/etc/camera/LDC_PACKDATA_VENDORID_0x03.bin:odm/etc/vili/camera/LDC_PACKDATA_VENDORID_0x03.bin
+vendor/etc/camera/LDC_PACKDATA_VENDORID_0x07.bin:odm/etc/vili/camera/LDC_PACKDATA_VENDORID_0x07.bin
+vendor/etc/camera/mibokeh_855_opencl.bin:odm/etc/vili/camera/mibokeh_855_opencl.bin
+vendor/etc/camera/mibokeh_855_parameter.bin:odm/etc/vili/camera/mibokeh_855_parameter.bin
 vendor/etc/camera/miSAT_params_2sat.json:odm/etc/vili/camera/miSAT_params_2sat.json
+vendor/etc/camera/miSATTRatio_params_2sat.json:odm/etc/vili/camera/miSATTRatio_params_2sat.json
+vendor/etc/camera/model_ai_dxo.dlc:odm/etc/vili/camera/model_ai_dxo.dlc
+vendor/etc/camera/model_back.dlc:odm/etc/vili/camera/model_back.dlc
+vendor/etc/camera/model_front.dlc:odm/etc/vili/camera/model_front.dlc
+vendor/etc/camera/model_front_mibokeh_video.dlc:odm/etc/vili/camera/model_front_mibokeh_video.dlc
+vendor/etc/camera/model_glass.dlc:odm/etc/vili/camera/model_glass.dlc
+vendor/etc/camera/preview_bokeh_params.json:odm/etc/vili/camera/preview_bokeh_params.json
+vendor/etc/camera/reid_float.dlc:odm/etc/vili/camera/reid_float.dlc
+vendor/etc/camera/vidhance_calibration:odm/etc/vili/camera/vidhance_calibration
 vendor/etc/camera/vili_motiontuning.xml:odm/etc/vili/camera/vili_motiontuning.xml
+vendor/etc/camera/xiaomi/manualsnapshot.json:odm/etc/vili/camera/xiaomi/manualsnapshot.json
 vendor/etc/camera/xiaomi/mfnrfusionsnapshot.json:odm/etc/vili/camera/xiaomi/mfnrfusionsnapshot.json
+vendor/etc/camera/xiaomi/miviinfo.json:odm/etc/vili/camera/xiaomi/miviinfo.json
+vendor/etc/camera/xiaomi/mivisettings.txt:odm/etc/vili/camera/xiaomi/mivisettings.txt
+vendor/etc/camera/xiaomi/rearsupernightsnapshot.json:odm/etc/vili/camera/xiaomi/rearsupernightsnapshot.json
+vendor/etc/camera/xiaomi/satsnapshot.json:odm/etc/vili/camera/xiaomi/satsnapshot.json
+vendor/etc/camera/xiaomi/superhdsnapshot.json:odm/etc/vili/camera/xiaomi/superhdsnapshot.json
 
 # Camera (firmware_vili)
 vendor/firmware/CAMERA_ICP.elf:odm/vili/firmware/CAMERA_ICP.elf
@@ -172,20 +175,20 @@ vendor/etc/qdcm_calib_data_xiaomi_42_02_0b_cmd_mode_dsc_dsi_panel.xml
 # Fingerprint modules (vili)
 vendor/lib64/hw/fingerprint.fpc.so:odm/vili/lib64/hw/fingerprint.fpc.lahaina.so
 vendor/lib64/hw/fingerprint.goodix.so:odm/vili/lib64/hw/fingerprint.goodix.lahaina.so
-vendor/lib64/libgoodixhwfingerprint.so:odm/vili/lib64/libgoodixhwfingerprint.so
-vendor/lib64/libgf_hal.so:odm/vili/lib64/libgf_hal.so
 vendor/lib64/libgf_ca.so:odm/vili/lib64/libgf_ca.so
+vendor/lib64/libgf_hal.so:odm/vili/lib64/libgf_hal.so
+vendor/lib64/libgoodixhwfingerprint.so:odm/vili/lib64/libgoodixhwfingerprint.so
 
 # Sensors configs (vili)
 vendor/etc/sensors/config/ak991x_dri_0.json:odm/etc/vili/sensors/config/ak991x_dri_0.json
 vendor/etc/sensors/config/bmp285_0.json:odm/etc/vili/sensors/config/bmp285_0.json
-vendor/etc/sensors/config/bu27030_0_back.json:odm/etc/vili/sensors/config/bu27030_0_back.json
 vendor/etc/sensors/config/bu27030_0.json:odm/etc/vili/sensors/config/bu27030_0.json
+vendor/etc/sensors/config/bu27030_0_back.json:odm/etc/vili/sensors/config/bu27030_0_back.json
 vendor/etc/sensors/config/lsm6dso_0.json:odm/etc/vili/sensors/config/lsm6dso_0.json
 vendor/etc/sensors/config/sm8350_ak991x_0.json:odm/etc/vili/sensors/config/sm8350_ak991x_0.json
 vendor/etc/sensors/config/sm8350_bmp285_0.json:odm/etc/vili/sensors/config/sm8350_bmp285_0.json
-vendor/etc/sensors/config/sm8350_bu27030_0_back.json:odm/etc/vili/sensors/config/sm8350_bu27030_0_back.json
 vendor/etc/sensors/config/sm8350_bu27030_0.json:odm/etc/vili/sensors/config/sm8350_bu27030_0.json
+vendor/etc/sensors/config/sm8350_bu27030_0_back.json:odm/etc/vili/sensors/config/sm8350_bu27030_0_back.json
 vendor/etc/sensors/config/sm8350_bu52053nvx_0.json:odm/etc/vili/sensors/config/sm8350_bu52053nvx_0.json
 vendor/etc/sensors/config/sm8350_default_sensors.json:odm/etc/vili/sensors/config/sm8350_default_sensors.json
 vendor/etc/sensors/config/sm8350_dynamic_sensors.json:odm/etc/vili/sensors/config/sm8350_dynamic_sensors.json
@@ -232,8 +235,8 @@ vendor/etc/sensors/config/sns_oem13.json:odm/etc/vili/sensors/config/sns_oem13.j
 vendor/etc/sensors/config/sns_pedometer.json:odm/etc/vili/sensors/config/sns_pedometer.json
 vendor/etc/sensors/config/sns_rmd.json:odm/etc/vili/sensors/config/sns_rmd.json
 vendor/etc/sensors/config/sns_rotv.json:odm/etc/vili/sensors/config/sns_rotv.json
-vendor/etc/sensors/config/sns_sar_algo_1.json:odm/etc/vili/sensors/config/sns_sar_algo_1.json
 vendor/etc/sensors/config/sns_sar_algo.json:odm/etc/vili/sensors/config/sns_sar_algo.json
+vendor/etc/sensors/config/sns_sar_algo_1.json:odm/etc/vili/sensors/config/sns_sar_algo_1.json
 vendor/etc/sensors/config/sns_smd.json:odm/etc/vili/sensors/config/sns_smd.json
 vendor/etc/sensors/config/sns_tilt.json:odm/etc/vili/sensors/config/sns_tilt.json
 vendor/etc/sensors/config/sns_tilt_sw_disabled.json:odm/etc/vili/sensors/config/sns_tilt_sw_disabled.json

@@ -1,22 +1,24 @@
 
 # ADSPRPC (haydn)
-vendor/lib/rfsa/adsp/libQnnHtpSkel.so:odm/haydn/lib/rfsa/adsp/libQnnHtpSkel.so
 vendor/lib/rfsa/adsp/libarcsoft_hdrplus_hvx_skel.so:odm/haydn/lib/rfsa/adsp/libarcsoft_hdrplus_hvx_skel.so
+vendor/lib/rfsa/adsp/libhap_blink_skel.so:odm/haydn/lib/rfsa/adsp/libhap_blink_skel.so
 vendor/lib/rfsa/adsp/libmialgo_basic_cdsp_skel.so:odm/haydn/lib/rfsa/adsp/libmialgo_basic_cdsp_skel.so
 vendor/lib/rfsa/adsp/libmialgo_rfs_cdsp_skel.so:odm/haydn/lib/rfsa/adsp/libmialgo_rfs_cdsp_skel.so
-vendor/lib/rfsa/adsp/libhap_blink_skel.so:odm/haydn/lib/rfsa/adsp/libhap_blink_skel.so
+vendor/lib/rfsa/adsp/libQnnHtpSkel.so:odm/haydn/lib/rfsa/adsp/libQnnHtpSkel.so
 vendor/lib/rfsa/adsp/libsnpe_htp_v65_skel.so:odm/haydn/lib/rfsa/adsp/libsnpe_htp_v65_skel.so
 vendor/lib/rfsa/adsp/libsnpe_htp_v66_skel.so:odm/haydn/lib/rfsa/adsp/libsnpe_htp_v66_skel.so
 vendor/lib/rfsa/adsp/libsnpe_htp_v68_skel.so:odm/haydn/lib/rfsa/adsp/libsnpe_htp_v68_skel.so
-vendor/lib/rfsa/adsp/misound_karaokemix_res.bin:odm/haydn/lib/rfsa/adsp/misound_karaokemix_res.bin
 vendor/lib/rfsa/adsp/misound_karaoke_res.bin:odm/haydn/lib/rfsa/adsp/misound_karaoke_res.bin
+vendor/lib/rfsa/adsp/misound_karaokemix_res.bin:odm/haydn/lib/rfsa/adsp/misound_karaokemix_res.bin
 vendor/lib/rfsa/adsp/misound_res_headphone.bin:odm/haydn/lib/rfsa/adsp/misound_res_headphone.bin
 vendor/lib/rfsa/adsp/misound_res_spk.bin:odm/haydn/lib/rfsa/adsp/misound_res_spk.bin
 
 # Audio
 vendor/lib/hw/audio.primary.lahaina.so:odm/haydn/lib/hw/audio.primary.lahaina.so
+vendor/lib/libacdbloader.so:odm/haydn/lib/libacdbloader.so
 vendor/lib/libfcsam.so:odm/haydn/lib/libfcsam.so
 vendor/lib64/hw/audio.primary.lahaina.so:odm/haydn/lib64/hw/audio.primary.lahaina.so
+vendor/lib64/libacdbloader.so:odm/haydn/lib64/libacdbloader.so
 
 # Audio (acdbdata_haydn)
 vendor/etc/acdbdata/adsp_avs_config.acdb:odm/etc/haydn/acdbdata/adsp_avs_config.acdb
@@ -40,11 +42,6 @@ vendor/etc/audio/sku_lahaina/sound_trigger_platform_info.xml:odm/etc/haydn/audio
 vendor/etc/audio/sku_lahaina_qssi/audio_policy_configuration.xml:odm/etc/haydn/audio/sku_lahaina_qssi/audio_policy_configuration.xml
 
 # Audio (firmware_haydn)
-vendor/firmware/rcv_voice_delta.txt:odm/haydn/firmware/rcv_voice_delta.txt
-vendor/firmware/spk1_playback_delta.txt:odm/haydn/firmware/spk1_playback_delta.txt
-vendor/firmware/spk1_voice_delta.txt:odm/haydn/firmware/spk1_voice_delta.txt
-vendor/firmware/spk2_playback_delta.txt:odm/haydn/firmware/spk2_playback_delta.txt
-vendor/firmware/spk2_voice_delta.txt:odm/haydn/firmware/spk2_voice_delta.txt
 vendor/firmware/cs35l41-dsp1-diag-revb2.wmfw:odm/haydn/firmware/cs35l41-dsp1-diag-revb2.wmfw
 vendor/firmware/cs35l41-dsp1-diag-z-RCV-revb2.bin:odm/haydn/firmware/cs35l41-dsp1-diag-z-RCV-revb2.bin
 vendor/firmware/cs35l41-dsp1-diag-z-revb2.bin:odm/haydn/firmware/cs35l41-dsp1-diag-z-revb2.bin
@@ -58,22 +55,24 @@ vendor/firmware/cs35l41-dsp1-spk-prot-revb2.bin:odm/haydn/firmware/cs35l41-dsp1-
 vendor/firmware/cs35l41-dsp1-spk-prot-revb2.wmfw:odm/haydn/firmware/cs35l41-dsp1-spk-prot-revb2.wmfw
 vendor/firmware/cs35l41-dsp1-spk-prot.bin:odm/haydn/firmware/cs35l41-dsp1-spk-prot.bin
 vendor/firmware/cs35l41-dsp1-spk-prot.wmfw:odm/haydn/firmware/cs35l41-dsp1-spk-prot.wmfw
+vendor/firmware/rcv_voice_delta.txt:odm/haydn/firmware/rcv_voice_delta.txt
+vendor/firmware/spk1_playback_delta.txt:odm/haydn/firmware/spk1_playback_delta.txt
+vendor/firmware/spk1_voice_delta.txt:odm/haydn/firmware/spk1_voice_delta.txt
+vendor/firmware/spk2_playback_delta.txt:odm/haydn/firmware/spk2_playback_delta.txt
+vendor/firmware/spk2_voice_delta.txt:odm/haydn/firmware/spk2_voice_delta.txt
 
 # Audio (SoundTrigger)
 vendor/lib/hw/sound_trigger.primary.lahaina.so:odm/haydn/lib/hw/sound_trigger.primary.lahaina.so
 
 # Camera (arcsoft)
-vendor/lib64/libarcsoft_dualcam_refocus_image.so:odm/haydn/lib64/libarcsoft_dualcam_refocus_image.so
-vendor/lib64/libarcsoft_dualcam_refocus_video.so:odm/haydn/lib64/libarcsoft_dualcam_refocus_video.so
 vendor/lib64/libarcsoft_dual_sat.so:odm/haydn/lib64/libarcsoft_dual_sat.so
 vendor/lib64/libarcsoft_dual_zoomtranslator.so:odm/haydn/lib64/libarcsoft_dual_zoomtranslator.so
+vendor/lib64/libarcsoft_dualcam_refocus_image.so:odm/haydn/lib64/libarcsoft_dualcam_refocus_image.so
+vendor/lib64/libarcsoft_dualcam_refocus_video.so:odm/haydn/lib64/libarcsoft_dualcam_refocus_video.so
 vendor/lib64/libarcsoft_triple_sat.so:odm/haydn/lib64/libarcsoft_triple_sat.so
 vendor/lib64/libarcsoft_triple_zoomtranslator.so:odm/haydn/lib64/libarcsoft_triple_zoomtranslator.so
 
 # Camera
-vendor/lib64/camera/components/com.vidhance.node.eis.so:odm/haydn/lib64/camera/components/com.vidhance.node.eis.so
-vendor/lib64/camera/components/com.vidhance.node.ica.so:odm/haydn/lib64/camera/components/com.vidhance.node.ica.so
-vendor/lib64/camera/components/com.vidhance.stats.aec_dmbr.so:odm/haydn/lib64/camera/components/com.vidhance.stats.aec_dmbr.so
 vendor/lib64/camera/com.qti.eeprom.haydn_ofilm_imx355_bl24s64_ultra_eeprom.so:odm/haydn/lib64/camera/com.qti.eeprom.haydn_ofilm_imx355_bl24s64_ultra_eeprom.so
 vendor/lib64/camera/com.qti.eeprom.haydn_sunny_imx686_gt24p128e_wide_eeprom.so:odm/haydn/lib64/camera/com.qti.eeprom.haydn_sunny_imx686_gt24p128e_wide_eeprom.so
 vendor/lib64/camera/com.qti.eeprom.haydn_sunny_s5k3t2_p24c64f_front_eeprom.so:odm/haydn/lib64/camera/com.qti.eeprom.haydn_sunny_s5k3t2_p24c64f_front_eeprom.so
@@ -94,7 +93,11 @@ vendor/lib64/camera/com.qti.tuned.haydn_sunny_imx686_wide.bin:odm/haydn/lib64/ca
 vendor/lib64/camera/com.qti.tuned.haydn_sunny_s5k3t2_front.bin:odm/haydn/lib64/camera/com.qti.tuned.haydn_sunny_s5k3t2_front.bin
 vendor/lib64/camera/com.qti.tuned.haydn_sunny_s5k5e9yx04_macro.bin:odm/haydn/lib64/camera/com.qti.tuned.haydn_sunny_s5k5e9yx04_macro.bin
 vendor/lib64/camera/com.qti.tuned.haydn_sunny_s5khm2_wide.bin:odm/haydn/lib64/camera/com.qti.tuned.haydn_sunny_s5khm2_wide.bin
+vendor/lib64/camera/components/com.vidhance.node.eis.so:odm/haydn/lib64/camera/components/com.vidhance.node.eis.so
+vendor/lib64/camera/components/com.vidhance.node.ica.so:odm/haydn/lib64/camera/components/com.vidhance.node.ica.so
+vendor/lib64/camera/components/com.vidhance.stats.aec_dmbr.so:odm/haydn/lib64/camera/components/com.vidhance.stats.aec_dmbr.so
 vendor/lib64/camera/plugins/com.qcom.plugin.jpegencode.so:odm/haydn/lib64/camera/plugins/com.qcom.plugin.jpegencode.so
+vendor/lib64/hw/camera.qcom.so:odm/haydn/lib64/hw/camera.qcom.so
 vendor/lib64/hw/camera.xiaomi.so:odm/haydn/lib64/hw/camera.xiaomi.so
 
 # Camera (Configs)
@@ -120,8 +123,8 @@ vendor/etc/camera/127_Creamy.png:odm/etc/haydn/camera/127_Creamy.png
 vendor/etc/camera/128_Sepia.png:odm/etc/haydn/camera/128_Sepia.png
 vendor/etc/camera/aivsParams.json:odm/etc/haydn/camera/aivsParams.json
 vendor/etc/camera/bokehParams.json:odm/etc/haydn/camera/bokehParams.json
-vendor/etc/camera/camxoverridesettingsOfPro.txt:odm/etc/haydn/camera/camxoverridesettingsOfPro.txt
 vendor/etc/camera/camxoverridesettings.txt:odm/etc/haydn/camera/camxoverridesettings.txt
+vendor/etc/camera/camxoverridesettingsOfPro.txt:odm/etc/haydn/camera/camxoverridesettingsOfPro.txt
 vendor/etc/camera/CFR_para_UW_V01.bin:odm/etc/haydn/camera/CFR_para_UW_V01.bin
 vendor/etc/camera/CFR_para_W_V01.bin:odm/etc/haydn/camera/CFR_para_W_V01.bin
 vendor/etc/camera/CFR_para_W_V01_HD.bin:odm/etc/haydn/camera/CFR_para_W_V01_HD.bin
