@@ -67,6 +67,15 @@ vendor/firmware/spk2_voice_delta.txt:odm/vili/firmware/spk2_voice_delta.txt
 vendor/lib/hw/sound_trigger.primary.lahaina.so:odm/vili/lib/hw/sound_trigger.primary.lahaina.so
 
 # Camera
+vendor/lib64/com.qti.feature2.gs.sm8350.so:odm/vili/lib64/com.qti.feature2.gs.sm8350.so
+vendor/lib64/hw/com.qti.chi.override.so:odm/vili/lib64/hw/com.qti.chi.override.so
+vendor/lib64/libcamlog.so:odm/vili/lib64/libcamlog.so
+vendor/lib64/camera/components/com.mi.node.aiasd.so:odm/vili/lib64/camera/components/com.mi.node.aiasd.so
+vendor/lib64/camera/components/com.mi.node.hdr.so:odm/vili/lib64/camera/components/com.mi.node.hdr.so
+vendor/lib64/camera/components/com.mi.node.realtimebokeh.so:odm/vili/lib64/camera/components/com.mi.node.realtimebokeh.so
+vendor/lib64/camera/components/com.mi.node.superlowlightraw.so:odm/vili/lib64/camera/components/com.mi.node.superlowlightraw.so
+vendor/lib64/camera/components/com.qti.node.ldc.so:odm/vili/lib64/camera/components/com.qti.node.ldc.so
+vendor/lib64/libcom.xiaomi.debug.so:odm/vili/lib64/libcom.xiaomi.debug.so
 vendor/lib64/camera/com.qti.eeprom.vili_ofilm_ov16a1q_bl24sa64_front_eeprom.so:odm/vili/lib64/camera/com.qti.eeprom.vili_ofilm_ov16a1q_bl24sa64_front_eeprom.so
 vendor/lib64/camera/com.qti.eeprom.vili_sunny_imx355_gt24p64e_ultra_eeprom.so:odm/vili/lib64/camera/com.qti.eeprom.vili_sunny_imx355_gt24p64e_ultra_eeprom.so
 vendor/lib64/camera/com.qti.eeprom.vili_sunny_s5k5e9yx04_p24c64f_macro_eeprom.so:odm/vili/lib64/camera/com.qti.eeprom.vili_sunny_s5k5e9yx04_p24c64f_macro_eeprom.so

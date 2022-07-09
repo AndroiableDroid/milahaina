@@ -192,7 +192,6 @@ vendor/lib64/com.qti.feature2.derivedoffline.so
 vendor/lib64/com.qti.feature2.frameselect.so
 vendor/lib64/com.qti.feature2.fusion.so
 vendor/lib64/com.qti.feature2.generic.so
-vendor/lib64/com.qti.feature2.gs.sm8350.so|ef07c374d3d6188f71cfedebb09f4922bcd2d25d
 vendor/lib64/com.qti.feature2.hdr.so
 vendor/lib64/com.qti.feature2.mcreprocrt.so
 vendor/lib64/com.qti.feature2.memcpy.so
@@ -221,7 +220,6 @@ vendor/lib64/com.qualcomm.mcx.linearmapper.so
 vendor/lib64/com.qualcomm.mcx.policy.mfl.so
 vendor/lib64/com.qualcomm.qti.mcx.usecase.extension.so
 vendor/lib64/HDR10plus.so
-vendor/lib64/hw/com.qti.chi.override.so|b1a2bc5cecdda8fc3fd963fd3d4070746dc3a841
 vendor/lib64/libAF.so
 vendor/lib64/libaidenoiser.so
 vendor/lib64/libaidenoiserv2.so
@@ -235,7 +233,6 @@ vendor/lib64/libcamera_dirty.so
 vendor/lib64/libcamera_nn_stub.so
 vendor/lib64/libcamera_scene.so
 vendor/lib64/libcamerapostproc.so
-vendor/lib64/libcamlog.so|34c682b20be41dcf7115be40a469594ad6d9b0e6
 vendor/lib64/libcapiv2svacnn.so
 vendor/lib64/libcapiv2svarnn.so
 vendor/lib64/libcapiv2vop.so
@@ -338,19 +335,15 @@ vendor/lib64/libcamxswprocessalgo.so
 vendor/lib64/libcamxtintlessalgo.so
 
 # Camera (components)
-vendor/lib64/camera/components/com.mi.node.aiasd.so|506aa387ff57545d3ab7193d4ef082574311f88f
 vendor/lib64/camera/components/com.mi.node.AIIE.so
 vendor/lib64/camera/components/com.mi.node.bodyslim.so
 vendor/lib64/camera/components/com.mi.node.distortioncorrection.so
-vendor/lib64/camera/components/com.mi.node.hdr.so|6d28531db995a2955224b51f0094b5f4894f2002
 vendor/lib64/camera/components/com.mi.node.mimovie.so
 vendor/lib64/camera/components/com.mi.node.mipitounpacketraw.so
 vendor/lib64/camera/components/com.mi.node.pureShot.so
-vendor/lib64/camera/components/com.mi.node.realtimebokeh.so|f25b79483e4b5aca15feec81c3dcac3e5fd1051b
 vendor/lib64/camera/components/com.mi.node.rearvideo.so
 vendor/lib64/camera/components/com.mi.node.skinbeautifier.so
 vendor/lib64/camera/components/com.mi.node.superiq.so
-vendor/lib64/camera/components/com.mi.node.superlowlightraw.so|498015323dbc21bfc2c1570809ae99f0438f485d
 vendor/lib64/camera/components/com.mi.node.videobokeh.so
 vendor/lib64/camera/components/com.mi.node.videonight.so
 vendor/lib64/camera/components/com.qti.camx.chiiqutils.so
@@ -369,7 +362,6 @@ vendor/lib64/camera/components/com.qti.node.formatconversion.so
 vendor/lib64/camera/components/com.qti.node.gpu.so
 vendor/lib64/camera/components/com.qti.node.hdr10plushist.so
 vendor/lib64/camera/components/com.qti.node.hdr10plusmeta.so
-vendor/lib64/camera/components/com.qti.node.ldc.so|80021e5a4a4b39fd0bb0bcf74d939fb5bd51a737
 vendor/lib64/camera/components/com.qti.node.memcpy.so
 vendor/lib64/camera/components/com.qti.node.ml.so
 vendor/lib64/camera/components/com.qti.node.remosaic.so
@@ -478,7 +470,6 @@ vendor/lib64/lib_sr_models.so
 vendor/lib64/libanc_dc_base.so
 vendor/lib64/libanc_hdr.so
 vendor/lib64/libancbase.so
-vendor/lib64/libcom.xiaomi.debug.so|0d16c9696ad72b9b34fc95e1e5989c375242d580
 vendor/lib64/libcom.xiaomi.grallocutils.so
 vendor/lib64/libcom.xiaomi.metadatautils.so
 vendor/lib64/libcom.xiaomi.pluginutils.so
