@@ -15,7 +15,7 @@ if [ -z $1 ]; then
 else
     PROP_FILE=$1
 fi
-
+DEVICES=("lahaina" "haydn" "qssi" "star" "vili")
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
@@ -35,9 +35,10 @@ setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}"
 # Warning headers and guards
 write_headers
 TMP_FILE=".tmp.prop.txt"
-cat ${MY_DIR}/proprietary-files-qssi.txt > ${MY_DIR}/$TMP_FILE
+
 cat ${MY_DIR}/proprietary-files.txt >> ${MY_DIR}/$TMP_FILE
-for i in lahaina vili haydn star; do
+
+for i in ${DEVICES[@]}; do
 	cat ${MY_DIR}/proprietary-files-$i.txt >> ${MY_DIR}/$TMP_FILE
 done
 

@@ -65,6 +65,12 @@ while [ "${#}" -gt 0 ]; do
 		PROP_FILE="proprietary-files-star.txt"
                 CLEAN_VENDOR=false
                 ;;
+        --devices=* )
+                DATA=$(echo $1 | cut -d'=' -f2-)
+                # --devices=vili=<path>:lahaina=<path>....
+                IFS=':' read -ra DEVICES <<< "$DATA"
+                CLEAN_VENDOR=false
+                ;;
         * )
                 SRC="${1}"
                 ;;
@@ -72,7 +78,7 @@ while [ "${#}" -gt 0 ]; do
     shift
 done
 
-if [ -z "${SRC}" ]; then
+if [ -z "${SRC}" ] && [ -z $DEVICES ]; then
     SRC="adb"
 fi
 
@@ -81,7 +87,7 @@ function blob_fixup() {
     vendor/etc/camera/pure*_parameter.xml)
         sed -i 's:=100:="100":g; s;=200;="200";g; s;=400;="400";g; s;=800;="800";g; s;=1600;="1600";g; s;=3200;="3200";g; s;=6400;="6400";g; s;Id=0;Id="0";g; s:Id=1:Id="1":g' "${2}"
     ;;
-    vendor/etc/camera/vili_motiontuning.xml)
+    odm/etc/vili/camera/vili_motiontuning.xml)
         sed -i 's:xml=version:xml version:g' "${2}"
     ;;
     # Remove dependency on android.hidl.base@1.0.
@@ -93,7 +99,19 @@ function blob_fixup() {
 
 # Initialize the helper.
 setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
-
-extract "${MY_DIR}/${PROP_FILE}" "${SRC}" "${KANG}" --section "${SECTION}"
+if [ ! -z $DEVICES ]; then
+    for i in ${DEVICES[@]}; do
+        DEVICE=-$(echo ${i} | cut -d'=' -f1)
+        if [ "$DEVICE" == "-common" ]; then
+            DEVICE=""
+        fi
+        SRC=$(echo ${i} | cut -d'=' -f2)
+        PROP_FILE="proprietary-files"${DEVICE}".txt"
+        echo "Extracting $DEVICE from $SRC using $PROP_FILE"
+        extract "${MY_DIR}/${PROP_FILE}" "${SRC}" "${KANG}" --section "${SECTION}"
+    done
+else
+    extract "${MY_DIR}/${PROP_FILE}" "${SRC}" "${KANG}" --section "${SECTION}"
+fi
 
 "${MY_DIR}/setup-makefiles.sh" "${PROP_FILE}"
