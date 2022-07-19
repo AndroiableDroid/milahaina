@@ -297,7 +297,6 @@ vendor/bin/init.qti.media.sh
 vendor/bin/init.qti.qcv.sh
 vendor/bin/init.qti.chg_policy.sh
 vendor/bin/init.qti.kernel.sh
-vendor/bin/vendor_modprobe.sh
 vendor/ueventd.rc:vendor/etc/ueventd.qcom.rc
 vendor/etc/init/hw/init.qcom.rc
 vendor/etc/init/init.qti.media.rc

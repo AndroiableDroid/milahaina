@@ -222,6 +222,7 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     init.xiaomi.early_boot.sh \
     init.xiaomi.post_boot.sh \
+    vendor_modprobe.sh \
     ueventd.lahaina.rc \
     ueventd.milahaina.rc
 
