@@ -58,6 +58,7 @@ q6_dlkm.ko
 q6_notifier_dlkm.ko
 q6_pdr_dlkm.ko
 qcom_edac.ko
+qcom-hv-haptics.ko
 qm1d1b0004.ko
 qm1d1c0042.ko
 qt1010.ko
@@ -73,6 +74,7 @@ si2157.ko
 slimbus.ko
 slimbus-ngd.ko
 snd_event_dlkm.ko
+stmvl53l5.ko
 stub_dlkm.ko
 swr_ctrl_dlkm.ko
 swr_dlkm.ko
