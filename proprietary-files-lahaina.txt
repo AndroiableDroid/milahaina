@@ -61,7 +61,6 @@ vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 # Bluetooth - from LA.UM.9.14.r1-18900-LAHAINA.QSSI12.0
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
-vendor/lib/btaudio_offload_if.so
 vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib/hw/audio.bluetooth_qti.default.so
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
@@ -69,13 +68,13 @@ vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so
 vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
 vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
+vendor/lib/btaudio_offload_if.so
 vendor/lib/libbluetooth_audio_session_qti.so
 vendor/lib/libbluetooth_audio_session_qti_2_1.so
 vendor/lib/libbt-hidlclient.so
 vendor/lib/libbtnv.so
 vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib/vendor.qti.hardware.bluetooth_sar@1.1.so
-vendor/lib64/btaudio_offload_if.so
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib64/hw/audio.bluetooth_qti.default.so
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
@@ -83,6 +82,7 @@ vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
+vendor/lib64/btaudio_offload_if.so
 vendor/lib64/libbluetooth_audio_session_qti.so
 vendor/lib64/libbluetooth_audio_session_qti_2_1.so
 vendor/lib64/libbt-hidlclient.so
@@ -94,25 +94,23 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 -vendor/app/CneApp/CneApp.apk
 vendor/bin/cnd
 vendor/bin/mutualex
-vendor/etc/cne/mwqem.conf
-vendor/etc/cne/profileMwqem.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile3.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile4.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile5.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile6.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile1.xml
 vendor/etc/cne/wqeclient/ROW/ROW_profile15.xml
 vendor/etc/cne/wqeclient/ROW/ROW_profile16.xml
 vendor/etc/cne/wqeclient/ROW/ROW_profile17.xml
 vendor/etc/cne/wqeclient/ROW/ROW_profile18.xml
 vendor/etc/cne/wqeclient/ROW/ROW_profile19.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile1.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile2.xml
 vendor/etc/cne/wqeclient/ROW/ROW_profile20.xml
 vendor/etc/cne/wqeclient/ROW/ROW_profile21.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile2.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile32.xml
 vendor/etc/cne/wqeclient/ROW/ROW_profile3.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile32.xml
 vendor/etc/cne/wqeclient/ROW/ROW_profile4.xml
 vendor/etc/cne/wqeclient/ROW/ROW_profile5.xml
 vendor/etc/cne/wqeclient/ROW/ROW_profile6.xml
@@ -123,6 +121,8 @@ vendor/etc/cne/wqeclient/VZW/VZW_profile3.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml
+vendor/etc/cne/mwqem.conf
+vendor/etc/cne/profileMwqem.xml
 vendor/etc/default-permissions/com.qualcomm.qti.cne.xml
 vendor/etc/init/cnd.rc
 vendor/etc/init/mutualex.rc
@@ -156,11 +156,11 @@ vendor/lib64/vendor.qti.latency@2.1.so
 # CDSP - from LA.UM.9.14.r1-18900-LAHAINA.QSSI12.0
 vendor/bin/cdsprpcd
 vendor/etc/init/vendor.qti.cdsprpc-service.rc
-vendor/lib/libcdsprpc.so
 vendor/lib/libcdsp_default_listener.so
+vendor/lib/libcdsprpc.so
 vendor/lib/libsysmon_cdsp_skel.so
-vendor/lib64/libcdsprpc.so
 vendor/lib64/libcdsp_default_listener.so
+vendor/lib64/libcdsprpc.so
 vendor/lib64/libsysmon_cdsp_skel.so
 
 # CVP - from LA.UM.9.14.r1-18900-LAHAINA.QSSI12.0
@@ -205,12 +205,12 @@ vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service
 vendor/bin/qseecomd
 vendor/bin/ssgqmigd
 vendor/bin/ssgtzd
-vendor/etc/gpfspath_oem_config.xml
 vendor/etc/init/qseecomd.rc
 vendor/etc/init/ssgtzd.rc
 vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc
 vendor/etc/ssg/ta_config.json
 vendor/etc/ssg/tz_whitelist.json
+vendor/etc/gpfspath_oem_config.xml
 vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so
 vendor/lib64/libGPreqcancel.so
 vendor/lib64/libGPreqcancel_svc.so
@@ -254,10 +254,10 @@ vendor/lib64/libsnapdragoncolor-qdcm.so
 vendor/lib64/libtinyxml2_1.so
 
 # Display configs - from LA.UM.9.14.r1-18900-LAHAINA.QSSI12.0
-vendor/etc/display/advanced_sf_offsets.xml
 vendor/etc/display/DPU660.xml
 vendor/etc/display/DPU670.xml
 vendor/etc/display/DPU7__.xml
+vendor/etc/display/advanced_sf_offsets.xml
 
 # Display postprocessing - from LA.UM.9.14.r1-18900-LAHAINA.QSSI12.0
 vendor/bin/hw/vendor.display.color@1.0-service
@@ -287,22 +287,22 @@ vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 # GPU drivers - from LA.UM.9.14.r1-18900-LAHAINA.QSSI12.0
 -vendor/app/com.qualcomm.qti.gpudrivers.lahaina.api30/com.qualcomm.qti.gpudrivers.lahaina.api30.apk;PRESIGNED
 
-# Init - from 
+# Init - from
 vendor/bin/init.class_main.sh
-vendor/bin/init.qcom.early_boot.sh
-vendor/bin/init.qcom.sh
 vendor/bin/init.kernel.post_boot-lahaina.sh
 vendor/bin/init.kernel.post_boot.sh
-vendor/bin/init.qti.media.sh
-vendor/bin/init.qti.qcv.sh
+vendor/bin/init.qcom.early_boot.sh
+vendor/bin/init.qcom.sh
 vendor/bin/init.qti.chg_policy.sh
 vendor/bin/init.qti.kernel.sh
-vendor/ueventd.rc:vendor/etc/ueventd.qcom.rc
+vendor/bin/init.qti.media.sh
+vendor/bin/init.qti.qcv.sh
 vendor/etc/init/hw/init.qcom.rc
+vendor/etc/init/hw/init.qti.kernel.rc
 vendor/etc/init/init.qti.media.rc
 vendor/etc/init/init.qti.qcv.rc
 vendor/etc/init/init.vendor.wlan.rc
-vendor/etc/init/hw/init.qti.kernel.rc
+vendor/ueventd.rc:vendor/etc/ueventd.qcom.rc
 
 # Keymaster - from LA.UM.9.14.r1-18900-LAHAINA.QSSI12.0
 vendor/bin/hw/android.hardware.keymaster@4.1-service-qti
@@ -321,8 +321,8 @@ vendor/bin/init.qti.media.sh
 vendor/etc/init/init.qti.media.rc
 vendor/etc/init/qconfig.rc
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
-vendor/etc/seccomp_policy/codec2.vendor.ext-arm.policy
 vendor/etc/seccomp_policy/codec2.vendor.base-arm.policy
+vendor/etc/seccomp_policy/codec2.vendor.ext-arm.policy
 vendor/etc/video_system_specs.json
 vendor/lib/libqc2colorconvertfilter.so
 vendor/lib/libqc2filter.so
@@ -362,8 +362,8 @@ vendor/etc/media_codecs_performance.xml
 vendor/etc/media_profiles.xml
 vendor/etc/media_profiles_V1_0.xml
 vendor/etc/media_profiles_lahaina.xml
-vendor/etc/media_profiles_vendor.xml
 vendor/etc/media_profiles_lahaina_vendor.xml
+vendor/etc/media_profiles_vendor.xml
 vendor/lib/libAlacSwDec.so
 vendor/lib/libApeSwDec.so
 vendor/lib/libFlacSwDec.so
@@ -463,10 +463,10 @@ vendor/lib/libperfconfig.so
 vendor/lib/libperfgluelayer.so
 vendor/lib/libperfioctl.so
 vendor/lib/libpowercore.so
-vendor/lib/libqti-iopd.so
 vendor/lib/libqti-iopd-client.so
-vendor/lib/libqti-perfd.so
+vendor/lib/libqti-iopd.so
 vendor/lib/libqti-perfd-client.so
+vendor/lib/libqti-perfd.so
 vendor/lib/libqti-util.so
 vendor/lib/libqti-utils.so
 vendor/lib/libskewknob.so
@@ -478,8 +478,8 @@ vendor/lib/vendor.qti.hardware.perf@2.2.so
 vendor/lib/vendor.qti.memory.pasrmanager@1.0.so
 vendor/lib/vendor.qti.memory.pasrmanager@1.1.so
 vendor/lib/vendor.qti.power.pasrmanager@1.0.so
-vendor/lib/vendor.qti.qspmhal@1.0.so
 vendor/lib/vendor.qti.qspmhal@1.0-impl.so
+vendor/lib/vendor.qti.qspmhal@1.0.so
 vendor/lib64/hw/vendor.qti.hardware.servicetracker@1.2-impl.so
 vendor/lib64/hw/vendor.qti.memory.pasrmanager@1.0-impl.so
 vendor/lib64/libadaptlaunch.so
@@ -489,8 +489,8 @@ vendor/lib64/libgplaf.so
 vendor/lib64/liblearningmodule.so
 vendor/lib64/liblmutils-ns.so
 vendor/lib64/libmemperfd.so
-vendor/lib64/libmeters.so
 vendor/lib64/libmeters-ns.so
+vendor/lib64/libmeters.so
 vendor/lib64/libpasrutils.so
 vendor/lib64/libperfconfig.so
 vendor/lib64/libperfgluelayer.so
@@ -498,10 +498,10 @@ vendor/lib64/libperfioctl.so
 vendor/lib64/libpowercallback.so
 vendor/lib64/libpowercore.so
 vendor/lib64/libprekill.so
-vendor/lib64/libqti-iopd.so
 vendor/lib64/libqti-iopd-client.so
-vendor/lib64/libqti-perfd.so
+vendor/lib64/libqti-iopd.so
 vendor/lib64/libqti-perfd-client.so
+vendor/lib64/libqti-perfd.so
 vendor/lib64/libqti-util.so
 vendor/lib64/libqti-utils.so
 vendor/lib64/libreffeature.so
@@ -515,26 +515,26 @@ vendor/lib64/vendor.qti.hardware.perf@2.2.so
 vendor/lib64/vendor.qti.memory.pasrmanager@1.0.so
 vendor/lib64/vendor.qti.memory.pasrmanager@1.1.so
 vendor/lib64/vendor.qti.power.pasrmanager@1.0.so
-vendor/lib64/vendor.qti.qspmhal@1.0.so
 vendor/lib64/vendor.qti.qspmhal@1.0-impl.so
+vendor/lib64/vendor.qti.qspmhal@1.0.so
 
 # Perf(Configs) - from
-vendor/etc/msm_irqbalance.conf
-vendor/etc/lm/AppClassifierFeature.xml
-vendor/etc/lm/gPLAFFeature.xml
-vendor/etc/lm/AdaptLaunchFeature.xml
-vendor/etc/lm/PreKillFeature.xml
-vendor/etc/lm/sPLHFeature.xml
-vendor/etc/lm/GameOptimizationFeature.xml
+vendor/etc/lm/prekill/prekill_2GB.data
 vendor/etc/lm/prekill/prekill_4GB.data
 vendor/etc/lm/prekill/prekill_6GB.data
-vendor/etc/lm/prekill/prekill_2GB.data
+vendor/etc/lm/AdaptLaunchFeature.xml
+vendor/etc/lm/AppClassifierFeature.xml
+vendor/etc/lm/GameOptimizationFeature.xml
+vendor/etc/lm/PreKillFeature.xml
+vendor/etc/lm/gPLAFFeature.xml
+vendor/etc/lm/sPLHFeature.xml
+vendor/etc/perf/commonresourceconfigs.xml
 vendor/etc/perf/commonsysnodesconfigs.xml
 vendor/etc/perf/perfboostsconfig.xml
 vendor/etc/perf/perfconfigstore.xml
-vendor/etc/perf/targetresourceconfigs.xml
-vendor/etc/perf/commonresourceconfigs.xml
 vendor/etc/perf/targetconfig.xml
+vendor/etc/perf/targetresourceconfigs.xml
+vendor/etc/msm_irqbalance.conf
 
 # Peripheral Manager - from LA.UM.9.14.r1-18900-LAHAINA.QSSI12.0
 vendor/bin/pm-proxy
@@ -562,10 +562,10 @@ vendor/lib64/libsoc_helper_jni.so
 vendor/bin/irsc_util
 vendor/bin/pd-mapper
 vendor/bin/qmipriod
-vendor/etc/init/qmipriod.rc
 vendor/etc/init/qmipriod.debug.rc
-vendor/etc/sec_config
+vendor/etc/init/qmipriod.rc
 vendor/etc/seccomp_policy/qti-systemd.policy
+vendor/etc/sec_config
 vendor/lib/libdiag.so
 vendor/lib/libdsutils.so
 vendor/lib/libidl.so
@@ -617,11 +617,17 @@ vendor/lib64/libQTEEConnector_vendor.so
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 
 # Radio - from LA.UM.9.14.r1-18900-LAHAINA.QSSI12.0
+#vendor/etc/qcril_database/upgrade/config/10.0_config.sql
+#vendor/etc/qcril_database/upgrade/config/11.0_config.sql
+#vendor/etc/qcril_database/upgrade/config/6.0_config.sql
+#vendor/etc/qcril_database/upgrade/config/7.0_config.sql
+#vendor/etc/qcril_database/upgrade/config/8.0_config.sql
+#vendor/etc/qcril_database/upgrade/config/9.0_config.sql
 -system_ext/app/datastatusnotification/datastatusnotification.apk
+vendor/bin/hw/qcrilNrd
 vendor/bin/ATFWD-daemon
 vendor/bin/adpl
 vendor/bin/embmsslServer
-vendor/bin/hw/qcrilNrd
 vendor/bin/netmgrd
 vendor/bin/port-bridge
 vendor/bin/qrtr-cfg
@@ -637,23 +643,18 @@ vendor/etc/data/dsi_config.xml
 vendor/etc/data/netmgr_config.xml
 vendor/etc/init/dataadpl.rc
 vendor/etc/init/dataqti.rc
-vendor/etc/init/init.embmssl_server.rc
 vendor/etc/init/init-qcril-data.rc
+vendor/etc/init/init.embmssl_server.rc
 vendor/etc/init/ipa_fws.rc
 vendor/etc/init/netmgrd.rc
 vendor/etc/init/port-bridge.rc
-vendor/etc/init/shsusrd.rc
 vendor/etc/init/qcrilNrd.rc
+vendor/etc/init/shsusrd.rc
 vendor/etc/init/vendor.qti.rmt_storage.rc
 vendor/etc/init/vendor.qti.tftp.rc
-vendor/etc/qcril_database/qcrilNr.db
-#vendor/etc/qcril_database/upgrade/config/6.0_config.sql
-#vendor/etc/qcril_database/upgrade/config/7.0_config.sql
-#vendor/etc/qcril_database/upgrade/config/8.0_config.sql
-#vendor/etc/qcril_database/upgrade/config/9.0_config.sql
-#vendor/etc/qcril_database/upgrade/config/10.0_config.sql
-#vendor/etc/qcril_database/upgrade/config/11.0_config.sql
 vendor/etc/qcril_database/upgrade/other/0_initial_qcrilnr.sql
+vendor/etc/qcril_database/upgrade/other/10_version_update_ecc_table.sql
+vendor/etc/qcril_database/upgrade/other/11_version_update_ecc_table.sql
 vendor/etc/qcril_database/upgrade/other/1_version_intro_qcrilnr.sql
 vendor/etc/qcril_database/upgrade/other/2_version_add_wps_config_qcrilnr.sql
 vendor/etc/qcril_database/upgrade/other/3_version_update_wps_config_qcrilnr.sql
@@ -663,8 +664,7 @@ vendor/etc/qcril_database/upgrade/other/6_version_change_property_table_qcrilnr.
 vendor/etc/qcril_database/upgrade/other/7_version_update_ecc_table_qcrilnr.sql
 vendor/etc/qcril_database/upgrade/other/8_version_update_ecc_table.sql
 vendor/etc/qcril_database/upgrade/other/9_version_update_ecc_table.sql
-vendor/etc/qcril_database/upgrade/other/10_version_update_ecc_table.sql
-vendor/etc/qcril_database/upgrade/other/11_version_update_ecc_table.sql
+vendor/etc/qcril_database/qcrilNr.db
 vendor/etc/seccomp_policy/atfwd@2.0.policy
 vendor/etc/seccomp_policy/qcrilnr@2.0.policy
 vendor/lib64/deviceInfoServiceModuleNr.so
@@ -692,8 +692,8 @@ vendor/lib64/libril-qc-radioconfig.so
 vendor/lib64/librilqmimiscservices.so
 vendor/lib64/librilqmiservices.so
 vendor/lib64/libsystem_health_mon.so
-vendor/lib64/qcrild_libqcrilnrutils.so
 vendor/lib64/qcrilMarshal.so
+vendor/lib64/qcrild_libqcrilnrutils.so
 vendor/lib64/qtiril-utils.so
 vendor/lib64/qtiwakelock.so
 vendor/lib64/vendor.qti.hardware.embmssl@1.0-adapter-helper.so
@@ -758,16 +758,16 @@ vendor/lib64/vendor.qti.hardware.radio.ims@1.4.so
 vendor/lib64/vendor.qti.hardware.radio.ims@1.5.so
 vendor/lib64/vendor.qti.hardware.radio.ims@1.6.so
 vendor/lib64/vendor.qti.hardware.radio.ims@1.7.so
-vendor/lib64/vendor.qti.ims.callinfo@1.0.so
 vendor/lib64/vendor.qti.ims.callcapability@1.0.so
+vendor/lib64/vendor.qti.ims.callinfo@1.0.so
 vendor/lib64/vendor.qti.ims.factory@1.0.so
 vendor/lib64/vendor.qti.ims.factory@1.1.so
 vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so
 vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so
 vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so
 vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so
-vendor/lib64/vendor.qti.imsrtpservice@3.0.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
+vendor/lib64/vendor.qti.imsrtpservice@3.0.so
 
 # QSPM HAL - from LA.UM.9.14.r1-18900-LAHAINA.QSSI12.0
 vendor/bin/vendor.qti.qspmhal@1.0-service
@@ -813,14 +813,14 @@ vendor/etc/vmmgr.conf
 
 # Video - from LA.UM.9.14.r1-18900-LAHAINA.QSSI12.0
 vendor/lib/libfastcrc.so
-vendor/lib/libstreamparser.so
-vendor/lib/libvideooptfeature.so
-vendor/lib/libvideoutils.so
-vendor/lib64/libvideooptfeature.so
 vendor/lib/libfastcrc.so
 vendor/lib/libstreamparser.so
+vendor/lib/libstreamparser.so
+vendor/lib/libvideooptfeature.so
 vendor/lib/libvideooptfeature.so
 vendor/lib/libvideoutils.so
+vendor/lib/libvideoutils.so
+vendor/lib64/libvideooptfeature.so
 vendor/lib64/libvideooptfeature.so
 
 # WIGIG - from LA.UM.9.14.r1-18900-LAHAINA.QSSI12.0

@@ -1,14 +1,14 @@
 # ADSPRPC (star)
 vendor/lib/rfsa/adsp/libQnnHtpSkel.so:odm/star/lib/rfsa/adsp/libQnnHtpSkel.so
 vendor/lib/rfsa/adsp/libarcsoft_hdrplus_hvx_skel.so:odm/star/lib/rfsa/adsp/libarcsoft_hdrplus_hvx_skel.so
+vendor/lib/rfsa/adsp/libhap_blink_skel.so:odm/star/lib/rfsa/adsp/libhap_blink_skel.so
 vendor/lib/rfsa/adsp/libmialgo_basic_cdsp_skel.so:odm/star/lib/rfsa/adsp/libmialgo_basic_cdsp_skel.so
 vendor/lib/rfsa/adsp/libmialgo_rfs_cdsp_skel.so:odm/star/lib/rfsa/adsp/libmialgo_rfs_cdsp_skel.so
-vendor/lib/rfsa/adsp/libhap_blink_skel.so:odm/star/lib/rfsa/adsp/libhap_blink_skel.so
 vendor/lib/rfsa/adsp/libsnpe_htp_v65_skel.so:odm/star/lib/rfsa/adsp/libsnpe_htp_v65_skel.so
 vendor/lib/rfsa/adsp/libsnpe_htp_v66_skel.so:odm/star/lib/rfsa/adsp/libsnpe_htp_v66_skel.so
 vendor/lib/rfsa/adsp/libsnpe_htp_v68_skel.so:odm/star/lib/rfsa/adsp/libsnpe_htp_v68_skel.so
-vendor/lib/rfsa/adsp/misound_karaokemix_res.bin:odm/star/lib/rfsa/adsp/misound_karaokemix_res.bin
 vendor/lib/rfsa/adsp/misound_karaoke_res.bin:odm/star/lib/rfsa/adsp/misound_karaoke_res.bin
+vendor/lib/rfsa/adsp/misound_karaokemix_res.bin:odm/star/lib/rfsa/adsp/misound_karaokemix_res.bin
 vendor/lib/rfsa/adsp/misound_res_headphone.bin:odm/star/lib/rfsa/adsp/misound_res_headphone.bin
 vendor/lib/rfsa/adsp/misound_res_spk.bin:odm/star/lib/rfsa/adsp/misound_res_spk.bin
 
@@ -17,13 +17,6 @@ vendor/lib/hw/audio.primary.lahaina.so:odm/star/lib/hw/audio.primary.lahaina.so
 vendor/lib64/hw/audio.primary.lahaina.so:odm/star/lib64/hw/audio.primary.lahaina.so
 
 # Audio (acdbdata_star)
-vendor/etc/acdbdata/adsp_avs_config.acdb:odm/etc/star/acdbdata/adsp_avs_config.acdb
-vendor/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.00.pmd:odm/etc/star/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.00.pmd
-vendor/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.10.pmd:odm/etc/star/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.10.pmd
-vendor/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.00.pmd:odm/etc/star/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.00.pmd
-vendor/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.10.pmd:odm/etc/star/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.10.pmd
-vendor/etc/acdbdata/nn_vad_models/fai_3.0.0_0.0_eai_1.00.pmd:odm/etc/star/acdbdata/nn_vad_models/fai_3.0.0_0.0_eai_1.00.pmd
-vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_1.10.pmd:odm/etc/star/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_1.10.pmd
 vendor/etc/acdbdata/Tutu/Tutu_Bluetooth_cal.acdb:odm/etc/star/acdbdata/Tutu/Tutu_Bluetooth_cal.acdb
 vendor/etc/acdbdata/Tutu/Tutu_General_cal.acdb:odm/etc/star/acdbdata/Tutu/Tutu_General_cal.acdb
 vendor/etc/acdbdata/Tutu/Tutu_Global_cal.acdb:odm/etc/star/acdbdata/Tutu/Tutu_Global_cal.acdb
@@ -40,23 +33,25 @@ vendor/etc/acdbdata/Tutu/mars/Tutu_Hdmi_cal_mars.acdb:odm/etc/star/acdbdata/Tutu
 vendor/etc/acdbdata/Tutu/mars/Tutu_Headset_cal_mars.acdb:odm/etc/star/acdbdata/Tutu/mars/Tutu_Headset_cal_mars.acdb
 vendor/etc/acdbdata/Tutu/mars/Tutu_Speaker_cal_mars.acdb:odm/etc/star/acdbdata/Tutu/mars/Tutu_Speaker_cal_mars.acdb
 vendor/etc/acdbdata/Tutu/mars/Tutu_workspaceFile_mars.qwsp:odm/etc/star/acdbdata/Tutu/mars/Tutu_workspaceFile_mars.qwsp
+vendor/etc/acdbdata/adsp_avs_config.acdb:odm/etc/star/acdbdata/adsp_avs_config.acdb
+vendor/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.00.pmd:odm/etc/star/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.00.pmd
+vendor/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.10.pmd:odm/etc/star/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.10.pmd
+vendor/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.00.pmd:odm/etc/star/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.00.pmd
+vendor/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.10.pmd:odm/etc/star/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.10.pmd
+vendor/etc/acdbdata/nn_vad_models/fai_3.0.0_0.0_eai_1.00.pmd:odm/etc/star/acdbdata/nn_vad_models/fai_3.0.0_0.0_eai_1.00.pmd
+vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_1.10.pmd:odm/etc/star/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_1.10.pmd
 
 # Audio (configs_star)
 vendor/etc/audio/sku_lahaina/audio_platform_info.xml:odm/etc/star/audio/sku_lahaina/audio_platform_info.xml
 vendor/etc/audio/sku_lahaina/audio_platform_info_intcodec.xml:odm/etc/star/audio/sku_lahaina/audio_platform_info_intcodec.xml
 vendor/etc/audio/sku_lahaina/audio_platform_info_qrd.xml:odm/etc/star/audio/sku_lahaina/audio_platform_info_qrd.xml
+vendor/etc/audio/sku_lahaina/mixer_paths.xml:odm/etc/star/audio/sku_lahaina/mixer_paths.xml
 vendor/etc/audio/sku_lahaina/mixer_paths_overlay_dynamic.xml:odm/etc/star/audio/sku_lahaina/mixer_paths_overlay_dynamic.xml
 vendor/etc/audio/sku_lahaina/mixer_paths_overlay_static.xml:odm/etc/star/audio/sku_lahaina/mixer_paths_overlay_static.xml
-vendor/etc/audio/sku_lahaina/mixer_paths.xml:odm/etc/star/audio/sku_lahaina/mixer_paths.xml
-vendor/etc/audio/sku_lahaina/sound_trigger_platform_info.xml:odm/etc/star/audio/sku_lahaina/sound_trigger_platform_info.xml
 vendor/etc/audio/sku_lahaina/sound_trigger_mixer_paths.xml:odm/etc/star/audio/sku_lahaina/sound_trigger_mixer_paths.xml
+vendor/etc/audio/sku_lahaina/sound_trigger_platform_info.xml:odm/etc/star/audio/sku_lahaina/sound_trigger_platform_info.xml
 
 # Audio (firmware_star)
-vendor/firmware/rcv_voice_delta.txt:odm/star/firmware/rcv_voice_delta.txt
-vendor/firmware/spk1_playback_delta.txt:odm/star/firmware/spk1_playback_delta.txt
-vendor/firmware/spk1_voice_delta.txt:odm/star/firmware/spk1_voice_delta.txt
-vendor/firmware/spk2_playback_delta.txt:odm/star/firmware/spk2_playback_delta.txt
-vendor/firmware/spk2_voice_delta.txt:odm/star/firmware/spk2_voice_delta.txt
 vendor/firmware/cs35l41-dsp1-diag-revb2.wmfw:odm/star/firmware/cs35l41-dsp1-diag-revb2.wmfw
 vendor/firmware/cs35l41-dsp1-diag-z-RCV-revb2.bin:odm/star/firmware/cs35l41-dsp1-diag-z-RCV-revb2.bin
 vendor/firmware/cs35l41-dsp1-diag-z-revb2.bin:odm/star/firmware/cs35l41-dsp1-diag-z-revb2.bin
@@ -70,6 +65,11 @@ vendor/firmware/cs35l41-dsp1-spk-prot-revb2.bin:odm/star/firmware/cs35l41-dsp1-s
 vendor/firmware/cs35l41-dsp1-spk-prot-revb2.wmfw:odm/star/firmware/cs35l41-dsp1-spk-prot-revb2.wmfw
 vendor/firmware/cs35l41-dsp1-spk-prot.bin:odm/star/firmware/cs35l41-dsp1-spk-prot.bin
 vendor/firmware/cs35l41-dsp1-spk-prot.wmfw:odm/star/firmware/cs35l41-dsp1-spk-prot.wmfw
+vendor/firmware/rcv_voice_delta.txt:odm/star/firmware/rcv_voice_delta.txt
+vendor/firmware/spk1_playback_delta.txt:odm/star/firmware/spk1_playback_delta.txt
+vendor/firmware/spk1_voice_delta.txt:odm/star/firmware/spk1_voice_delta.txt
+vendor/firmware/spk2_playback_delta.txt:odm/star/firmware/spk2_playback_delta.txt
+vendor/firmware/spk2_voice_delta.txt:odm/star/firmware/spk2_voice_delta.txt
 
 # Audio (SoundTrigger)
 vendor/lib/hw/sound_trigger.primary.lahaina.so:odm/star/lib/hw/sound_trigger.primary.lahaina.so
