@@ -127,6 +127,7 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_milahaina
 
 # Kernel
 BOARD_KERNEL_CMDLINE := \
+    firmware_class.path=/vendor/firmware \
     androidboot.console=ttyMSM0 \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
