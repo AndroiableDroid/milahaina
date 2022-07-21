@@ -932,14 +932,7 @@ vendor/firmware/vpu20_4v_unsigned.mbn
 
 # WLAN
 vendor/bin/cnss-daemon
-vendor/etc/wifi/qca6390/WCNSS_qcom_cfg.ini
-vendor/etc/wifi/qca6750/WCNSS_qcom_cfg.ini
-vendor/etc/wifi/wlan/WCNSS_qcom_cfg.ini
-vendor/etc/wifi/aoa_cldb_falcon.bin
-vendor/etc/wifi/aoa_cldb_swl14.bin
-vendor/etc/wifi/fstman.ini
-vendor/etc/wifi/icm.conf
 vendor/etc/wifi/p2p_supplicant_overlay.conf
 vendor/etc/wifi/vendor_cmd.xml
-vendor/etc/wifi/wpa_supplicant.conf
 vendor/etc/wifi/wpa_supplicant_overlay.conf
+vendor/firmware/wlan/qca_cld/wlan/WCNSS_qcom_cfg.ini
