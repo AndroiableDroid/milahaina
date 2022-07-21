@@ -70,13 +70,13 @@ vendor/lib64/libarcsoft_dualcam_refocus_image.so:odm/haydn/lib64/libarcsoft_dual
 vendor/lib64/libarcsoft_dualcam_refocus_video.so:odm/haydn/lib64/libarcsoft_dualcam_refocus_video.so
 vendor/lib64/libarcsoft_triple_sat.so:odm/haydn/lib64/libarcsoft_triple_sat.so
 vendor/lib64/libarcsoft_triple_zoomtranslator.so:odm/haydn/lib64/libarcsoft_triple_zoomtranslator.so
-vendor/lib64/libarcsoft_beautyshot.so
-vendor/lib64/libarcsoft_bodyslim.so
-vendor/lib64/libarcsoft_distortion_correction.so
-vendor/lib64/libarcsoft_hdrplus_hvx_stub.so
-vendor/lib64/libarcsoft_portrait_lighting.so
-vendor/lib64/libarcsoft_portrait_lighting_c.so
-vendor/lib64/libarcsoft_super_night_raw.so
+vendor/lib64/libarcsoft_beautyshot.so:odm/haydn/lib64/libarcsoft_beautyshot.so
+vendor/lib64/libarcsoft_bodyslim.so:odm/haydn/lib64/libarcsoft_bodyslim.so
+vendor/lib64/libarcsoft_distortion_correction.so:odm/haydn/lib64/libarcsoft_distortion_correction.so
+vendor/lib64/libarcsoft_hdrplus_hvx_stub.so:odm/haydn/lib64/libarcsoft_hdrplus_hvx_stub.so
+vendor/lib64/libarcsoft_portrait_lighting.so:odm/haydn/lib64/libarcsoft_portrait_lighting.so
+vendor/lib64/libarcsoft_portrait_lighting_c.so:odm/haydn/lib64/libarcsoft_portrait_lighting_c.so
+vendor/lib64/libarcsoft_super_night_raw.so:odm/haydn/lib64/libarcsoft_super_night_raw.so
 
 # Camera odm
 vendor/lib64/camera/com.qti.eeprom.haydn_ofilm_imx355_bl24s64_ultra_eeprom.so:odm/haydn/lib64/camera/com.qti.eeprom.haydn_ofilm_imx355_bl24s64_ultra_eeprom.so
@@ -103,11 +103,11 @@ vendor/lib64/camera/components/com.vidhance.node.eis.so:odm/haydn/lib64/camera/c
 vendor/lib64/camera/components/com.vidhance.node.ica.so:odm/haydn/lib64/camera/components/com.vidhance.node.ica.so
 vendor/lib64/camera/components/com.vidhance.stats.aec_dmbr.so:odm/haydn/lib64/camera/components/com.vidhance.stats.aec_dmbr.so
 vendor/lib64/camera/plugins/com.qcom.plugin.jpegencode.so:odm/haydn/lib64/camera/plugins/com.qcom.plugin.jpegencode.so
-vendor/lib64/com.qti.feature2.gs.sm8350.so:odm/vili/lib64/com.qti.feature2.gs.sm8350.so
+vendor/lib64/com.qti.feature2.gs.sm8350.so:odm/haydn/lib64/com.qti.feature2.gs.sm8350.so
 vendor/lib64/hw/camera.qcom.so:odm/haydn/lib64/hw/camera.qcom.so
 vendor/lib64/hw/camera.xiaomi.so:odm/haydn/lib64/hw/camera.xiaomi.so
-vendor/lib64/hw/com.qti.chi.override.so:odm/vili/lib64/hw/com.qti.chi.override.so
-vendor/lib64/libcom.xiaomi.debug.so:odm/vili/lib64/libcom.xiaomi.debug.so
+vendor/lib64/hw/com.qti.chi.override.so:odm/haydn/lib64/hw/com.qti.chi.override.so
+vendor/lib64/libcom.xiaomi.debug.so:odm/haydn/lib64/libcom.xiaomi.debug.so
 
 # Camera (Configs)
 vendor/etc/camera/102_SummerDay.png:odm/etc/haydn/camera/102_SummerDay.png
@@ -274,7 +274,7 @@ vendor/firmware/4_pop_P_RTP.bin:odm/haydn/firmware/4_pop_P_RTP.bin
 vendor/firmware/5_heavyClick_P_RTP.bin:odm/haydn/firmware/5_heavyClick_P_RTP.bin
 
 # Touch firmware (haydn)
-vendor/firmware/focaltech_ts_fw.bin:vendor_ramdisk/firmware/focaltech_ts_fw.bin
-vendor/firmware/focaltech_ts_ht_fw.bin:vendor_ramdisk/firmware/focaltech_ts_ht_fw.bin
+vendor/firmware/focaltech_ts_fw.bin:vendor_ramdisk/vendor/firmware/focaltech_ts_fw.bin
+vendor/firmware/focaltech_ts_ht_fw.bin:vendor_ramdisk/vendor/firmware/focaltech_ts_ht_fw.bin
 vendor/firmware/focaltech_ts_fw.bin
 vendor/firmware/focaltech_ts_ht_fw.bin

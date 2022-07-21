@@ -117,13 +117,13 @@ vendor/lib64/libarcsoft_hdr_detection.so:odm/vili/lib64/libarcsoft_hdr_detection
 vendor/lib64/libarcsoft_high_dynamic_range_v5.so:odm/vili/lib64/libarcsoft_high_dynamic_range_v5.so
 vendor/lib64/libarcsoft_low_light_hdr.so:odm/vili/lib64/libarcsoft_low_light_hdr.so
 vendor/lib64/libarcsoft_qnnhtp.so:odm/vili/lib64/libarcsoft_qnnhtp.so
-vendor/lib64/libarcsoft_beautyshot.so
-vendor/lib64/libarcsoft_bodyslim.so
-vendor/lib64/libarcsoft_distortion_correction.so
-vendor/lib64/libarcsoft_hdrplus_hvx_stub.so
-vendor/lib64/libarcsoft_portrait_lighting.so
-vendor/lib64/libarcsoft_portrait_lighting_c.so
-vendor/lib64/libarcsoft_super_night_raw.so
+vendor/lib64/libarcsoft_beautyshot.so:odm/vili/lib64/libarcsoft_beautyshot.so
+vendor/lib64/libarcsoft_bodyslim.so:odm/vili/lib64/libarcsoft_bodyslim.so
+vendor/lib64/libarcsoft_distortion_correction.so:odm/vili/lib64/libarcsoft_distortion_correction.so
+vendor/lib64/libarcsoft_hdrplus_hvx_stub.so:odm/vili/lib64/libarcsoft_hdrplus_hvx_stub.so
+vendor/lib64/libarcsoft_portrait_lighting.so:odm/vili/lib64/libarcsoft_portrait_lighting.so
+vendor/lib64/libarcsoft_portrait_lighting_c.so:odm/vili/lib64/libarcsoft_portrait_lighting_c.so
+vendor/lib64/libarcsoft_super_night_raw.so:odm/vili/lib64/libarcsoft_super_night_raw.so
 
 # Camera (configs)
 vendor/etc/camera/CFR_para_UW_V01.bin:odm/etc/vili/camera/CFR_para_UW_V01.bin
@@ -290,7 +290,7 @@ vendor/firmware/4_pop_P_RTP.bin:odm/vili/firmware/4_pop_P_RTP.bin
 vendor/firmware/5_heavyClick_P_RTP.bin:odm/vili/firmware/5_heavyClick_P_RTP
 
 # Touch firmware (vili)
-vendor/firmware/st_fts_k3s.ftb:vendor_ramdisk/firmware/st_fts_k3s.ftb
+vendor/firmware/st_fts_k3s.ftb:vendor_ramdisk/vendor/firmware/st_fts_k3s.ftb
 vendor/firmware/st_fts_k3s.ftb
 
 # Wifi
