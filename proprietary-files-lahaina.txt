@@ -434,6 +434,16 @@ vendor/lib64/unnhal-acc-htp.so
 # NFC - from LA.UM.9.14.r1-18900-LAHAINA.QSSI12.0
 vendor/bin/nqnfcinfo
 
+# NFC (Secure Element) - from LA.UM.9.14.r1-18900-LAHAINA.QSSI12.0
+vendor/bin/hw/vendor.qti.esepowermanager@1.1-service
+vendor/bin/hw/vendor.qti.secure_element@1.2-service
+vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc
+vendor/etc/init/vendor.qti.secure_element@1.2-service.rc
+vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so
+vendor/lib64/android.hardware.secure_element@1.0-impl.so
+vendor/lib64/vendor.qti.esepowermanager@1.0.so
+vendor/lib64/vendor.qti.esepowermanager@1.1.so
+
 # Perf - from LA.UM.9.14.r1-18900-LAHAINA.QSSI12.0
 -vendor/app/pasrservice/pasrservice.apk
 vendor/bin/hw/vendor.qti.hardware.iop@2.0-service

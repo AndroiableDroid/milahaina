@@ -273,15 +273,17 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 
 # NFC
 $(call inherit-product, vendor/nxp/opensource/commonsys/packages/apps/Nfc/nfc_system_product.mk)
-$(call inherit-product, vendor/nxp/opensource/sn100x/halimpl/nfc_vendor_product.mk)
 
 TARGET_USES_NQ_NFC := true
 
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.se.omapi.ese.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_haydnpro/android.hardware.se.omapi.ese.xml \
-    frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.uicc.xml
-
-TARGET_NFC_SKU := milahaina
+    frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_milahaina/com.nxp.mifare.xml \
+    frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_milahaina/com.android.nfc_extras.xml \
+    frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_milahaina/android.hardware.nfc.xml \
+    frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_milahaina/android.hardware.nfc.hce.xml \
+    frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_milahaina/android.hardware.nfc.hcef.xml \
+    frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_milahaina/android.hardware.nfc.ese.xml \
+    frameworks/native/data/etc/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_milahaina/android.hardware.nfc.uicc.xml
 
 PRODUCT_PACKAGES += \
     SecureElement \
@@ -291,6 +293,8 @@ PRODUCT_PACKAGES += \
     ls_nq_client:64 \
     jcos_nq_client:64 \
     vendor.nxp.nxpnfc@1.0.vendor \
+    vendor.nxp.hardware.nfc@2.0-service \
+    nfc_nci.nqx.default.hw
 
 PRODUCT_SOONG_NAMESPACES += \
     vendor/nxp/opensource/pn5xx \

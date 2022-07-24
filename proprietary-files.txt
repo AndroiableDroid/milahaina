@@ -826,18 +826,6 @@ vendor/lib64/vendor.qti.hardware.trustedui@1.0.so
 vendor/lib64/vendor.qti.hardware.trustedui@1.1.so
 vendor/lib64/vendor.qti.hardware.trustedui@1.2.so
 
-# SecureMSM (GPQESE)
-vendor/bin/hw/vendor.qti.esepowermanager@1.1-service
-vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc
-vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so
-vendor/lib64/vendor.qti.esepowermanager@1.0.so
-vendor/lib64/vendor.qti.esepowermanager@1.1.so
-
-# SecureMSM (Element) - from vili
-vendor/bin/hw/vendor.qti.secure_element@1.2-service|f44cec1980634f5ccd47ebf91d681c17bf7fa7a9
-vendor/etc/init/vendor.qti.secure_element@1.2-service.rc|cb8e44a67709a5d9c2f0544058d79eb9f6faad7b
-vendor/lib64/android.hardware.secure_element@1.0-impl.so|8e8a8e16ae89c1404ff3e56852c0ca8c477e9c57
-
 # SecureMSM (SECDISP)
 vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
