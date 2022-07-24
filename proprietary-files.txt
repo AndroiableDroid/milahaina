@@ -674,11 +674,6 @@ vendor/etc/libnfc-nxp.conf|e1706f50fa5ccd21e2b11c5e91844b07c8c691fe
 vendor/etc/libnfc-nxp_RF.conf|4db6c4629db744561d6040e7d5f5943c5944ec7c
 vendor/lib/libsn100u_fw.so|005273ef076ed7e4c2eaa5ac572e5fe05043c2ba
 
-# NVMAC
--vendor/bin/nv_mac
-vendor/bin/vendor_cmd_tool
-vendor/bin/xiaomi_extend_cmd
-
 # Ozoaudio
 system/lib/libcodec2_vndk.so:vendor/lib/libcodec2_vndk.so
 system/lib64/libcodec2_vndk.so:vendor/lib64/libcodec2_vndk.so
@@ -918,12 +913,3 @@ vendor/firmware/vpu20_4v.mbn
 vendor/firmware/vpu20_4v.mdt
 vendor/firmware/vpu20_4v_unsigned.mbn
 
-# WLAN
-vendor/bin/cnss-daemon
-vendor/etc/wifi/qca6390/WCNSS_qcom_cfg.ini
-vendor/etc/wifi/qca6750/WCNSS_qcom_cfg.ini
-vendor/etc/wifi/wlan/WCNSS_qcom_cfg.ini:vendor/etc/wifi/WCNSS_qcom_cfg.ini
-vendor/etc/wifi/p2p_supplicant_overlay.conf
-vendor/etc/wifi/vendor_cmd.xml
-vendor/etc/wifi/wpa_supplicant_overlay.conf
-vendor/firmware/wlan/qca_cld/wlan/WCNSS_qcom_cfg.ini
