@@ -30,16 +30,6 @@ vendor/etc/acdbdata/Forte/Forte_Speaker_cal.acdb:odm/etc/haydn/acdbdata/Forte/Fo
 vendor/etc/acdbdata/Forte/Forte_workspaceFile.qwsp:odm/etc/haydn/acdbdata/Forte/Forte_workspaceFile.qwsp
 vendor/etc/acdbdata/adsp_avs_config.acdb:odm/etc/haydn/acdbdata/adsp_avs_config.acdb
 
-# Audio (configs_haydn)
-vendor/etc/audio/sku_lahaina/audio_io_policy.conf:odm/etc/haydn/audio/sku_lahaina/audio_io_policy.conf
-vendor/etc/audio/sku_lahaina/audio_platform_info_intcodec.xml:odm/etc/haydn/audio/sku_lahaina/audio_platform_info_intcodec.xml
-vendor/etc/audio/sku_lahaina/mixer_paths.xml:odm/etc/haydn/audio/sku_lahaina/mixer_paths.xml
-vendor/etc/audio/sku_lahaina/mixer_paths_overlay_dynamic.xml:odm/etc/haydn/audio/sku_lahaina/mixer_paths_overlay_dynamic.xml
-vendor/etc/audio/sku_lahaina/mixer_paths_overlay_static.xml:odm/etc/haydn/audio/sku_lahaina/mixer_paths_overlay_static.xml
-vendor/etc/audio/sku_lahaina/sound_trigger_mixer_paths.xml:odm/etc/haydn/audio/sku_lahaina/sound_trigger_mixer_paths.xml
-vendor/etc/audio/sku_lahaina/sound_trigger_platform_info.xml:odm/etc/haydn/audio/sku_lahaina/sound_trigger_platform_info.xml
-vendor/etc/audio/sku_lahaina_qssi/audio_policy_configuration.xml:odm/etc/haydn/audio/sku_lahaina_qssi/audio_policy_configuration.xml
-
 # Audio (firmware_haydn)
 vendor/firmware/cs35l41-dsp1-diag-revb2.wmfw:odm/haydn/firmware/cs35l41-dsp1-diag-revb2.wmfw
 vendor/firmware/cs35l41-dsp1-diag-z-RCV-revb2.bin:odm/haydn/firmware/cs35l41-dsp1-diag-z-RCV-revb2.bin
