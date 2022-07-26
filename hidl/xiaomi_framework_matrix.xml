@@ -3,6 +3,17 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <compatibility-matrix version="2.0" type="framework">
+    <hal format="hidl" optional="true">
+        <name>android.hardware.media.c2</name>
+        <version>1.0</version>
+        <interface>
+            <name>IComponentStore</name>
+            <instance>default</instance>
+            <instance>ozoaudio</instance>
+            <instance>dolby</instance>
+            <instance>software</instance>
+        </interface>
+    </hal>
     <!-- Camera -->
     <hal format="hidl" optional="true">
         <name>vendor.xiaomi.hardware.cameraperf</name>
@@ -42,6 +53,18 @@
         <interface>
             <name>IMlipayService</name>
             <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>com.fingerprints.extension</name>
+        <version>3.0</version>
+        <interface>
+           <name>IFingerprintSensorTest</name>
+           <instance>default</instance>
+        </interface>
+        <interface>
+           <name>IFingerprintNavigation</name>
+           <instance>default</instance>
         </interface>
     </hal>
 </compatibility-matrix>
