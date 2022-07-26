@@ -115,6 +115,8 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.qcom.bluetooth.scram.enabled=false \
     persist.vendor.qcom.bluetooth.twsp_state.enabled=false
 
+$(call-inherit, vendor/qcom/opensource/commonsys-intf/bluetooth/bt-system-opensource-product.mk)
+
 # Boot Control
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl-qti \
