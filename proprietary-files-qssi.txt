@@ -1,3 +1,11 @@
+# APTX - from sake
+system_ext/app/aptxacu/aptxacu.apk|48ecf3e803325296548907d77b58de727a72f1db
+system_ext/app/aptxui/aptxui.apk|2dc1b344b12ce42b81cc42217aaf2b33f05151dd
+system_ext/etc/permissions/privapp-permissions-aptxals.xml|9b44c747227292ad288e1c34de7e95ae49f5dbdc
+system_ext/priv-app/aptxals/aptxals.apk|7c2860c524435ba1368aecd70159b77884b1609c
+system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
+system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
+
 # Audio (System) - from
 system_ext/bin/qxrsplitauxservice
 system_ext/etc/init/sxrauxd_ext.rc
@@ -45,8 +53,6 @@ system_ext/lib64/libmmparser_lite.so
 # Bluetooth(System)
 system_ext/lib/com.qualcomm.qti.ant@1.0.so
 system_ext/lib64/com.qualcomm.qti.ant@1.0.so
-system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
-system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 
 # Display(System)
 product/etc/permissions/com.qti.snapdragon.sdk.display.xml
