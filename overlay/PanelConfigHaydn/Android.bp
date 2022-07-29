@@ -5,5 +5,5 @@
 
 runtime_resource_overlay {
     name: "PanelConfigHaydn",
-    vendor: true,
+    device_specific: true,
 }
