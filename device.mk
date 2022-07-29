@@ -312,6 +312,12 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     media.stagefright.thumbnail.prefer_hw_codecs=true \
     ro.media.recorder-max-base-layer-fps=60
 
+# Mlipay
+PRODUCT_PACKAGES += \
+    IFAAService \
+    vendor.xiaomi.hardware.mlipay@1.1.vendor \
+    vendor.xiaomi.hardware.mtdservice@1.0.vendor
+
 # NFC
 $(call inherit-product, vendor/nxp/opensource/commonsys/packages/apps/Nfc/nfc_system_product.mk)
 
