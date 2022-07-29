@@ -86,8 +86,6 @@ system/etc/permissions/com.qualcomm.qti.UxPerformance.xml|d92749d80c5d956db8251b
 -system/framework/QPerformance.jar
 -system/framework/QXPerformance.jar
 -system/framework/UxPerformance.jar
--system_ext/app/PerformanceMode/PerformanceMode.apk
--system_ext/app/workloadclassifier/workloadclassifier.apk
 system_ext/bin/perfservice
 system_ext/bin/qspmsvc
 system_ext/etc/init/perfservice.rc
