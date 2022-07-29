@@ -1,0 +1,12 @@
+<manifest version="1.0" type="device">
+    <!-- xiaomi fod service-->
+    <hal format="hidl">
+        <name>vendor.xiaomi.hardware.dtool</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IDtool</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+</manifest>
