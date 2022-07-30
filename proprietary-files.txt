@@ -506,10 +506,6 @@ vendor/lib64/mediadrm/libwvdrmengine.so
 vendor/lib64/liboemcrypto.so
 vendor/lib64/libwvhidl.so
 
-# Display calibration data
-vendor/etc/snapdragon_color_libs_config.xml
-vendor/lib64/libmi-stc-HW-modulate.so
-
 # IPA
 vendor/etc/init/ipa_fws.rc
 vendor/firmware/ipa_fws.b00
