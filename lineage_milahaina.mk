@@ -17,14 +17,13 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 PRODUCT_BRAND := xiaomi
 PRODUCT_DEVICE := milahaina
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_MODEL := Mi 11
+PRODUCT_MODEL := milahaina for xiaomi 888
 PRODUCT_NAME := lineage_milahaina
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 LINEAGE_VERSION_APPEND_TIME_OF_DAY := true
-
+WITH_GMS := true
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_DEVICE=milahaina \
-    PRODUCT_NAME=HAYDN
+    PRODUCT_NAME=milahaina
 
-BUILD_FINGERPRINT := Xiaomi/haydn_in/haydnin:11/RKQ1.201112.002/V12.0.3.0.RKKCNXM:user/release-keys
