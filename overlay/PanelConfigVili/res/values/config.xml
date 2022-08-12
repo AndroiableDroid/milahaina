@@ -21,12 +21,6 @@
          non-zero. -->
     <integer name="config_defaultPeakRefreshRate">120</integer>
 
-    <!-- default refresh rate in the zone defined by brightness and ambient thresholds -->
-    <integer name="config_defaultRefreshRateInZone">120</integer>
-
-    <!-- Default refresh rate while the device has high brightness mode enabled for HDR. -->
-    <integer name="config_defaultRefreshRateInHbmHdr">60</integer>
-
     <!-- Whether the always on display mode is available. -->
     <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
 
