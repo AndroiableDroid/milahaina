@@ -38,7 +38,6 @@ machine_dlkm.ko
 max2165.ko
 mbhc_dlkm.ko
 mc44s803.ko
-mi_thermal_interface.ko
 msi001.ko
 msm_drm.ko
 mt2060.ko
