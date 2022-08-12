@@ -9,3 +9,9 @@ ro.hardware.wlan.chip=685x
 ro.hardware.wlan.mimo=1
 ro.hardware.wlan.vendor=qcom
 wifi.interface=wlan0
+
+# hacks
+ro.launcher.blur.appLaunch=0
+arm64.memtag.process.system_server=off
+dalvik.vm.dex2oat64.enabled=true
+persist.wm.enable_remote_keyguard_animation=0

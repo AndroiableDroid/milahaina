@@ -84,8 +84,7 @@ persist.timed.enable=true
 # 196608 is decimal for 0x30000 to report version 3
 # 196609 is decimal for 0x30001 to report version 3.1
 # 196610 is decimal for 0x30002 to report version 3.2
-# set by device/qcom/common- adreno component
-#ro.opengles.version=196610
+ro.opengles.version=196610
 
 # system property for maximum number of HFP client connections
 bt.max.hfpclient.connections=1
@@ -93,8 +92,7 @@ bt.max.hfpclient.connections=1
 #
 # System props for telephony
 # System prop to turn on CdmaLTEPhone always
-# set by device/qcom/common- telephony component
-#telephony.lteOnCdmaDevice=1
+telephony.lteOnCdmaDevice=1
 
 #Simulate sdcard on /data/media
 #
@@ -102,7 +100,7 @@ persist.fuse_sdcard=true
 
 #system prop for Bluetooth SOC type
 vendor.bluetooth.soc=hastings
-#ro.bluetooth.library_name=libbluetooth_qti.so set by device/qcom/common- bt component
+ro.bluetooth.library_name=libbluetooth_qti.so
 persist.vendor.btstack.enable.splita2dp=true
 persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aptxadaptiver2-aac-ldac-lhdc
 
@@ -133,9 +131,9 @@ persist.data.df.iwlan_mux=9
 persist.data.df.dev_name=rmnet_usb0
 
 #property to enable user to access Google WFD settings
-#persist.debug.wfd.enable=1 set via device/qcom/common- wfd component
-##property to choose between virtual/external wfd display
-#persist.sys.wfd.virtual=0 set via device/qcom/common- wfd component
+persist.debug.wfd.enable=1
+#property to choose between virtual/external wfd display
+persist.sys.wfd.virtual=0
 
 # enable tunnel encoding for amrwb
 tunnel.audio.encode = true
@@ -150,7 +148,7 @@ av.offload.enable=true
 use.voice.path.for.pcm.voip=true
 
 # system prop for NFC DT
-#ro.nfc.port=I2C
+ro.nfc.port=I2C
 
 #enable dsp gapless mode by default
 audio.offload.gapless.enabled=true
@@ -173,3 +171,4 @@ ro.lmk.kill_timeout_ms=15
 
 #Expose aux camera for below packages
 vendor.camera.aux.packagelist=org.codeaurora.snapcam
+persist.device_config.runtime_native_boot.iorap_perfetto_enable=true
