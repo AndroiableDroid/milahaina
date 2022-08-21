@@ -298,7 +298,6 @@ vendor/bin/init.qti.chg_policy.sh
 vendor/bin/init.qti.kernel.sh
 vendor/bin/init.qti.media.sh
 vendor/bin/init.qti.qcv.sh
-vendor/etc/init/hw/init.qcom.rc
 vendor/etc/init/hw/init.qti.kernel.rc
 vendor/etc/init/init.qti.media.rc
 vendor/etc/init/init.qti.qcv.rc
