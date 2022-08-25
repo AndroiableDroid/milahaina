@@ -24,6 +24,11 @@ for MODULE in ${MODULES}; do
 done
 
 DEVICE="$(getprop ro.boot.hardware.sku)"
+NFC_DEVICES=("viliin")
+SUPPORT_NFC="false"
+for device in $NFC_DEVICES; do
+	[[ "$device" == "$DEVICE" ]] && SUPPORT_NFC="true"
+done
 
 ${MODPROBE} -a -b -d ${MODULES_PATH} ${MODULE}
 if [ $? -ne 0 ];then
@@ -34,6 +39,7 @@ fi
 # Iterate over module list and modprobe them in background.
 for MODULE in ${MODULES}; do
 	[[ "$MODULE" == "camlog" ]] && [[ "$DEVICE" != "vili"* ]] && continue
+	[[ "$MODULE" == *"nfc"* ]] && [[ "$SUPPORT_NFC" == "false" ]] && continue
 	${MODPROBE} -a -b -d ${MODULES_PATH} ${MODULE} &
 done
 
