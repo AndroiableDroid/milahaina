@@ -377,6 +377,7 @@ PRODUCT_PACKAGES += \
     StarFrameworksOverlay \
     ViliFrameworksOverlay \
     FrameworksResTarget \
+    SettingsResCommon \
     SystemUIResCommon \
     TelephonyResCommon \
     WifiResCommon \
