@@ -219,7 +219,6 @@ TARGET_USERIMAGES_USE_F2FS := true
 # SELinux
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 
-SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 BOARD_VENDOR_SEPOLICY_DIRS += \
     $(DEVICE_PATH)/sepolicy/audio/vendor \
     $(DEVICE_PATH)/sepolicy/batterysecret/vendor \
@@ -233,7 +232,8 @@ BOARD_VENDOR_SEPOLICY_DIRS += \
     $(DEVICE_PATH)/sepolicy/display/vendor \
     $(DEVICE_PATH)/sepolicy/nfc/vendor \
     $(DEVICE_PATH)/sepolicy/media/vendor \
-    $(DEVICE_PATH)/sepolicy/vili/vendor
+    $(DEVICE_PATH)/sepolicy/vili/vendor \
+    $(DEVICE_PATH)/sepolicy/milahaina/vendor
 
 # Soong
 SOONG_CONFIG_NAMESPACES += ufsbsg
