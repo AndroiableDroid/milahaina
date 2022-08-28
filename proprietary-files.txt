@@ -126,12 +126,9 @@ vendor/lib64/libadiertac.so
 vendor/lib64/libaudcal.so
 
 # Batterysecret
-vendor/bin/batterysecret
-vendor/bin/charge_logger
-vendor/bin/mishow.sh
-vendor/etc/init/hw/init.batterysecret.rc
-vendor/etc/init/init.charge_logger.rc
-vendor/etc/init/init.mishow.ctl.rc
+vendor/bin/batterysecret1|2758e7b5b3fe5fe1533fa6efead9ca325243f71f
+vendor/bin/batterysecret2|74bccea38b670a970b6f6523b85b488e76620fa0
+vendor/etc/init/hw/init.batterysecret.rc|25bca1e655c8607847d625f56c678b283a056c25
 
 # CVP firmware
 vendor/firmware/evass-lt.b00
