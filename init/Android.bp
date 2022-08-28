@@ -86,14 +86,14 @@ prebuilt_etc {
     vendor: true,
 }
 
-prebuilt_etc {
+prebuilt_root {
     name: "ueventd.milahaina.rc",
     filename: "ueventd.rc",
     src: "ueventd.milahaina.rc",
     vendor: true,
 }
 
-prebuilt_etc {
+prebuilt_root {
     name: "ueventd.lahaina.rc",
     filename: "ueventd.rc",
     src: "ueventd.lahaina.rc",
