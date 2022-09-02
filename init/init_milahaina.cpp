@@ -136,6 +136,10 @@ void vendor_load_properties()
             set_device_props("Xiaomi", "star", "M2102K1G", "star", "Mi 11 Ultra");
             property_override("ro.milahaina.nfc", "true");
             property_override("ro.boot.milahaina_version", "star");
+        } else if (device == "mars") {
+            set_device_props("Xiaomi", "mars", "M2102K1AC", "mars", "Mi 11 Pro");
+            property_override("ro.milahaina.nfc", "true");
+            property_override("ro.boot.milahaina_version", "star");
         } else {
             set_device_props("Xiaomi", "milahaina", "milahaina", "milahaina", "milahaina for xiaomi 888");
         }

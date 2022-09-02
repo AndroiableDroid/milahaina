@@ -344,6 +344,12 @@ $(call inherit-product, vendor/nxp/opensource/commonsys/packages/apps/Nfc/nfc_sy
 TARGET_USES_NQ_NFC := true
 
 PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/nfc/haydn,$(TARGET_COPY_OUT_ODM)/etc/haydn) \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/nfc/star,$(TARGET_COPY_OUT_ODM)/etc/star) \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/nfc/vili,$(TARGET_COPY_OUT_ODM)/etc/vili)
+
+
+PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_milahaina/com.nxp.mifare.xml \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_milahaina/com.android.nfc_extras.xml \
     frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_milahaina/android.hardware.nfc.xml \
@@ -354,6 +360,10 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     SecureElement \
+    Tag \
+    NQNfcNci \
+    com.android.nfc_extras \
+    com.nxp.nfc.nq \
     android.hardware.secure_element@1.0:64 \
     android.hardware.secure_element@1.2.vendor \
     se_nq_extn_client:64 \
@@ -364,7 +374,7 @@ PRODUCT_PACKAGES += \
     nfc_nci.nqx.default.hw
 
 PRODUCT_SOONG_NAMESPACES += \
-    vendor/nxp/opensource/pn5xx \
+    vendor/nxp/opensource/sn100x \
     vendor/nxp/opensource/halimpl
 
 # Namespaces

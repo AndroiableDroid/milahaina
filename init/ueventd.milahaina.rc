@@ -9,3 +9,5 @@ import /vendor/etc/ueventd.qcom.rc
 /sys/bus/iio/devices/iio:device* scan_elements/in_proximity_en  0600 system system
 /sys/bus/iio/devices/iio:device* scan_elements/in_timestamp_en  0600 system system
 
+# NFC permissions
+/dev/nq-nci               0660    nfc         nfc
