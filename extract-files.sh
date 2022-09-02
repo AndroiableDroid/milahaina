@@ -93,6 +93,9 @@ function blob_fixup() {
     odm/etc/vili/camera/vili_motiontuning.xml)
         sed -i 's:xml=version:xml version:g' "${2}"
     ;;
+    odm/etc/star/camera/star_motiontuning.xml|odm/etc/star/camera/mars_motiontuning.xml)
+          sed -i 's/xml=version/xml\ version/g' "${2}"
+    ;;
     # Remove dependency on android.hidl.base@1.0.
     vendor/lib64/android.hardware.secure_element@1.0-impl.so )
         "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"

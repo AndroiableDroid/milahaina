@@ -36,6 +36,11 @@ on post-fs-data
     mkdir /data/vendor/camera/offlinelog 0777 cameraserver audio
     chmod 0666 /dev/camlog
 
+# Enable stmvl53l5 sensor only on star for laser autofocus
+on boot && property:ro.boot.milahaina_version=star
+    chmod 0666 /dev/stmvl53l5
+    chown system system /dev/stmvl53l5
+
 service vendor.camera-provider-2-4 /vendor/bin/hw/android.hardware.camera.provider@2.4-service_64
     interface android.hardware.camera.provider@2.4::ICameraProvider legacy/0
     interface vendor.qti.hardware.camera.postproc@1.0::IPostProcService camerapostprocservice
