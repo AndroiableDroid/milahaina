@@ -994,7 +994,11 @@ vendor/bin/wificfrtool
 vendor/bin/wifilearner
 vendor/etc/init/vendor.qti.hardware.wifi.wificfr@1.0-service.rc
 vendor/etc/init/vendor.qti.hardware.wifi.wifilearner@1.0-service.rc
+vendor/etc/wifi/vendor_cmd.xml
+vendor/etc/wifi/icm.conf
 -vendor/etc/vintf/manifest/vendor.qti.hardware.wifi.wificfr@1.0-service.xml
+vendor/etc/wifi/aoa_cldb_falcon.bin
+vendor/etc/wifi/aoa_cldb_swl14.bin
 vendor/lib64/libspectre.so
 vendor/lib64/vendor.qti.hardware.wifi.wificfr@1.0.so
 vendor/lib64/vendor.qti.hardware.wifi.wifilearner@1.0.so
