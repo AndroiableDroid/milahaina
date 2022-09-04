@@ -278,7 +278,6 @@ PRODUCT_PACKAGES += \
     init.xiaomi.nfc.rc \
     init.xiaomi.overlay.rc \
     init.xiaomi.recovery.rc \
-    init.xiaomi.perf.rc \
     fstab.default.vendor_ramdisk \
     init.target.rc \
     init.xiaomi.early_boot.sh \
