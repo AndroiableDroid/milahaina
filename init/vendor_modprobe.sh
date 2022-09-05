@@ -24,11 +24,7 @@ for MODULE in ${MODULES}; do
 done
 
 DEVICE="$(getprop ro.boot.hardware.sku)"
-NFC_DEVICES=("viliin")
-SUPPORT_NFC="false"
-for device in $NFC_DEVICES; do
-	[[ "$device" == "$DEVICE" ]] && SUPPORT_NFC="true"
-done
+SUPPORT_NFC="$(getprop ro.milahaina.nfc)"
 
 ${MODPROBE} -a -b -d ${MODULES_PATH} ${MODULE}
 if [ $? -ne 0 ];then
