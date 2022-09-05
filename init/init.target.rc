@@ -175,6 +175,8 @@ on post-fs-data
     chmod 0664 /sys/class/leds/led:switch_3/trigger
     chmod 0664 /sys/class/leds/flashlight/brightness
 
+    mkdir /data/vendor/mac_addr 0770 system wifi
+
 on post-fs-data
     chmod 0666 /dev/migt
     restorecon /dev/migt
