@@ -26,7 +26,22 @@
     <!-- Boolean indicating enable or disable quick connect. -->
     <bool name="config_wifi_framework_enable_quick_connect">true</bool>
 
+    <!-- boolean indicating whether the WiFi chipset has 6GHz band support -->
+    <bool name="config_wifi6ghzSupport">false</bool>
+
+    <!-- Wifi driver supports 6GHz band for softap -->
+    <bool name="config_wifiSoftap6ghzSupported">true</bool>
+
     <!-- Integer for WiFi Partial scan results fetching period (in ms). -->
     <integer name="config_wifi_partial_scan_results_fetching_period_ms">1000</integer>
+
+    <!-- Configure wifi tcp buffersizes in the form:
+         rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
+    <string name="config_wifi_tcp_buffers">524288,1048576,8808040,262144,524288,6710886</string>
+
+    <!-- Array describing scanning schedule in seconds when device is disconnected and screen is on -->
+    <integer-array name="config_wifiDisconnectedScanIntervalScheduleSec">
+        <item>20</item>
+    </integer-array>
 
 </resources>
