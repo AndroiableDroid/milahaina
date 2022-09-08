@@ -803,3 +803,5 @@ vendor/firmware/vpu20_4v.mbn
 vendor/firmware/vpu20_4v.mdt
 vendor/firmware/vpu20_4v_unsigned.mbn
 
+# WLAN
+vendor/bin/cnss-daemon

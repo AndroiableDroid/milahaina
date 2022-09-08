@@ -983,7 +983,6 @@ vendor/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so
 
 # WLAN
 vendor/bin/athdiag
-vendor/bin/cnss-daemon
 vendor/bin/cnss_diag
 vendor/bin/hal_proxy_daemon
 vendor/bin/myftm
