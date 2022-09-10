@@ -10,3 +10,7 @@ allow vendor_overlay_file self:filesystem { associate };
 
 # Allow init to access milahaina prop
 set_prop(vendor_init, milahaina_prop)
+
+# Allow vendor_modprobe to access milahaina prop
+set_prop(vendor_modprobe, milahaina_prop)
+get_prop(vendor_modprobe, milahaina_prop)
