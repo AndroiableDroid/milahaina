@@ -1,14 +1,10 @@
 # Allow overlayFS to mount.
-allow init vendor_configs_file:{ dir file } mounton;
-allow init vendor_configs_file:filesystem  { associate relabelfrom relabelto mount getattr };
-allow vendor_configs_file self:filesystem { associate };
+allow init vendor_configs_file:dir mounton;
+allow vendor_configs_file self:filesystem associate;
+allow init vendor_file:file execute;
+allow vendor_file self:filesystem associate;
+allow init vendor_hal_file:dir mounton;
 
-# Allow init to mount vendor file
-allow init vendor_overlay_file:{ dir file } mounton;
-allow init vendor_overlay_file:filesystem  { associate relabelfrom relabelto mount getattr };
-allow vendor_overlay_file self:filesystem { associate };
-
-# Allow init to access milahaina prop
 set_prop(vendor_init, milahaina_prop)
 
 # Allow vendor_modprobe to access milahaina prop

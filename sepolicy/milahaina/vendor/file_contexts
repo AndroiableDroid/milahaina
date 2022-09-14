@@ -1,0 +1,12 @@
+/(odm|vendor/odm)/vili(/.*)?                       u:object_r:vendor_file:s0
+/(odm|vendor/odm)/haydn(/.*)?                       u:object_r:vendor_file:s0
+/(odm|vendor/odm)/star(/.*)?                       u:object_r:vendor_file:s0
+/(odm|vendor/odm)/vili/lib(64)?/hw                 u:object_r:vendor_hal_file:s0
+/(odm|vendor/odm)/haydn/lib(64)?/hw                 u:object_r:vendor_hal_file:s0
+/(odm|vendor/odm)/star/lib(64)?/hw                 u:object_r:vendor_hal_file:s0
+/(odm|vendor/odm)/vili/etc(/.*)?                   u:object_r:vendor_configs_file:s0
+/(odm|vendor/odm)/haydn/etc(/.*)?                   u:object_r:vendor_configs_file:s0
+/(odm|vendor/odm)/star/etc(/.*)?                   u:object_r:vendor_configs_file:s0
+/(odm|vendor/odm)/vili/overlay(/.*)?               u:object_r:vendor_overlay_file:s0
+/(odm|vendor/odm)/haydn/overlay(/.*)?               u:object_r:vendor_overlay_file:s0
+/(odm|vendor/odm)/star/overlay(/.*)?               u:object_r:vendor_overlay_file:s0
