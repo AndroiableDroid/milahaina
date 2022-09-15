@@ -215,6 +215,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Fastboot
 PRODUCT_PACKAGES += \
+    android.hardware.fastboot@1.1-impl.custom \
     fastbootd
 
 # Health
