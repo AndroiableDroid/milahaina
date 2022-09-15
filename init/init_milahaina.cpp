@@ -114,6 +114,11 @@ void haydn_vendor_properties()
     }
 }
 
+void set_build_fingerprint()
+{
+    property_override("ro.build.fingerprint", GetProperty("ro.vendor.build.fingerprint", "").c_str());
+}
+
 void vendor_load_properties()
 {
     string device = GetProperty("ro.boot.product.hardware.sku", "");
@@ -143,6 +148,11 @@ void vendor_load_properties()
         } else {
             set_device_props("Xiaomi", "milahaina", "milahaina", "milahaina", "milahaina for xiaomi 888");
         }
+    }
+
+    // Set Build fingerprint same as of vendor
+    if (!android::init::IsRecoveryMode()) {    // DO-NOT Update props in recovery
+        set_build_fingerprint();               // increamental OTA checks build fingerprint
     }
     // Set hardware revision
     property_override("ro.boot.hardware.revision", GetProperty("ro.boot.hwversion", "").c_str());
