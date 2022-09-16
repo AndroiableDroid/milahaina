@@ -5,3 +5,7 @@
 # This is labeled as public_adsprpcd_file as it needs to be read by apps
 # (e.g. Google Camera App)
 /mnt/vendor/dsp/fastrpc_shell_3			u:object_r:public_adsprpcd_file:s0
+
+/(odm|vendor/odm)/haydn/lib(64)?/libcamxexternalformatutils\.so             u:object_r:same_process_hal_file:s0
+/(odm|vendor/odm)/star/lib(64)?/libcamxexternalformatutils\.so              u:object_r:same_process_hal_file:s0
+/(odm|vendor/odm)/vili/lib(64)?/libcamxexternalformatutils\.so              u:object_r:same_process_hal_file:s0
