@@ -562,10 +562,13 @@ vendor/etc/permissions/vendor.qti.hardware.factory.xml
 vendor/lib64/vendor.qti.hardware.factory@1.0.so
 vendor/lib64/vendor.qti.hardware.factory@1.1.so
 
+# Media
+-vendor/etc/vintf/manifest/c2_manifest_vendor.xml
+
 # Media (Dolby Vision) - from vili
 vendor/bin/hw/dolbycodec2|186f07732444177f5d719c31d99a7420a54cb025
 vendor/etc/init/dolbycodec2.rc|1ea8b363e94fd4f5410cadceb30de8229fb38045
--vendor/etc/vintf/manifest/c2_manifest_vendor.xml:odm/etc/vintf/manifest/c2_manifest_xiaomi.xml|23b3e75796047e3d62399a3f4a51050ab4837994
+-vendor/etc/vintf/manifest/c2_manifest_vendor.xml:odm/etc/dolby/manifest_c2_dolby_vision.xml|23b3e75796047e3d62399a3f4a51050ab4837994
 vendor/etc/dolby_vision.cfg|bfd35ef2a6e012ea148a9d69643640095caac767
 vendor/etc/media_codecs_dolby_audio.xml|a794eb15fc198d0285510260025cd99b53fa174f
 vendor/etc/media_codecs_lahaina.xml|39f4ce9b3cf8cbc4efd9679765a341f7b6181423

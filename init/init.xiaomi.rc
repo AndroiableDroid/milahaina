@@ -302,9 +302,12 @@ service vendor.nv_mac /vendor/bin/nv_mac
 
 on boot && property:ro.boot.milahaina_version=vili
     stop getdump_hal
+    start dolbycodec2
 
 on boot && property:ro.boot.milahaina_version=haydn
     stop getdump_hal
+    stop dolbycodec2
 
 on boot && property:ro.boot.milahaina_version=star
     start getdump_hal
+    stop dolbycodec2
