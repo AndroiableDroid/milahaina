@@ -2,8 +2,8 @@
 ro.sf.lcd_density=560
 
 # CTS
-ro.vendor.build.fingerprint=Xiaomi/star_in/star:12/RKQ1.211001.001/V13.0.3.0.SKAINXM:user/release-keys
-ro.bootimage.build.fingerprint=Xiaomi/star_in/star:12/RKQ1.211001.001/V13.0.3.0.SKAINXM:user/release-keys
+ro.vendor.build.fingerprint=Xiaomi/star/star:12/RKQ1.211001.001/V13.0.12.0.SKACNXM:user/release-keys
+ro.bootimage.build.fingerprint=Xiaomi/star/star:12/RKQ1.211001.001/V13.0.12.0.SKACNXM:user/release-keys
 
 # NFC
 ro.vendor.nfc.repair=1

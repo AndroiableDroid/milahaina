@@ -90,11 +90,8 @@ function blob_fixup() {
     odm/etc/*/camera/pure*_parameter.xml)
         sed -i 's:=100:="100":g; s;=200;="200";g; s;=400;="400";g; s;=800;="800";g; s;=1600;="1600";g; s;=3200;="3200";g; s;=6400;="6400";g; s;Id=0;Id="0";g; s:Id=1:Id="1":g' "${2}"
     ;;
-    odm/etc/vili/camera/vili_motiontuning.xml)
+    odm/etc/*/camera/*_motiontuning.xml)
         sed -i 's:xml=version:xml version:g' "${2}"
-    ;;
-    odm/etc/star/camera/star_motiontuning.xml|odm/etc/star/camera/mars_motiontuning.xml)
-          sed -i 's/xml=version/xml\ version/g' "${2}"
     ;;
     # Remove dependency on android.hidl.base@1.0.
     vendor/lib64/android.hardware.secure_element@1.0-impl.so )

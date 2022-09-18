@@ -1,0 +1,183 @@
+# Allow overlayFS to mount.
+allow init vendor_configs_file:{ dir file } mounton;
+allow init vendor_configs_file:filesystem  { mount getattr };
+
+allow init vendor_file:file execute;
+allow init vendor_file:filesystem { getattr mount };
+allow init vendor_hal_file:filesystem relabelto;
+allow init vendor_hal_file:filesystem relabelfrom;
+allow init vendor_hal_file:filesystem mount;
+allow init vendor_hal_file:filesystem getattr;
+# Allow init to access milahaina prop
+set_prop(vendor_init, milahaina_prop)
+
+# Allow vendor_modprobe to access milahaina prop
+set_prop(vendor_modprobe, milahaina_prop)
+get_prop(vendor_modprobe, milahaina_prop)
+
+#============= bootanim ==============
+allow bootanim vendor_file:dir { open read };
+allow bootanim vendor_file:filesystem getattr;
+
+#============= init ==============
+allow init vendor_configs_file:filesystem { relabelfrom relabelto };
+allow init vendor_file:filesystem { relabelfrom relabelto };
+
+#============= kernel ==============
+allow kernel vendor_file:file { open read };
+
+#============= mediacodec ==============
+allow mediacodec vendor_file:filesystem getattr;
+
+#============= platform_app ==============
+allow platform_app vendor_file:filesystem getattr;
+
+#============= rild ==============
+allow rild vendor_file:filesystem getattr;
+
+#============= surfaceflinger ==============
+allow surfaceflinger vendor_file:dir { open read };
+allow surfaceflinger vendor_file:filesystem getattr;
+
+#============= system_server ==============
+allow system_server vendor_file:dir { open read };
+
+#============= vendor_adpl ==============
+allow vendor_adpl vendor_file:filesystem getattr;
+
+#============= vendor_adsprpcd ==============
+allow vendor_adsprpcd vendor_file:filesystem getattr;
+
+#============= vendor_atfwd ==============
+allow vendor_atfwd vendor_file:filesystem getattr;
+
+#============= vendor_audioadsprpcd ==============
+allow vendor_audioadsprpcd vendor_file:filesystem getattr;
+
+#============= vendor_cdsprpcd ==============
+allow vendor_cdsprpcd vendor_file:filesystem getattr;
+
+#============= vendor_cnd ==============
+allow vendor_cnd vendor_file:filesystem getattr;
+
+#============= vendor_configs_file ==============
+allow vendor_configs_file self:filesystem associate;
+
+#============= vendor_file ==============
+allow vendor_file self:filesystem associate;
+
+#============= vendor_hal_display_color_default ==============
+allow vendor_hal_display_color_default vendor_file:filesystem getattr;
+
+#============= vendor_qti ==============
+allow vendor_qti vendor_file:filesystem getattr;
+
+#============= vendor_qti_init_shell ==============
+allow vendor_qti_init_shell vendor_sysfs_qdss_dev:file setattr;
+
+#============= vendor_rmt_storage ==============
+allow vendor_rmt_storage vendor_file:filesystem getattr;
+
+#============= vendor_sensors ==============
+allow vendor_sensors vendor_file:filesystem getattr;
+
+#============= vendor_sensors_qti ==============
+allow vendor_sensors_qti vendor_file:filesystem getattr;
+
+#============= vendor_shsusrd ==============
+allow vendor_shsusrd vendor_file:filesystem getattr;
+
+#============= vendor_ssgtzd ==============
+allow vendor_ssgtzd vendor_file:filesystem getattr;
+
+#============= vendor_thermal-engine ==============
+allow vendor_thermal-engine vendor_file:filesystem getattr;
+
+#============= vendor_time_daemon ==============
+allow vendor_time_daemon vendor_file:filesystem getattr;
+
+#============= vendor_vppservice ==============
+allow vendor_vppservice vendor_file:filesystem getattr;
+
+#============= vendor_wcnss_service ==============
+allow vendor_wcnss_service vendor_data_file:dir setattr;
+allow vendor_wcnss_service vendor_data_file:file { open read setattr write };
+allow vendor_wcnss_service vendor_file:filesystem getattr;
+
+#============= vendor_wfdhdcphalservice_qti ==============
+allow vendor_wfdhdcphalservice_qti vendor_file:filesystem getattr;
+
+#============= vendor_wfdvndservice ==============
+allow vendor_wfdvndservice vendor_file:filesystem getattr;
+
+#============= vendor_wifidisplayhalservice_qti ==============
+allow vendor_wifidisplayhalservice_qti vendor_file:filesystem getattr;
+
+#============= zygote ==============
+allow zygote vendor_file:dir { open read };
+allow zygote vendor_file:filesystem getattr;
+
+allow surfaceflinger vendor_firmware_file:dir search;
+#allow surfaceflinger vendor_firmware_file:file { open read };
+
+#============= init ==============
+allow init vendor_hal_file:dir mounton;
+allow vendor_hal_file self:filesystem associate;
+
+#============= kernel ==============
+allow kernel self:capability sys_admin;
+
+#============= mediacodec ==============
+allow mediacodec vendor_audio_prop:file map;
+
+allow vendor_init block_device:lnk_file setattr;
+allow vendor_init persist_debug_prop:file read;
+
+
+#============= hal_bluetooth_default ==============
+allow hal_bluetooth_default vendor_file:filesystem getattr;
+
+#============= hal_camera_default ==============
+allow hal_camera_default vendor_file:filesystem getattr;
+
+#============= hal_fingerprint_default ==============
+allow hal_fingerprint_default vendor_file:filesystem getattr;
+
+#============= hal_health_default ==============
+allow hal_health_default vendor_file:filesystem getattr;
+
+#============= hal_ir_default ==============
+allow hal_ir_default vendor_file:filesystem getattr;
+
+#============= hal_memtrack_default ==============
+allow hal_memtrack_default vendor_file:filesystem getattr;
+
+#============= init ==============
+allow init debugfs_tracing_debug:dir mounton;
+
+#============= vdc ==============
+allow vdc self:capability kill;
+
+#============= vendor_dpmd ==============
+allow vendor_dpmd vendor_file:dir read;
+
+#============= vendor_hal_capabilityconfigstore_qti_default ==============
+allow vendor_hal_capabilityconfigstore_qti_default vendor_file:filesystem getattr;
+
+#============= vendor_hal_eid_qti ==============
+allow vendor_hal_eid_qti vendor_file:filesystem getattr;
+
+#============= vendor_hal_esepowermanager_qti ==============
+allow vendor_hal_esepowermanager_qti vendor_file:filesystem getattr;
+
+#============= vendor_hal_gnss_qti ==============
+allow vendor_hal_gnss_qti vendor_file:filesystem getattr;
+
+#============= vendor_hal_qteeconnector_qti ==============
+allow vendor_hal_qteeconnector_qti vendor_file:filesystem getattr;
+
+#============= vendor_hal_soter_qti ==============
+allow vendor_hal_soter_qti vendor_file:filesystem getattr;
+
+#============= vendor_hal_srvctracker_default ==============
+allow vendor_hal_srvctracker_default vendor_file:filesystem getattr;

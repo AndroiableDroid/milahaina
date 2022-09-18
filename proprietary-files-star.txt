@@ -105,6 +105,7 @@ vendor/lib64/camera/fdconfigpreview.bin:odm/star/lib64/camera/fdconfigpreview.bi
 vendor/lib64/camera/fdconfigpreviewlite.bin:odm/star/lib64/camera/fdconfigpreviewlite.bin
 vendor/lib64/camera/fdconfigvideo.bin:odm/star/lib64/camera/fdconfigvideo.bin
 vendor/lib64/camera/fdconfigvideolite.bin:odm/star/lib64/camera/fdconfigvideolite.bin
+vendor/lib64/hw/camera.qcom.so:odm/star/lib64/hw/camera.qcom.so
 vendor/lib64/hw/camera.xiaomi.so:odm/star/lib64/hw/camera.xiaomi.so
 vendor/lib64/hw/com.qti.chi.override.so:odm/star/lib64/hw/com.qti.chi.override.so
 vendor/lib64/HDR10plus.so:odm/star/lib64/HDR10plus.so
