@@ -10,8 +10,3 @@
 /(odm|vendor/odm)/vili/overlay(/.*)?               u:object_r:vendor_overlay_file:s0
 /(odm|vendor/odm)/haydn/overlay(/.*)?               u:object_r:vendor_overlay_file:s0
 /(odm|vendor/odm)/star/overlay(/.*)?               u:object_r:vendor_overlay_file:s0
-
-# Lable Firmware
-/(odm|vendor/odm)/haydn/firmware(/.*)?                  u:object_r:vendor_firmware_file:s0
-/(odm|vendor/odm)/star/firmware(/.*)?                   u:object_r:vendor_firmware_file:s0
-/(odm|vendor/odm)/vili/firmware(/.*)?                   u:object_r:vendor_firmware_file:s0
