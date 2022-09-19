@@ -118,7 +118,6 @@ void vili_vendor_properties()
     string region = GetProperty("ro.boot.hwc", "");
 
     property_override("ro.boot.milahaina_version", "vili");
-    property_override("ro.milahaina.dolby_vision", "true");
     property_override("ro.milahaina.nfc", "true");
 
     if (region == "IN") { // India
