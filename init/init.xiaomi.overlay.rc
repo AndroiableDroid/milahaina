@@ -27,5 +27,5 @@ on post-fs-data
     mount overlay overlay /vendor/lib64/ lowerdir=/odm/${ro.boot.milahaina_version}/lib64/:/vendor/lib64/
     mount overlay overlay /vendor/firmware lowerdir=/odm/${ro.boot.milahaina_version}/firmware:/vendor/firmware
 
-on property:ro.milahaina.nfc=true
+on property:ro.odm.milahaina.nfc=true
     mount overlay overlay /vendor/etc/permissions lowerdir=/odm/etc/permissions/sku_milahaina:/vendor/etc/permissions

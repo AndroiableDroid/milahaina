@@ -5,8 +5,8 @@ allow init vendor_file:file execute;
 allow vendor_file self:filesystem associate;
 allow init vendor_hal_file:dir mounton;
 
-set_prop(vendor_init, milahaina_prop)
+set_prop(vendor_init, odm_milahaina_prop)
 
 # Allow vendor_modprobe to access milahaina prop
-set_prop(vendor_modprobe, milahaina_prop)
-get_prop(vendor_modprobe, milahaina_prop)
+set_prop(vendor_modprobe, odm_milahaina_prop)
+get_prop(vendor_modprobe, odm_milahaina_prop)

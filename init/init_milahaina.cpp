@@ -118,7 +118,7 @@ void vili_vendor_properties()
     string region = GetProperty("ro.boot.hwc", "");
 
     property_override("ro.boot.milahaina_version", "vili");
-    property_override("ro.milahaina.nfc", "true");
+    property_override("ro.odm.milahaina.nfc", "true");
 
     if (region == "IN") { // India
         set_device_props("Xiaomi", "viliin", "2107113SI", "vili_in", "Xiaomi 11T Pro");
@@ -140,10 +140,10 @@ void haydn_vendor_properties()
         set_device_props("Xiaomi", "haydnin", "M2012K11I", "haydn_in", "Mi 11X Pro");
     } else if (region == "CN") { // China
         set_device_props("Redmi", "haydnpro", "M2012K11C", "haydnpro", "Redmi K40 Pro+");
-        property_override("ro.milahaina.nfc", "true");
+        property_override("ro.odm.milahaina.nfc", "true");
     } else { // Global
         set_device_props("Xiaomi", "haydn", "M2012K11G", "haydn_global", "Mi 11i Globa");
-        property_override("ro.milahaina.nfc", "true");
+        property_override("ro.odm.milahaina.nfc", "true");
     }
 }
 
@@ -173,11 +173,11 @@ void vendor_load_properties()
             haydn_vendor_properties();
         } else if (device == "star") {
             set_device_props("Xiaomi", "star", "M2102K1G", "star", "Mi 11 Ultra");
-            property_override("ro.milahaina.nfc", "true");
+            property_override("ro.odm.milahaina.nfc", "true");
             property_override("ro.boot.milahaina_version", "star");
         } else if (device == "mars") {
             set_device_props("Xiaomi", "mars", "M2102K1AC", "mars", "Mi 11 Pro");
-            property_override("ro.milahaina.nfc", "true");
+            property_override("ro.odm.milahaina.nfc", "true");
             property_override("ro.boot.milahaina_version", "star");
         } else {
             set_device_props("Xiaomi", "milahaina", "milahaina", "milahaina", "milahaina for xiaomi 888");

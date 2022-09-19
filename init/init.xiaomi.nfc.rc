@@ -22,7 +22,7 @@ service secureelement-hal_1_2 /vendor/bin/hw/vendor.qti.secure_element@1.2-servi
     group system
     disabled
 
-on boot && property:ro.milahaina.nfc=true
+on boot && property:ro.odm.milahaina.nfc=true
     enable nqnfc_2_0_hal_service
     enable qti_esepowermanager_service_1_1
     enable secureelement-hal_1_2
