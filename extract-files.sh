@@ -105,6 +105,12 @@ function blob_fixup() {
         hexdump -ve '1/1 "%.2X"' "${2}" | sed "s/524D070094/521F2003D5/g" | xxd -r -p > "${TMPDIR}/${1##*/}"
         mv "${TMPDIR}/${1##*/}" "${2}"
     ;;
+    vendor/etc/vintf/manifest/manifest_vendor_c2.xml)
+        sed -ni '/dolby/!p' "${2}"
+    ;;
+    vendor/etc/media_codecs_*.xml)
+        sed -ni '/with_dolby/!p' "${2}"
+    ;;
     esac
 }
 

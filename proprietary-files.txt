@@ -563,31 +563,21 @@ vendor/lib64/vendor.qti.hardware.factory@1.0.so
 vendor/lib64/vendor.qti.hardware.factory@1.1.so
 
 # Media
--vendor/etc/vintf/manifest/c2_manifest_vendor.xml
-
-# Media (Dolby Vision) - from vili
-vendor/bin/hw/dolbycodec2|186f07732444177f5d719c31d99a7420a54cb025
-vendor/etc/init/dolbycodec2.rc|1ea8b363e94fd4f5410cadceb30de8229fb38045
-vendor/etc/dolby_vision.cfg|bfd35ef2a6e012ea148a9d69643640095caac767
-vendor/etc/media_codecs_dolby_audio.xml|a794eb15fc198d0285510260025cd99b53fa174f
-vendor/etc/media_codecs_lahaina.xml|39f4ce9b3cf8cbc4efd9679765a341f7b6181423
-vendor/etc/media_codecs_lahaina_vendor.xml|a87d08c35919e5bd36eccddfec6f32fbbdcab079
-vendor/etc/media_codecs_system_default_lahaina.xml|803568c1c4f72c43a12c588e31e309da03b87b97
-vendor/etc/media_codecs_system_default_shima.xml|9f59992d72f6dc544804fad6e440feee97940e28
-vendor/etc/media_codecs_system_default_yupik.xml|abadd126dc3af03e87493bca901a9b63c1d41d79
-vendor/etc/media_codecs_with_dolby_lahaina.xml|c4e90e9891390cd19732ba5941a47c17162e3bbc
-vendor/etc/media_codecs_with_dolby_shima.xml|1204b2efc25cc09d2e031ba99b59b016c30069d8
-vendor/etc/media_codecs_with_dolby_yupik.xml|bbd24a7967257dadc6a4e0a72271fb3053940f1f
-vendor/etc/media_codecs_yupik_v1.xml|abadd126dc3af03e87493bca901a9b63c1d41d79
-vendor/lib/c2.dolby.avc.dec.so|46d92835722ec8bee6160ecbd74f4876b9605cdb
-vendor/lib/c2.dolby.avc.sec.dec.so|df128db1afa1527b28c6188e414f3f79ecb30293
-vendor/lib/c2.dolby.client.so|33b96ef37f0708f44b3726ef376bc64722d2ed58
-vendor/lib/c2.dolby.egl.so|8d1710568a36178e1742113668626d37d8173c8a
-vendor/lib/c2.dolby.hevc.dec.so|3c1eafc7feffad3bb2279ef027b5d3a441306227
-vendor/lib/c2.dolby.hevc.sec.dec.so|664f12c499bc236628b92d1179e0290b0b5b1bf7
-vendor/lib/c2.dolby.store.so|08d26054d08062a508e53ad2751baa8590a6d3cf
-vendor/lib/libdolbyottcameracontrol.so|3758b2541004c5d9a2935ed134afbabb66d6a315
-vendor/lib/libdovi.so|185d52f232cfd2ec7156ee5103593ac12f04cb1f
+vendor/etc/vintf/manifest/c2_manifest_vendor.xml:vendor/etc/vintf/manifest/manifest_vendor_c2.xml
+vendor/etc/media_lahaina/video_system_specs.json
+vendor/etc/media_shima_v1/video_system_specs.json
+vendor/etc/media_shima_v2/video_system_specs.json
+vendor/etc/media_shima_v3/video_system_specs.json
+vendor/etc/media_yupik_iot/video_system_specs.json
+vendor/etc/media_yupik_v0/video_system_specs.json
+vendor/etc/media_yupik_v1/video_system_specs.json
+vendor/etc/media_codecs_dolby_audio.xml
+vendor/etc/media_codecs_lahaina.xml
+vendor/etc/media_codecs_lahaina_vendor.xml
+vendor/etc/media_codecs_system_default_lahaina.xml
+vendor/etc/media_codecs_system_default_shima.xml
+vendor/etc/media_codecs_system_default_yupik.xml
+vendor/etc/media_codecs_yupik_v1.xml
 
 # NFC
 vendor/etc/libnfc-nci.conf|d55fb720a8388e6e80e058e4bb7284974a535c08
