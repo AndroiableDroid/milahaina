@@ -414,7 +414,8 @@ PRODUCT_PACKAGES += \
     libavservices_minijail.vendor \
     libpsi.vendor \
     libtflite \
-    vendor.qti.hardware.perf@2.2.vendor
+    vendor.qti.hardware.perf@2.3 \
+    vendor.qti.hardware.perf@2.3.vendor
 
 PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.perf-hal.ver=2.2 \
