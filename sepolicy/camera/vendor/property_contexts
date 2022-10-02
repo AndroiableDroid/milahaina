@@ -4,3 +4,9 @@ ro.boot.camera.				u:object_r:vendor_camera_prop:s0
 ro.vendor.camera.                       u:object_r:vendor_camera_prop:s0
 ro.vendor.camera.res.fmq.size           u:object_r:vendor_camera_prop:s0
 ro.vendor.camera.req.fmq.size           u:object_r:vendor_camera_prop:s0
+ro.camera.req.fmq.size                  u:object_r:vendor_camera_prop:s0
+ro.camera.res.fmq.size                  u:object_r:vendor_camera_prop:s0
+ro.miui.build.region                    u:object_r:vendor_camera_prop:s0
+persist.sys.camlog.system.af            u:object_r:vendor_camera_prop:s0
+persist.wa.log.level                    u:object_r:vendor_camera_prop:s0
+
