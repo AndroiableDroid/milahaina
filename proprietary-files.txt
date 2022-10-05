@@ -51,10 +51,10 @@ vendor/firmware/a660_zap.mdt
 # Audio
 vendor/lib/liba2dpoffload.so
 vendor/lib/libadm.so
-vendor/lib/libaudio_log_utils.so
+-vendor/lib/libaudio_log_utils.so
 vendor/lib/libaudioalsa.so
 vendor/lib/libaudioconfigstore.so
-vendor/lib/libaudioparsers.so
+-vendor/lib/libaudioparsers.so
 vendor/lib/libaudioroute_ext.so
 vendor/lib/libbatterylistener.so
 vendor/lib/libcomprcapture.so
@@ -70,10 +70,10 @@ vendor/lib/libspkrprot.so
 vendor/lib/libssrec.so
 vendor/lib/libsurround_3mic_proc.so
 vendor/lib64/liba2dpoffload.so
-vendor/lib64/libaudio_log_utils.so
+-vendor/lib64/libaudio_log_utils.so
 vendor/lib64/libaudioalsa.so
 vendor/lib64/libaudioconfigstore.so
-vendor/lib64/libaudioparsers.so
+-vendor/lib64/libaudioparsers.so
 vendor/lib64/libaudioroute_ext.so
 vendor/lib64/libbatterylistener.so
 vendor/lib64/libcomprcapture.so
