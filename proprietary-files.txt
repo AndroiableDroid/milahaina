@@ -49,42 +49,26 @@ vendor/firmware/a660_zap.elf
 vendor/firmware/a660_zap.mdt
 
 # Audio
-vendor/lib/liba2dpoffload.so
 vendor/lib/libadm.so
 -vendor/lib/libaudio_log_utils.so
 vendor/lib/libaudioalsa.so
 vendor/lib/libaudioconfigstore.so
 -vendor/lib/libaudioparsers.so
 vendor/lib/libaudioroute_ext.so
-vendor/lib/libbatterylistener.so
-vendor/lib/libcomprcapture.so
 vendor/lib/libdrc.so
-vendor/lib/libexthwplugin.so
-vendor/lib/libhdmiedid.so
 vendor/lib/libhdmipassthru.so
-vendor/lib/libhfp.so
 vendor/lib/libqtigef.so
 vendor/lib/libresampler.so
-vendor/lib/libsndmonitor.so
-vendor/lib/libspkrprot.so
 vendor/lib/libssrec.so
 vendor/lib/libsurround_3mic_proc.so
-vendor/lib64/liba2dpoffload.so
 -vendor/lib64/libaudio_log_utils.so
 vendor/lib64/libaudioalsa.so
 vendor/lib64/libaudioconfigstore.so
 -vendor/lib64/libaudioparsers.so
 vendor/lib64/libaudioroute_ext.so
-vendor/lib64/libbatterylistener.so
-vendor/lib64/libcomprcapture.so
-vendor/lib64/libexthwplugin.so
-vendor/lib64/libhdmiedid.so
 vendor/lib64/libhdmipassthru.so
-vendor/lib64/libhfp.so
 vendor/lib64/libqtigef.so
 vendor/lib64/libresampler.so
-vendor/lib64/libsndmonitor.so
-vendor/lib64/libspkrprot.so
 vendor/lib64/libssrec.so
 
 # Audio (configs)
@@ -93,15 +77,9 @@ vendor/etc/media_codecs_vendor_audio.xml
 # Audio (FX)
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libmisoundfx.so
-vendor/lib/soundfx/libqcompostprocbundle.so
-vendor/lib/soundfx/libqcomvisualizer.so
-vendor/lib/soundfx/libqcomvoiceprocessing.so
 vendor/lib/soundfx/libshoebox.so
 vendor/lib64/soundfx/libasphere.so
 vendor/lib64/soundfx/libmisoundfx.so
-vendor/lib64/soundfx/libqcompostprocbundle.so
-vendor/lib64/soundfx/libqcomvisualizer.so
-vendor/lib64/soundfx/libqcomvoiceprocessing.so
 vendor/lib64/soundfx/libshoebox.so
 
 # Audio (SoundTrigger)

@@ -1,8 +1,6 @@
 # ADSP - from LA.UM.9.14.r1-20000.01-LAHAINA.QSSI12.0
 vendor/bin/adsprpcd|e97a90171313051e2994d1a3d0985de59f586788
-vendor/bin/audioadsprpcd|46b48dea170504b3586d0de1cdfe08c52c5bf692
 vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc|8f0eb84d3eb5fc0f683ef7b975b75044d56f513e
-vendor/etc/init/vendor.qti.audio-adsprpc-service.rc|b2427ab31c6505ca02a785a0b2d9f7d5e2f86801
 vendor/lib/libadsp_default_listener.so|1d717a53ad16ad68ad96c8ad4dddba2da77389c8
 vendor/lib/libadsprpc.so|6cd0e903c1bcb5dec6efec74eb2f25fc5cab1f9f
 vendor/lib64/libadsp_default_listener.so|d01f85011cb2a182fd6a91d0c3e159f3d9f661c1
