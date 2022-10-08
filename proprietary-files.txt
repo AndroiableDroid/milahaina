@@ -566,28 +566,6 @@ vendor/lib/libsn100u_fw.so|005273ef076ed7e4c2eaa5ac572e5fe05043c2ba
 # NVMAC
 -vendor/bin/nv_mac
 
-# Ozoaudio
-system/lib/libcodec2_vndk.so:vendor/lib/libcodec2_vndk.so
-system/lib64/libcodec2_vndk.so:vendor/lib64/libcodec2_vndk.so
-vendor/bin/hw/vendor.ozoaudio.media.c2@1.0-service
-vendor/etc/init/vendor.ozoaudio.media.c2@1.0-service.rc
-vendor/etc/seccomp_policy/vendor.ozoaudio.media.c2@1.0-default-seccomp_policy
-vendor/etc/ozosdk.license
-vendor/lib/soundfx/libozoprocessing.so
-vendor/lib/libav_ozoencoder.so
-vendor/lib/libcodec2_hidl@1.0.so
-vendor/lib/libozoaudio.so
-vendor/lib64/soundfx/libozoprocessing.so
-vendor/lib64/libav_ozodecoder.so
-vendor/lib64/libav_ozoencoder.so
-vendor/lib64/libcodec2_hidl@1.0.so
-vendor/lib64/libcodec2_hidl@1.1.so
-vendor/lib64/libcodec2_soft_ozodec.so
-vendor/lib64/libcodec2_soft_ozoenc.so
-vendor/lib64/libozoaudio.so
-vendor/lib64/libozoc2store.so
-vendor/lib64/libozowidening.so
-
 # Power
 vendor/etc/powerhint.xml
 
