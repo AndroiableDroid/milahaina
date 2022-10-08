@@ -14,10 +14,8 @@ vendor/lib/rfsa/adsp/misound_res_headphone.bin:odm/vili/lib/rfsa/adsp/misound_re
 vendor/lib/rfsa/adsp/misound_res_spk.bin:odm/vili/lib/rfsa/adsp/misound_res_spk.bin
 
 # Audio
-vendor/lib/hw/audio.primary.lahaina.so:odm/vili/lib/hw/audio.primary.lahaina.so
 vendor/lib/libacdbloader.so:odm/vili/lib/libacdbloader.so
 vendor/lib/libvideoNS.so:odm/vili/lib/libvideoNS.so
-vendor/lib64/hw/audio.primary.lahaina.so:odm/vili/lib64/hw/audio.primary.lahaina.so
 vendor/lib64/libacdbloader.so:odm/vili/lib64/libacdbloader.so
 
 # Audio (acdbdata_vili)
