@@ -13,8 +13,10 @@ vendor/lib/rfsa/adsp/misound_res_headphone.bin:odm/haydn/lib/rfsa/adsp/misound_r
 vendor/lib/rfsa/adsp/misound_res_spk.bin:odm/haydn/lib/rfsa/adsp/misound_res_spk.bin
 
 # Audio
+vendor/lib/hw/audio.primary.lahaina.so:odm/haydn/lib/hw/audio.primary.lahaina.so
 vendor/lib/libacdbloader.so:odm/haydn/lib/libacdbloader.so
 vendor/lib/libfcsam.so:odm/haydn/lib/libfcsam.so
+vendor/lib64/hw/audio.primary.lahaina.so:odm/haydn/lib64/hw/audio.primary.lahaina.so
 vendor/lib64/libacdbloader.so:odm/haydn/lib64/libacdbloader.so
 
 # Audio (acdbdata_haydn)

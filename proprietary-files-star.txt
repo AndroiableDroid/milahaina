@@ -13,8 +13,10 @@ vendor/lib/rfsa/adsp/misound_res_headphone.bin:odm/star/lib/rfsa/adsp/misound_re
 vendor/lib/rfsa/adsp/misound_res_spk.bin:odm/star/lib/rfsa/adsp/misound_res_spk.bin
 
 # Audio
+vendor/lib/hw/audio.primary.lahaina.so:odm/star/lib/hw/audio.primary.lahaina.so
 vendor/lib/libacdbloader.so:odm/star/lib/libacdbloader.so
 vendor/lib/libvideoNS.so:odm/star/lib/libvideoNS.so
+vendor/lib64/hw/audio.primary.lahaina.so:odm/star/lib64/hw/audio.primary.lahaina.so
 vendor/lib64/libacdbloader.so:odm/star/lib64/libacdbloader.so
 
 # Audio (acdbdata_star)
