@@ -338,6 +338,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_milahaina/android.hardware.nfc.uicc.xml
 
 PRODUCT_PACKAGES += \
+    nqnfcinfo \
     SecureElement \
     Tag \
     NQNfcNci \
