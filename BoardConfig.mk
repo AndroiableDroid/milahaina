@@ -286,3 +286,4 @@ WIFI_DRIVER_STATE_ON := "ON"
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 
 include vendor/qcom/opensource/commonsys-intf/bluetooth/bt-commonsys-intf-board.mk
+-include device/xiaomi/milahaina_kernel/BoardConfig.mk

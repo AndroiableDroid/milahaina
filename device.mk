@@ -637,3 +637,5 @@ PRODUCT_PACKAGES += \
     sigma_dut \
     wpa_supplicant \
     wpa_supplicant.conf
+
+-include device/xiaomi/milahaina_kernel/product.mk
