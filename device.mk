@@ -4,8 +4,48 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
 # Inherit from our proprietary files directory.
 $(call inherit-product, vendor/xiaomi/milahaina/milahaina-vendor.mk)
+
+TARGET_USES_QMAA := true
+TARGET_USES_QMAA_OVERRIDE_RPMB	:= true
+TARGET_USES_QMAA_OVERRIDE_DISPLAY := true
+TARGET_USES_QMAA_OVERRIDE_AUDIO   := true
+TARGET_USES_QMAA_OVERRIDE_VIDEO   := true
+TARGET_USES_QMAA_OVERRIDE_CAMERA  := true
+TARGET_USES_QMAA_OVERRIDE_GFX     := true
+TARGET_USES_QMAA_OVERRIDE_WFD     := true
+TARGET_USES_QMAA_OVERRIDE_GPS     := true
+TARGET_USES_QMAA_OVERRIDE_ANDROID_RECOVERY := true
+TARGET_USES_QMAA_OVERRIDE_ANDROID_CORE := true
+TARGET_USES_QMAA_OVERRIDE_WLAN    := true
+TARGET_USES_QMAA_OVERRIDE_DPM  := true
+TARGET_USES_QMAA_OVERRIDE_BLUETOOTH   := true
+TARGET_USES_QMAA_OVERRIDE_FM  := false
+TARGET_USES_QMAA_OVERRIDE_CVP  := true
+TARGET_USES_QMAA_OVERRIDE_FASTCV  := true
+TARGET_USES_QMAA_OVERRIDE_SCVE  := true
+TARGET_USES_QMAA_OVERRIDE_OPENVX  := true
+TARGET_USES_QMAA_OVERRIDE_DIAG := true
+TARGET_USES_QMAA_OVERRIDE_FTM := true
+TARGET_USES_QMAA_OVERRIDE_DATA := true
+TARGET_USES_QMAA_OVERRIDE_DATA_NET := true
+TARGET_USES_QMAA_OVERRIDE_MSM_BUS_MODULE := true
+TARGET_USES_QMAA_OVERRIDE_KERNEL_TESTS_INTERNAL := true
+TARGET_USES_QMAA_OVERRIDE_MSMIRQBALANCE := true
+TARGET_USES_QMAA_OVERRIDE_VIBRATOR := true
+TARGET_USES_QMAA_OVERRIDE_DRM     := true
+TARGET_USES_QMAA_OVERRIDE_KMGK := true
+TARGET_USES_QMAA_OVERRIDE_VPP := true
+TARGET_USES_QMAA_OVERRIDE_GP := true
+TARGET_USES_QMAA_OVERRIDE_SPCOM_UTEST := true
+TARGET_USES_QMAA_OVERRIDE_PERF := true
+QMAA_HAL_LIST := audio video camera display sensors gps
+TARGET_MOUNT_POINTS_SYMLINKS := false
 
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
@@ -43,7 +83,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.opengles.version=196610
 
 # Audio
-AUDIO_HAL_DIR := hardware/qcom-caf/sm8350/audio
+AUDIO_HAL_DIR := vendor/qcom/opensource/audio-hal/primary-hal
 
 PRODUCT_COPY_FILES += \
     $(AUDIO_HAL_DIR)/configs/common/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_lahaina/audio_policy_configuration.xml \
@@ -105,6 +145,14 @@ PRODUCT_PACKAGES += \
     vendor.xiaomi.hardware.fingerprintextension@1.0.vendor
 
 # Bluetooth
+SOONG_CONFIG_NAMESPACES += aosp_vs_qva
+SOONG_CONFIG_aosp_vs_qva += aosp_or_qva
+SOONG_CONFIG_aosp_vs_qva_aosp_or_qva := qva
+
+SOONG_CONFIG_NAMESPACES += bredr_vs_btadva
+SOONG_CONFIG_bredr_vs_btadva += bredr_or_btadva
+SOONG_CONFIG_bredr_vs_btadva_bredr_or_btadva := bredr
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml
@@ -140,13 +188,12 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.qcom.bluetooth.scram.enabled=false \
     persist.vendor.qcom.bluetooth.twsp_state.enabled=false
 
-$(call-inherit, vendor/qcom/opensource/commonsys-intf/bluetooth/bt-system-opensource-product.mk)
-
 # Boot Control
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.2-impl-qti \
-    android.hardware.boot@1.2-impl-qti.recovery \
-    android.hardware.boot@1.2-service
+    android.hardware.boot@1.1-impl-qti \
+    android.hardware.boot@1.1-impl-qti.recovery \
+    android.hardware.boot@1.1-service \
+    bootctrl.lahaina
 
 # Camera
 PRODUCT_COPY_FILES += \
@@ -188,19 +235,11 @@ PRODUCT_PACKAGES += \
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Data
-$(call inherit-product, vendor/qcom/opensource/dataservices/dataservices_vendor_product.mk)
-
 PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml
 
 # Display
-$(call inherit-product, hardware/qcom-caf/sm8350/display/config/display-product.mk)
-$(call inherit-product, vendor/qcom/opensource/commonsys-intf/display/config/display-interfaces-product.mk)
-$(call inherit-product, vendor/qcom/opensource/commonsys-intf/display/config/display-product-system.mk)
-$(call inherit-product, vendor/qcom/opensource/commonsys/display/config/display-product-commonsys.mk)
-$(call inherit-product, vendor/qcom/opensource/display/config/display-product-vendor.mk)
-
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
 
@@ -246,11 +285,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
 # GPS
 LOC_HIDL_VERSION := 4.0
-include $(LOCAL_PATH)/gps/gps_vendor_board.mk
-$(call inherit-product, $(LOCAL_PATH)/gps/gps_vendor_product.mk)
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
+
+# GPT
+SOONG_CONFIG_NAMESPACES += ufsbsg
+SOONG_CONFIG_ufsbsg += ufsframework
+SOONG_CONFIG_ufsbsg_ufsframework := bsg
 
 # Initialization
 PRODUCT_PACKAGES += \
@@ -272,6 +314,24 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.post_boot.custom=true
+
+## QESDK Manager Soong config
+SOONG_CONFIG_NAMESPACES += qesdkmanager
+SOONG_CONFIG_qesdkmanager += target
+SOONG_CONFIG_qesdkmanager_target := lahaina
+## qesdk manager end
+
+# Kernel
+KERNEL_LLVM_SUPPORT := true
+KERNEL_DEFCONFIG := vendor/vili-qgki_defconfig
+KERNEL_AOSP_LLVM_CLANG := true
+KERNEL_SD_LLVM_SUPPORT := false
+KERNEL_MODULES_INSTALL := vendor_dlkm
+KERNEL_MODULES_OUT := out/target/product/milahaina/$(KERNEL_MODULES_INSTALL)/lib/modules
+QCOM_BOARD_PLATFORMS += lahaina
+TARGET_USES_QSSI := true
+TARGET_HAS_GENERIC_KERNEL_HEADERS := true
+TARGET_COMPILE_WITH_MSM_KERNEL := true
 
 # Keymaster
 PRODUCT_PACKAGES += \
@@ -323,8 +383,6 @@ PRODUCT_PACKAGES += \
     vendor.xiaomi.hardware.mtdservice@1.0.vendor
 
 # NFC
-$(call inherit-product, vendor/nxp/opensource/commonsys/packages/apps/Nfc/nfc_system_product.mk)
-
 TARGET_USES_NQ_NFC := true
 
 PRODUCT_COPY_FILES += \
@@ -573,7 +631,6 @@ PRODUCT_PACKAGES += \
 # USB
 TARGET_HAS_DIAG_ROUTER := true
 TARGET_KERNEL_VERSION := 5.4
-$(call inherit-product, vendor/qcom/opensource/usb/vendor_product.mk)
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.accessory.xml \
@@ -606,9 +663,6 @@ PRODUCT_COPY_FILES += \
 TARGET_ENABLE_VM_SUPPORT := true
 
 # WFD
-PRODUCT_BOOT_JARS += \
-    WfdCommon
-
 PRODUCT_PACKAGES += \
     libnl \
     libwfdaac_vendor
@@ -644,4 +698,12 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf
 
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.ota.allow_downgrade=true
+
 -include device/xiaomi/milahaina_kernel/product.mk
+include $(wildcard $(TOPDIR)vendor/qcom/defs/board-defs/*/*.mk)
+$(foreach sdefs, $(sort $(wildcard vendor/qcom/defs/product-defs/system/*.mk)), \
+    $(call inherit-product, $(sdefs)))
+$(foreach vdefs, $(sort $(wildcard vendor/qcom/defs/product-defs/vendor/*.mk)), \
+    $(call inherit-product, $(vdefs)))

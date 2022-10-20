@@ -8,9 +8,11 @@ BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
+BUILD_BROKEN_NINJA_USES_ENV_VARS += SDCLANG_AE_CONFIG SDCLANG_CONFIG SDCLANG_SA_ENABLE
 DEVICE_PATH := device/xiaomi/milahaina
 
 include build/make/target/board/BoardConfigMainlineCommon.mk
+include $(wildcard $(TOPDIR)vendor/qcom/defs/board-defs/vendor/*.mk)
 
 # Treble
 BOARD_VNDK_VERSION := current
@@ -53,7 +55,7 @@ TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_VARIANT := cortex-a76
 
 TARGET_2ND_ARCH := arm
-TARGET_2ND_ARCH_VARIANT := armv8-a
+TARGET_2ND_ARCH_VARIANT := armv8-2a
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a76
@@ -73,7 +75,6 @@ BOARD_SUPPORTS_SOUND_TRIGGER := true
 BOARD_USES_ALSA_AUDIO := true
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
 TARGET_USE_QTI_BT_STACK := true
 
 # Bootloader
@@ -88,8 +89,6 @@ BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_KERNEL_SEPARATED_DTBO := true
 
 # Display
-include hardware/qcom-caf/sm8350/display/config/display-board.mk
-
 TARGET_SCREEN_DENSITY := 440
 
 # FSConfig
@@ -100,8 +99,7 @@ DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/hidl/framework_manifest.xml
 
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(DEVICE_PATH)/hidl/xiaomi_framework_matrix.xml \
-    hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
-    vendor/lineage/config/device_framework_matrix.xml
+    vendor/qcom/opensource/core-utils/vendor_framework_compatibility_matrix.xml
 
 DEVICE_MANIFEST_FILE := \
     $(DEVICE_PATH)/hidl/xiaomi_manifest.xml \
@@ -134,6 +132,11 @@ ODM_MANIFEST_STAR_FILES := \
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_milahaina
 TARGET_RECOVERY_DEVICE_MODULES := libinit_milahaina
 
+SOONG_CONFIG_NAMESPACES += vendorInitVars
+SOONG_CONFIG_vendorInitVars += \
+    target_init_vendor_lib
+SOONG_CONFIG_vendorInitVars_target_init_vendor_lib := $(TARGET_INIT_VENDOR_LIB)
+
 # Kernel
 BOARD_KERNEL_CMDLINE := \
     firmware_class.path=/vendor/firmware \
@@ -151,10 +154,11 @@ BOARD_KERNEL_CMDLINE := \
     pcie_ports=compat \
     service_locator.enable=1 \
     swiotlb=0 \
-    loop.max_part=7
-#    androidboot.selinux=permissive
+    loop.max_part=7 \
+    androidboot.selinux=permissive
 
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load))
+BOARD_VENDOR_KERNEL_MODULES := $(shell for i in $(BOARD_VENDOR_KERNEL_MODULES_LOAD); do echo $(KERNEL_MODULES_OUT)/$$i; done)
 
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
@@ -162,13 +166,12 @@ BOARD_RAMDISK_OFFSET := 0x01000000
 BOARD_RAMDISK_USE_LZ4 := true
 
 BOARD_KERNEL_IMAGE_NAME := Image
-TARGET_KERNEL_ADDITIONAL_FLAGS := \
-    DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/dtc/dtc \
-    LLVM=1
 
+BOARD_DO_NOT_STRIP_VENDOR_MODULES := true
+TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CONFIG := vendor/vili-qgki_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/sm8350
+TARGET_KERNEL_SOURCE := kernel/msm-5.4
 
 # Partitions
 BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := odm product system system_ext vendor vendor_dlkm
@@ -180,11 +183,13 @@ BOARD_BOOTIMAGE_PARTITION_SIZE := 0x6000000
 BOARD_DTBOIMG_PARTITION_SIZE := 0x1800000
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 0x06000000
-
-BOARD_VENDOR_DLKMIMAGE_PARTITION_RESERVED_SIZE := 500000000
-BOARD_VENDORIMAGE_PARTITION_RESERVED_SIZE := 20000000
+BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 1000000000
+BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 100000000
+BOARD_SYSTEM_EXTIMAGE_PARTITION_RESERVED_SIZE := 100000000
+#BOARD_VENDOR_DLKMIMAGE_PARTITION_RESERVED_SIZE := 200000000
+BOARD_VENDORIMAGE_PARTITION_RESERVED_SIZE := 10000000
 #BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 1000000000
-BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 50000000
+#BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 20000000
 #BOARD_SYSTEM_EXTIMAGE_PARTITION_RESERVED_SIZE := 100000000
 
 BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -211,7 +216,8 @@ BOARD_INCLUDE_RECOVERY_DTBO := true
 BOARD_INCLUDE_RECOVERY_RAMDISK_IN_VENDOR_BOOT := true
 BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
 BOOT_KERNEL_MODULES := $(strip $(shell cat $(DEVICE_PATH)/modules.load.recovery))
-BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(BOOT_KERNEL_MODULES)
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(BOOT_KERNEL_MODULES)
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(shell for i in $(BOOT_KERNEL_MODULES); do echo $(KERNEL_MODULES_OUT)/$$i; done)
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.default
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 100
@@ -276,5 +282,5 @@ WIFI_DRIVER_STATE_OFF := "OFF"
 WIFI_DRIVER_STATE_ON := "ON"
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 
-include vendor/qcom/opensource/commonsys-intf/bluetooth/bt-commonsys-intf-board.mk
 -include device/xiaomi/milahaina_kernel/BoardConfig.mk
+
