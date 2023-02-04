@@ -22,13 +22,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.qcom.rc",
-    src: "init.qcom.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
     name: "init.xiaomi.camera.rc",
     filename: "android.hardware.camera.provider@2.4-service_64.rc",
     src: "init.xiaomi.camera.rc",

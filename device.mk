@@ -133,6 +133,14 @@ PRODUCT_PACKAGES += \
     libvolumelistener \
     sound_trigger.primary.lahaina
 
+$(call inherit-product-if-exists, vendor/qcom/common/system/audio/audio-vendor.mk)
+
+# AV
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    vendor.mm.enable.qcom_parser=16777215
+
+$(call inherit-product-if-exists, vendor/qcom/common/system/av/av-vendor.mk)
+
 # Biometrics
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
@@ -187,6 +195,8 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.qcom.bluetooth.enable.swbpm=true \
     persist.vendor.qcom.bluetooth.scram.enabled=false \
     persist.vendor.qcom.bluetooth.twsp_state.enabled=false
+
+$(call inherit-product-if-exists, vendor/qcom/common/system/bt/bt-vendor.mk)
 
 # Boot Control
 PRODUCT_PACKAGES += \
@@ -332,6 +342,7 @@ QCOM_BOARD_PLATFORMS += lahaina
 TARGET_USES_QSSI := true
 TARGET_HAS_GENERIC_KERNEL_HEADERS := true
 TARGET_COMPILE_WITH_MSM_KERNEL := true
+TARGET_KERNEL_VERSION := 5.4
 
 # Keymaster
 PRODUCT_PACKAGES += \
@@ -486,6 +497,13 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.power.pasr.enabled=true \
     ro.vendor.qspm.enable=true
 
+PRODUCT_BOOT_JARS += \
+    QPerformance \
+    UxPerformance
+
+$(call inherit-product-if-exists, vendor/qcom/common/system/perf/perf-vendor.mk)
+include vendor/qcom/props/common/perf/qti-perf.mk
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
@@ -624,6 +642,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
+$(call inherit-product-if-exists, vendor/qcom/common/system/telephony/telephony-vendor.mk)
+
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.qti
@@ -667,6 +687,8 @@ PRODUCT_PACKAGES += \
     libnl \
     libwfdaac_vendor
 
+$(call inherit-product-if-exists, vendor/qcom/common/system/wfd/wfd-vendor.mk)
+
 # WiFi
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.aware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.aware.xml \
@@ -701,7 +723,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.ota.allow_downgrade=true
 
--include device/xiaomi/milahaina_kernel/product.mk
+$(call inherit-product-if-exists, vendor/qcom/common/system/wlan/wlan-vendor.mk)
+
 include $(wildcard $(TOPDIR)vendor/qcom/defs/board-defs/*/*.mk)
 $(foreach sdefs, $(sort $(wildcard vendor/qcom/defs/product-defs/system/*.mk)), \
     $(call inherit-product, $(sdefs)))

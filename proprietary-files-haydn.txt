@@ -12,22 +12,15 @@ vendor/lib/rfsa/adsp/misound_karaokemix_res.bin:odm/haydn/lib/rfsa/adsp/misound_
 vendor/lib/rfsa/adsp/misound_res_headphone.bin:odm/haydn/lib/rfsa/adsp/misound_res_headphone.bin
 vendor/lib/rfsa/adsp/misound_res_spk.bin:odm/haydn/lib/rfsa/adsp/misound_res_spk.bin
 
-# Audio
-vendor/lib/hw/audio.primary.lahaina.so:odm/haydn/lib/hw/audio.primary.lahaina.so
-vendor/lib/libacdbloader.so:odm/haydn/lib/libacdbloader.so
-vendor/lib/libfcsam.so:odm/haydn/lib/libfcsam.so
-vendor/lib64/hw/audio.primary.lahaina.so:odm/haydn/lib64/hw/audio.primary.lahaina.so
-vendor/lib64/libacdbloader.so:odm/haydn/lib64/libacdbloader.so
-
 # Audio (acdbdata_haydn)
-vendor/etc/acdbdata/Forte/Forte_Bluetooth_cal.acdb:odm/etc/haydn/acdbdata/Forte/Forte_Bluetooth_cal.acdb
-vendor/etc/acdbdata/Forte/Forte_General_cal.acdb:odm/etc/haydn/acdbdata/Forte/Forte_General_cal.acdb
-vendor/etc/acdbdata/Forte/Forte_Global_cal.acdb:odm/etc/haydn/acdbdata/Forte/Forte_Global_cal.acdb
-vendor/etc/acdbdata/Forte/Forte_Handset_cal.acdb:odm/etc/haydn/acdbdata/Forte/Forte_Handset_cal.acdb
-vendor/etc/acdbdata/Forte/Forte_Hdmi_cal.acdb:odm/etc/haydn/acdbdata/Forte/Forte_Hdmi_cal.acdb
-vendor/etc/acdbdata/Forte/Forte_Headset_cal.acdb:odm/etc/haydn/acdbdata/Forte/Forte_Headset_cal.acdb
-vendor/etc/acdbdata/Forte/Forte_Speaker_cal.acdb:odm/etc/haydn/acdbdata/Forte/Forte_Speaker_cal.acdb
-vendor/etc/acdbdata/Forte/Forte_workspaceFile.qwsp:odm/etc/haydn/acdbdata/Forte/Forte_workspaceFile.qwsp
+vendor/etc/acdbdata/Forte/Forte_Bluetooth_cal.acdb:odm/etc/haydn/acdbdata/Tutu/Tutu_Bluetooth_cal.acdb
+vendor/etc/acdbdata/Forte/Forte_General_cal.acdb:odm/etc/haydn/acdbdata/Tutu/Tutu_General_cal.acdb
+vendor/etc/acdbdata/Forte/Forte_Global_cal.acdb:odm/etc/haydn/acdbdata/Tutu/Tutu_Global_cal.acdb
+vendor/etc/acdbdata/Forte/Forte_Handset_cal.acdb:odm/etc/haydn/acdbdata/Tutu/Tutu_Handset_cal.acdb
+vendor/etc/acdbdata/Forte/Forte_Hdmi_cal.acdb:odm/etc/haydn/acdbdata/Tutu/Tutu_Hdmi_cal.acdb
+vendor/etc/acdbdata/Forte/Forte_Headset_cal.acdb:odm/etc/haydn/acdbdata/Tutu/Tutu_Headset_cal.acdb
+vendor/etc/acdbdata/Forte/Forte_Speaker_cal.acdb:odm/etc/haydn/acdbdata/Tutu/Tutu_Speaker_cal.acdb
+vendor/etc/acdbdata/Forte/Forte_workspaceFile.qwsp:odm/etc/haydn/acdbdata/Tutu/Tutu_workspaceFile.qwsp
 vendor/etc/acdbdata/adsp_avs_config.acdb:odm/etc/haydn/acdbdata/adsp_avs_config.acdb
 
 # Audio (firmware_haydn)
@@ -49,9 +42,6 @@ vendor/firmware/spk1_playback_delta.txt:odm/haydn/firmware/spk1_playback_delta.t
 vendor/firmware/spk1_voice_delta.txt:odm/haydn/firmware/spk1_voice_delta.txt
 vendor/firmware/spk2_playback_delta.txt:odm/haydn/firmware/spk2_playback_delta.txt
 vendor/firmware/spk2_voice_delta.txt:odm/haydn/firmware/spk2_voice_delta.txt
-
-# Audio (SoundTrigger)
-vendor/lib/hw/sound_trigger.primary.lahaina.so:odm/haydn/lib/hw/sound_trigger.primary.lahaina.so
 
 # Camera odm
 vendor/lib/libcamxexternalformatutils.so:odm/haydn/lib/libcamxexternalformatutils.so

@@ -13,13 +13,6 @@ vendor/lib/rfsa/adsp/misound_karaokemix_res.bin:odm/vili/lib/rfsa/adsp/misound_k
 vendor/lib/rfsa/adsp/misound_res_headphone.bin:odm/vili/lib/rfsa/adsp/misound_res_headphone.bin
 vendor/lib/rfsa/adsp/misound_res_spk.bin:odm/vili/lib/rfsa/adsp/misound_res_spk.bin
 
-# Audio
-vendor/lib/hw/audio.primary.lahaina.so:odm/vili/lib/hw/audio.primary.lahaina.so
-vendor/lib/libacdbloader.so:odm/vili/lib/libacdbloader.so
-vendor/lib/libvideoNS.so:odm/vili/lib/libvideoNS.so
-vendor/lib64/hw/audio.primary.lahaina.so:odm/vili/lib64/hw/audio.primary.lahaina.so
-vendor/lib64/libacdbloader.so:odm/vili/lib64/libacdbloader.so
-
 # Audio (acdbdata_vili)
 vendor/etc/acdbdata/Tutu/Tutu_Bluetooth_cal.acdb:odm/etc/vili/acdbdata/Tutu/Tutu_Bluetooth_cal.acdb
 vendor/etc/acdbdata/Tutu/Tutu_General_cal.acdb:odm/etc/vili/acdbdata/Tutu/Tutu_General_cal.acdb
@@ -50,9 +43,6 @@ vendor/firmware/spk1_playback_delta.txt:odm/vili/firmware/spk1_playback_delta.tx
 vendor/firmware/spk1_voice_delta.txt:odm/vili/firmware/spk1_voice_delta.txt
 vendor/firmware/spk2_playback_delta.txt:odm/vili/firmware/spk2_playback_delta.txt
 vendor/firmware/spk2_voice_delta.txt:odm/vili/firmware/spk2_voice_delta.txt
-
-# Audio (SoundTrigger)
-vendor/lib/hw/sound_trigger.primary.lahaina.so:odm/vili/lib/hw/sound_trigger.primary.lahaina.so
 
 # Camera odm
 vendor/lib64/camera/com.qti.eeprom.vili_ofilm_ov16a1q_bl24sa64_front_eeprom.so:odm/vili/lib64/camera/com.qti.eeprom.vili_ofilm_ov16a1q_bl24sa64_front_eeprom.so
@@ -99,6 +89,8 @@ vendor/lib64/libsnpe_dsp_domains_v2.so:odm/vili/lib64/libsnpe_dsp_domains_v2.so
 vendor/lib64/libsnpe_dsp_domains_v3.so:odm/vili/lib64/libsnpe_dsp_domains_v3.so
 vendor/lib64/libwa_sat.so:odm/vili/lib64/libwa_sat.so
 vendor/lib64/libxmi_hdr_bokeh.so:odm/vili/lib64/libxmi_hdr_bokeh.so
+vendor/lib64/libwa_opticalzoomfactor.so:odm/vili/lib64/libwa_opticalzoomfactor.so
+vendor/lib64/libanc_dc_plugin_xiaomi_v2.so:odm/vili/lib64/libanc_dc_plugin_xiaomi_v2.so
 
 # Camera (arcsoft) odm
 vendor/lib64/libarcsoft_hdr_detection.so:odm/vili/lib64/libarcsoft_hdr_detection.so
